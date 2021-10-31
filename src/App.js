@@ -1,11 +1,11 @@
 import React from 'react';
 import NavBar from './components/NavBar';
-import SectionContainer from './components/SectionContainer';
+import HomeContent from './components/HomeContent';
 
 const App = () => (
   <>
     <NavBar />
-    <SectionContainer />
+    <HomeContent />
   </>
 );
 

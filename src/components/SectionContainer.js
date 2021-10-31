@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 const SectionContainer = ({ children }) => (
-  <Box height={{ lg: 'calc(100% - 60px)' }} bg="lightGray">
+  <Box height="calc(100% - 60px)" bg="lightGray">
     {children}
   </Box>
 );
