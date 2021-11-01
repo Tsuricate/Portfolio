@@ -23,7 +23,13 @@ const NavBar = () => {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={{ base: 4, lg: 8 }}>
+      <Box
+        bg={useColorModeValue('gray.100', 'gray.900')}
+        px={{ base: 4, lg: 8 }}
+        position="fixed"
+        width="100%"
+        zIndex={1}
+      >
         <Flex h={16} alignItems="center" justifyContent="space-between" height="60px">
           <IconButton
             size="md"
