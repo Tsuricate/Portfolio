@@ -1,16 +1,16 @@
 import React from 'react';
 import { Flex, Heading, Text } from '@chakra-ui/react';
 import SectionContainer from './SectionContainer';
+import ActionButtons from './ActionButtons';
 
 const HomeContent = () => (
-  <SectionContainer>
+  <SectionContainer bgColor="lightGray">
     <Flex
       display="flex"
       height="100%"
+      justifyContent="center"
       alignItems="center"
       width={{ lg: '50%' }}
-      justifyContent="center"
-      px={{ base: '7', lg: '16' }}
     >
       <Flex flexDirection="column">
         <Text fontSize="6xl">Hi, I&apos;m Zoé.</Text>
@@ -21,6 +21,7 @@ const HomeContent = () => (
           id velit ac ligula auctor accumsan. Phasellus consectetur enim dignissim lobortis
           ultrices.
         </Text>
+        <ActionButtons />
       </Flex>
     </Flex>
   </SectionContainer>
