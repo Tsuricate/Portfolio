@@ -15,11 +15,11 @@ import ActionButtons from './ActionButtons';
 
 const AboutContent = () => (
   <SectionContainer bgColor="#F0F7F4" sectionTitle="About">
-    <SimpleGrid columns={{ base: 1, lg: 2 }} className="Grid on top" height="100%" p={16}>
+    <SimpleGrid columns={{ base: 1, lg: 2 }} height="100%" p={{ lg: 16 }}>
       <Box>Image to come</Box>
 
-      <Flex flexDirection="column" justifyContent="center" className="Container Flex">
-        <Tabs variant="soft-rounded" colorScheme="purple" height="60%" isFitted>
+      <Flex flexDirection="column" justifyContent="center">
+        <Tabs variant="soft-rounded" colorScheme="purple" height={{ lg: '60%' }} isFitted>
           <TabList>
             <Tab>Background</Tab>
             <Tab>Values</Tab>
@@ -68,7 +68,6 @@ const AboutContent = () => (
             </TabPanel>
           </TabPanels>
         </Tabs>
-
         <ActionButtons />
       </Flex>
     </SimpleGrid>
