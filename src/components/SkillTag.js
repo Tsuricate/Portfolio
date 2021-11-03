@@ -9,14 +9,18 @@ const SkillTag = ({ name, icon }) => {
 
   return (
     <Tag variant="subtle" size="lg" background="blackAlpha.300" p={2} borderRadius="5px">
-      <TagLeftIcon as={TheIcon} />
+      {icon && <TagLeftIcon as={TheIcon} />}
       <TagLabel>{name}</TagLabel>
     </Tag>
   );
 };
 export default SkillTag;
 
+SkillTag.defaultProps = {
+  icon: null,
+};
+
 SkillTag.propTypes = {
   name: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string,
 };
