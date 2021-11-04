@@ -4,7 +4,7 @@ export const projects = [
     image: 'https://cdn.pixabay.com/photo/2020/05/15/13/31/illumination-5173540_960_720.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros. Fusce sed purus imperdiet, suscipit nunc sed, lacinia urna. ',
-    url: './',
+    url: '/',
     skills: [
       {
         name: 'React',
@@ -38,7 +38,6 @@ export const projects = [
       },
       {
         name: 'Doctrine',
-        icon: 'DiDoctrine',
       },
     ],
   },
@@ -47,7 +46,7 @@ export const projects = [
     image: 'https://cdn.pixabay.com/photo/2020/05/19/13/32/cartoon-5190837_960_720.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros. Fusce sed purus imperdiet, suscipit nunc sed, lacinia urna. ',
-    url: './',
+    url: '/',
     skills: [
       {
         name: 'React',
@@ -79,7 +78,7 @@ export const projects = [
     image: 'https://cdn.pixabay.com/photo/2020/01/29/09/36/connection-4801974_960_720.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros. Fusce sed purus imperdiet, suscipit nunc sed, lacinia urna. ',
-    url: './',
+    url: '/',
     skills: [
       {
         name: 'React',

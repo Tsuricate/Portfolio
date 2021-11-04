@@ -12,7 +12,7 @@ const SkillsContent = () => (
     {/* Banner */}
     <Box background="#90BE6D" height="170px" />
     <Grid
-      templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(4, 1fr)' }}
+      templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(4, 1fr)' }}
       gap={4}
       height="calc(100% - 170px)"
     >
