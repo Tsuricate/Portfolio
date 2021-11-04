@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import HomeContent from './components/HomeContent';
 import AboutContent from './components/AboutContent';
 import SkillsContent from './components/SkillsContent';
+import ProjectsContent from './components/ProjectsContent';
 
 const App = () => (
   <>
@@ -10,6 +11,7 @@ const App = () => (
     <HomeContent />
     <AboutContent />
     <SkillsContent />
+    <ProjectsContent />
   </>
 );
 
