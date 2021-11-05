@@ -7,33 +7,32 @@ import SkillTag from './SkillTag';
 const ProjectCard = ({ image, name, description, url, specs }) => {
   return (
     <Flex
-      minWidth={{ md: 'md' }}
+      direction="column"
+      maxWidth="md"
       width={{ md: 'md' }}
+      p={6}
+      overflow="hidden"
       bg="white"
       boxShadow="2xl"
-      p={6}
-      direction="column"
       borderRadius="15px"
-      overflow="hidden"
-      mx={{ md: 2 }}
-      my={{ base: 2, md: 0 }}
     >
-      <Box mt={-6} mx={-6} mb={6} height={{ base: 56, md: 64 }} borderWidth="1px" overflow="hidden">
-        <Image fit="cover" src={image} alt="Image representing project" alignContent="center" />
+      <Box mt={-6} mx={-6} mb={6} height={{ base: 48, md: 56 }} borderWidth="1px" overflow="hidden">
+        <Image fit="cover" src={image} alt="Image representing project" />
       </Box>
 
       <Stack
         direction="column"
         flexGrow="1"
-        spacing={{ base: 5, lg: 0 }}
+        spacing={{ base: 5, md: 0 }}
         justifyContent={{ base: 'space-between', md: 'none' }}
       >
-        <Stack height={{ md: 48 }}>
+        <Stack height={{ md: 40 }}>
           <Heading color="gray.700" fontSize="2xl">
             {name}
           </Heading>
           <Text color="gray.500">{description}</Text>
         </Stack>
+
         <Stack height={{ md: 48 }}>
           <Text>Specs : </Text>
           <Wrap spacing={2}>
@@ -42,6 +41,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
             ))}
           </Wrap>
         </Stack>
+
         <ProjectActionButtons url={url} />
       </Stack>
     </Flex>

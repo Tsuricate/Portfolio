@@ -3,7 +3,7 @@ export const projects = [
     title: 'TaleMe',
     image: 'https://cdn.pixabay.com/photo/2020/05/15/13/31/illumination-5173540_960_720.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros. Fusce sed purus imperdiet, suscipit nunc sed, lacinia urna. ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
     url: '/',
     skills: [
       {
@@ -45,7 +45,7 @@ export const projects = [
     title: 'YAAC',
     image: 'https://cdn.pixabay.com/photo/2020/05/19/13/32/cartoon-5190837_960_720.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros. Fusce sed purus imperdiet, suscipit nunc sed, lacinia urna. ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
     url: '/',
     skills: [
       {
@@ -77,7 +77,24 @@ export const projects = [
     title: 'Portfolio',
     image: 'https://cdn.pixabay.com/photo/2020/01/29/09/36/connection-4801974_960_720.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros. Fusce sed purus imperdiet, suscipit nunc sed, lacinia urna. ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
+    url: '/',
+    skills: [
+      {
+        name: 'React',
+        icon: 'SiReact',
+      },
+      {
+        name: 'Chakra UI',
+        icon: 'SiChakraui',
+      },
+    ],
+  },
+  {
+    title: 'Portfolio2',
+    image: 'https://cdn.pixabay.com/photo/2020/01/29/09/36/connection-4801974_960_720.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
     url: '/',
     skills: [
       {
