@@ -6,20 +6,20 @@ const SectionContainer = ({ children, bgColor, sectionTitle, fullWidth }) => {
   const paddingX = fullWidth ? 0 : { base: '7', lg: '16' };
   return (
     <Box
-      height={{ lg: '100%' }}
+      height={{ xl: '100%' }}
       minHeight={{ base: '100%' }}
       bg={bgColor}
       py="70px"
       px={paddingX}
       className="SectionContainer"
     >
-      <Flex direction="column" height="100%">
+      <Flex direction="column" height={{ xl: '100%' }}>
         {sectionTitle && (
           <Heading textAlign="center" pb={5}>
             {sectionTitle}
           </Heading>
         )}
-        <Box flexGrow="1">{children}</Box>
+        <Box flexGrow={{ xl: '1' }}>{children}</Box>
       </Flex>
     </Box>
   );
