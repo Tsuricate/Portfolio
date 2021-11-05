@@ -9,63 +9,37 @@ import {
   Tab,
   TabPanel,
   TabPanels,
+  VStack,
 } from '@chakra-ui/react';
 import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
+import aboutSections from '../data/aboutSections';
 
 const AboutContent = () => (
   <SectionContainer bgColor="#F0F7F4" sectionTitle="About">
-    <SimpleGrid columns={{ base: 1, lg: 2 }} height="100%" p={{ lg: 16 }}>
+    <SimpleGrid columns={{ base: 1, xl: 2 }} height={{ xl: '100%' }} p={{ xl: 16 }}>
       <Box>Image to come</Box>
 
-      <Flex flexDirection="column" justifyContent="center">
-        <Tabs variant="soft-rounded" colorScheme="purple" height={{ lg: '60%' }} isFitted>
+      <Flex flexDirection="column" justifyContent={{ xl: 'center' }}>
+        <Tabs variant="soft-rounded" colorScheme="purple" isFitted>
           <TabList>
-            <Tab>Background</Tab>
-            <Tab>Values</Tab>
-            <Tab>Hobbies</Tab>
+            {aboutSections.map((section) => (
+              <Tab key={section.title}>{section.title}</Tab>
+            ))}
           </TabList>
+
           <TabPanels>
-            <TabPanel>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat metus at
-                viverra interdum. Cras libero est, aliquam quis aliquam nec, vehicula at ante. Fusce
-                gravida posuere nisl sodales feugiat. Phasellus mollis tortor a ligula egestas
-                pulvinar. Aliquam vehicula velit non sapien tempor, ac varius leo commodo. Etiam
-                convallis nunc at felis elementum pretium. Fusce et tristique arcu, non auctor
-                massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam at
-                nisl sit amet pulvinar. Suspendisse id sem non augue porta congue id eget quam.
-              </Text>
-              <Text>
-                Quisque dignissim, dolor elementum efficitur elementum, libero est aliquam mauris,
-                sed sodales est arcu quis turpis. Ut urna lorem, rhoncus vel erat sit amet, aliquam
-                viverra orci. Vivamus lacus urna, egestas vel auctor a, malesuada in libero. Proin
-                aliquet posuere consectetur. Sed imperdiet nunc lacus, sit amet fringilla risus
-                lobortis vitae. Maecenas condimentum posuere mauris ut fermentum. Etiam tempor eros
-                neque, et suscipit lorem.
-              </Text>
-            </TabPanel>
-            <TabPanel>
-              <Text>
-                Quisque dignissim, dolor elementum efficitur elementum, libero est aliquam mauris,
-                sed sodales est arcu quis turpis. Ut urna lorem, rhoncus vel erat sit amet, aliquam
-                viverra orci. Vivamus lacus urna, egestas vel auctor a, malesuada in libero. Proin
-                aliquet posuere consectetur. Sed imperdiet nunc lacus, sit amet fringilla risus
-                lobortis vitae. Maecenas condimentum posuere mauris ut fermentum. Etiam tempor eros
-                neque, et suscipit lorem.
-              </Text>
-            </TabPanel>
-            <TabPanel>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat metus at
-                viverra interdum. Cras libero est, aliquam quis aliquam nec, vehicula at ante. Fusce
-                gravida posuere nisl sodales feugiat. Phasellus mollis tortor a ligula egestas
-                pulvinar. Aliquam vehicula velit non sapien tempor, ac varius leo commodo. Etiam
-                convallis nunc at felis elementum pretium. Fusce et tristique arcu, non auctor
-                massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam at
-                nisl sit amet pulvinar. Suspendisse id sem non augue porta congue id eget quam.
-              </Text>
-            </TabPanel>
+            {aboutSections.map((section) => (
+              <TabPanel key={section.title}>
+                <VStack spacing={{ base: 5 }}>
+                  {section.texts.map((text) => (
+                    <Text key={text} lineHeight={1.7}>
+                      {text}
+                    </Text>
+                  ))}
+                </VStack>
+              </TabPanel>
+            ))}
           </TabPanels>
         </Tabs>
         <ActionButtons />
