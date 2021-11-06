@@ -14,7 +14,7 @@ const SkillsContent = () => (
       <Box background="#90BE6D" height="170px" />
       <Grid
         templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
-        gap={{ md: 3, xl: 4 }}
+        gap={{ md: 3, xl: 10 }}
         flexGrow={{ xl: '1' }}
         px={{ xl: 20 }}
       >

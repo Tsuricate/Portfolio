@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, SimpleGrid, Stack, Wrap } from '@chakra-ui/react';
+import { Text, SimpleGrid, Stack, Button, Link } from '@chakra-ui/react';
+import { FaRegEnvelope, FaLinkedin, FaUserCircle } from 'react-icons/fa';
 import SectionContainer from './SectionContainer';
-import SkillTag from './SkillTag';
 
 const ContactContent = () => (
   <SectionContainer bgColor="#F9EBE0" sectionTitle="Contact">
@@ -24,12 +24,20 @@ const ContactContent = () => (
             lobortis.
           </Text>
         </Stack>
-        <Wrap direction="column" spacing={{ base: 5 }}>
-          <SkillTag name="Email" icon="SiGmail" />
-          <SkillTag name="Linkedin" icon="SiLinkedin" />
-          <SkillTag name=" 💻 WeLoveDevs" />
-          <SkillTag name=" 💻 WelcomeToTheJungle" />
-        </Wrap>
+        <Stack direction="column" spacing={{ base: 5 }} align={{ lg: 'start' }}>
+          <Button as={Link} href="./" leftIcon={<FaRegEnvelope />} size="lg">
+            Email
+          </Button>
+          <Button as={Link} href="./" leftIcon={<FaLinkedin />} size="lg">
+            Linkedin
+          </Button>
+          <Button as={Link} href="./" leftIcon={<FaUserCircle />} size="lg">
+            WeLoveDevs
+          </Button>
+          <Button as={Link} href="./" leftIcon={<FaUserCircle />} size="lg">
+            WelcomeToTheJungle
+          </Button>
+        </Stack>
       </Stack>
     </SimpleGrid>
   </SectionContainer>
