@@ -49,7 +49,7 @@ const ProjectsContent = () => {
           ))}
         </ChakraCarousel>
       ) : (
-        <Wrap spacing={5} justify="center" align="center" bg="gold" p={3}>
+        <Wrap spacing={5} justify="center" align="center" p={3}>
           {projects.map((project) => (
             <WrapItem key={project.title}>
               <ProjectCard

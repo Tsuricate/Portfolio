@@ -1,14 +1,20 @@
 import React from 'react';
-import { Flex, Text, SimpleGrid, Stack, Box } from '@chakra-ui/react';
+import { Text, SimpleGrid, Stack, Wrap } from '@chakra-ui/react';
 import SectionContainer from './SectionContainer';
 import SkillTag from './SkillTag';
 
 const ContactContent = () => (
   <SectionContainer bgColor="#F9EBE0" sectionTitle="Contact">
-    <SimpleGrid columns={{ base: 1, lg: 2 }} height="100%">
-      <Flex p={8} direction="column" justifyContent="space-evenly">
-        <Stack direction="column" spacing={{ base: 2, lg: 5 }}>
-          <Text fontSize="2xl">Let&apos;s get in touch !</Text>
+    <SimpleGrid columns={{ base: 1, lg: 2 }} height={{ xl: '100%' }}>
+      <Stack
+        p={{ md: 8 }}
+        direction="column"
+        spacing={{ base: 8, md: 14 }}
+        height={{ xl: '100%' }}
+        justify={{ xl: 'space-evenly' }}
+      >
+        <Stack direction="column" spacing={{ base: 4, md: 8 }}>
+          <Text fontSize={{ base: '2xl', xl: '4xl' }}>Let&apos;s get in touch !</Text>
           <Text>
             Suspendisse vitae elit ante. Duis et efficitur velit, nec finibus massa. Phasellus
             facilisis facilisis ipsum non maximus. Morbi sit amet ultricies eros. Etiam volutpat
@@ -18,21 +24,13 @@ const ContactContent = () => (
             lobortis.
           </Text>
         </Stack>
-        <Stack direction="column" spacing={8}>
-          <Box>
-            <SkillTag name="Email" icon="SiGmail" />
-          </Box>
-          <Box>
-            <SkillTag name="Linkedin" icon="SiLinkedin" />
-          </Box>
-          <Box>
-            <SkillTag name="WeLoveDevs" />
-          </Box>
-          <Box>
-            <SkillTag name="WelcomeToTheJungle" />
-          </Box>
-        </Stack>
-      </Flex>
+        <Wrap direction="column" spacing={{ base: 5 }}>
+          <SkillTag name="Email" icon="SiGmail" />
+          <SkillTag name="Linkedin" icon="SiLinkedin" />
+          <SkillTag name=" 💻 WeLoveDevs" />
+          <SkillTag name=" 💻 WelcomeToTheJungle" />
+        </Wrap>
+      </Stack>
     </SimpleGrid>
   </SectionContainer>
 );
