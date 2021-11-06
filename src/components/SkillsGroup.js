@@ -1,27 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tag, Flex, Box } from '@chakra-ui/react';
+import { Tag, Box, Stack } from '@chakra-ui/react';
 import SkillsList from './SkillsList';
 
 const SkillsGroup = ({ groupTitle, skills }) => (
-  <>
-    <Box textAlign="center" mt={{ lg: '-25px' }}>
+  <Stack
+    pt={{ base: 5, xl: 0 }}
+    height={{ xl: '100%' }}
+    alignItems={{ xl: 'center' }}
+    spacing={{ xl: 20 }}
+  >
+    <Box textAlign="center" mt={{ xl: '-25px' }}>
       <Tag fontSize="1.5xl" height="50px" variant="subtle" border="1px solid black">
         {groupTitle}
       </Tag>
     </Box>
 
-    <Flex
-      height="calc(100% - 50px)"
-      direction={{ base: 'column', lg: 'row' }}
-      alignItems="center"
-      justifyContent="space-evenly"
+    <Stack
+      flexGrow={{ xl: '1' }}
+      direction={{ base: 'column', md: 'row' }}
+      spacing={{ base: 5, md: 10, xl: 5 }}
     >
       {skills.map((skill) => (
         <SkillsList key={skill.title} category={skill.title} skillList={skill.list} />
       ))}
-    </Flex>
-  </>
+    </Stack>
+  </Stack>
 );
 
 export default SkillsGroup;

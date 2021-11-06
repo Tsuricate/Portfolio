@@ -1,20 +1,27 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Text, Wrap } from '@chakra-ui/react';
+import { Stack, Text, Wrap } from '@chakra-ui/react';
 import SkillTag from './SkillTag';
 
 const SkillsList = ({ category, skillList }) => (
-  <Box background="#F4A259" p={6} height={{ lg: '80%' }} w="350px" borderRadius="10px">
+  <Stack
+    width={{ base: 'full', xl: 'auto' }}
+    height={{ xl: 'xs' }}
+    p={{ base: 3, md: 4, xl: 5 }}
+    borderRadius="10px"
+    spacing={5}
+    border="2px solid #F4A259"
+  >
     <Text textAlign="center" fontWeight="bold">
       {category}
     </Text>
-    <Wrap spacing={5} py={{ base: 5, lg: 10 }}>
+    <Wrap spacing={5} justify="center">
       {skillList.map((skill) => (
         <SkillTag key={skill.name} name={skill.name} icon={skill.icon} />
       ))}
     </Wrap>
-  </Box>
+  </Stack>
 );
 
 export default SkillsList;

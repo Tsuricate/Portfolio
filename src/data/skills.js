@@ -73,10 +73,6 @@ const skills = [
         icon: 'SiGithub',
       },
       {
-        name: 'Agile & Scrum',
-        icon: 'SiHandshake',
-      },
-      {
         name: 'Visual Studio Code',
         icon: 'SiVisualstudiocode',
       },
@@ -84,6 +80,7 @@ const skills = [
         name: 'Slack',
         icon: 'SiSlack',
       },
+
       {
         name: 'Trello',
         icon: 'SiTrello',
@@ -91,6 +88,10 @@ const skills = [
       {
         name: 'Jira',
         icon: 'SiJirasoftware',
+      },
+      {
+        name: 'Agile & Scrum',
+        icon: 'SiHandshake',
       },
     ],
   },
@@ -108,6 +109,10 @@ const skills = [
       {
         name: 'Nuxt',
         icon: 'SiNuxtdotjs',
+      },
+      {
+        name: 'Svelte',
+        icon: 'SiSvelte',
       },
       {
         name: 'Typescript',
