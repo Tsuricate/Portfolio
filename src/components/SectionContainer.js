@@ -12,6 +12,7 @@ const SectionContainer = ({ children, bgColor, sectionTitle, fullWidth }) => {
       py="70px"
       px={paddingX}
       className="SectionContainer"
+      id={sectionTitle}
     >
       <Flex direction="column" height={{ xl: '100%' }}>
         {sectionTitle && (

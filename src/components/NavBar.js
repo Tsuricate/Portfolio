@@ -11,7 +11,7 @@ import {
   useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react';
-// import PropTypes from 'prop-types';
+
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import NavLink from './NavLink';
 
