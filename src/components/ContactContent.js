@@ -36,18 +36,30 @@ const ContactContent = () => (
             lobortis.
           </Text>
         </Stack>
-        <Stack direction="column" spacing={5} align={{ lg: 'start' }}>
-          <Button as={Link} href="./" leftIcon={<FaRegEnvelope />} size="lg">
+        <Stack direction="column" spacing={5} align={{ lg: 'baseline' }}>
+          <Button
+            as={Link}
+            href="mailto:zoeamat.pro@gmail.com"
+            leftIcon={<FaRegEnvelope />}
+            size="lg"
+          >
             Email
           </Button>
-          <Button as={Link} href="./" leftIcon={<FaLinkedin />} size="lg">
+          <Button
+            as={Link}
+            href="https://www.linkedin.com/in/zo%C3%A9amat/"
+            leftIcon={<FaLinkedin />}
+            size="lg"
+          >
             Linkedin
           </Button>
-          <Button as={Link} href="./" leftIcon={<FaUserCircle />} size="lg">
+          <Button
+            as={Link}
+            href="https://welovedevs.com/app/developer/zoe-developpeuse-react"
+            leftIcon={<FaUserCircle />}
+            size="lg"
+          >
             WeLoveDevs
-          </Button>
-          <Button as={Link} href="./" leftIcon={<FaUserCircle />} size="lg">
-            WelcomeToTheJungle
           </Button>
         </Stack>
       </Stack>
