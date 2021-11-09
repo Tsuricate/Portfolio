@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavHashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import { useColorModeValue } from '@chakra-ui/react';
 
 const NavLink = ({ children }) => {
   const anchor = children === 'Home' ? '#' : `#${children}`;
 
   return (
-    <NavHashLink
+    <HashLink
       smooth
       to={anchor}
       px={2}
@@ -19,7 +19,7 @@ const NavLink = ({ children }) => {
       }}
     >
       {children}
-    </NavHashLink>
+    </HashLink>
   );
 };
 NavLink.propTypes = {

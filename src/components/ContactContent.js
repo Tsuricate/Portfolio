@@ -1,6 +1,18 @@
+import {
+  Box,
+  Button,
+  Link,
+  SimpleGrid,
+  Stack,
+  Text,
+  LinkOverlay,
+  LinkBox,
+  Flex,
+  Image,
+} from '@chakra-ui/react';
 import React from 'react';
-import { Text, SimpleGrid, Stack, Button, Link } from '@chakra-ui/react';
-import { FaRegEnvelope, FaLinkedin, FaUserCircle } from 'react-icons/fa';
+import { FaAngleDoubleUp, FaLinkedin, FaRegEnvelope, FaUserCircle } from 'react-icons/fa';
+import { HashLink } from 'react-router-hash-link';
 import SectionContainer from './SectionContainer';
 
 const ContactContent = () => (
@@ -24,7 +36,7 @@ const ContactContent = () => (
             lobortis.
           </Text>
         </Stack>
-        <Stack direction="column" spacing={{ base: 5 }} align={{ lg: 'start' }}>
+        <Stack direction="column" spacing={5} align={{ lg: 'start' }}>
           <Button as={Link} href="./" leftIcon={<FaRegEnvelope />} size="lg">
             Email
           </Button>
@@ -39,6 +51,41 @@ const ContactContent = () => (
           </Button>
         </Stack>
       </Stack>
+
+      <Box>
+        <Flex
+          height={{ xl: '100%' }}
+          justify={{ xl: 'space-between' }}
+          alignItems="center"
+          direction="column"
+          p={10}
+        >
+          <Box boxSize={{ base: '2xs', lg: 'md', xl: 'xl' }}>
+            <Image
+              src="https://cdn.pixabay.com/photo/2020/05/19/13/54/cartoon-5190961_960_720.jpg"
+              alt="Contact"
+              borderRadius="full"
+            />
+          </Box>
+          <Box alignSelf={{ lg: 'flex-end' }}>
+            <LinkBox>
+              <Stack
+                direction="column"
+                align="center"
+                p={5}
+                borderRadius={5}
+                mt={10}
+                bg="whiteAlpha.700"
+              >
+                <FaAngleDoubleUp />
+                <LinkOverlay as={HashLink} to="#" smooth>
+                  Back to top
+                </LinkOverlay>
+              </Stack>
+            </LinkBox>
+          </Box>
+        </Flex>
+      </Box>
     </SimpleGrid>
   </SectionContainer>
 );
