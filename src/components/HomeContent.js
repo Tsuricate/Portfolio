@@ -2,18 +2,19 @@ import React from 'react';
 import { Grid, GridItem, Heading, Text, Wrap, Box, Image } from '@chakra-ui/react';
 import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
-import test from '../data/test.png';
 
 const HomeContent = () => (
-  <SectionContainer bgColor="white">
+  <SectionContainer bgColor="lightGray">
     <Grid
-      templateColumns={{ base: 'repeat(1, 1fr)', xl: 'repeat(3, 1fr)' }}
       height={{ xl: '100%' }}
-      justifyContent="center"
-      alignItems="baseline"
+      templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}
+      justifyItems="center"
+      alignItems="center"
+      gap={{ base: 9, md: 16, lg: 9 }}
+      pt={{ lg: 16 }}
     >
-      <GridItem colSpan={{ base: 1, xl: 1 }}>
-        <Wrap direction="column" spacing={{ base: 10 }} mt={{ xl: 20 }}>
+      <GridItem colSpan={1} mt={{ base: 10 }}>
+        <Wrap direction="column" spacing={{ base: 5, md: 10, xl: 12 }}>
           <Box>
             <Text fontSize={{ base: '3xl' }}>Hi, I&apos;m Zoé.</Text>
             <Heading fontSize={{ base: '4xl' }}>Front-end web developper</Heading>
@@ -27,8 +28,11 @@ const HomeContent = () => (
           <ActionButtons />
         </Wrap>
       </GridItem>
+
       <GridItem colSpan={{ base: 1, xl: 2 }}>
-        <Image src={test} />
+        <Box>
+          <Image src="/images/homeImage.webp" />
+        </Box>
       </GridItem>
     </Grid>
   </SectionContainer>
