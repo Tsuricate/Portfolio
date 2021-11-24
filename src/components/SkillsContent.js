@@ -8,10 +8,18 @@ const firstGroup = skills.slice(0, 3);
 const secondGroup = skills.slice(-1);
 
 const SkillsContent = () => (
-  <SectionContainer bgColor="#F0EFF4" sectionTitle="Skills" fullWidth>
-    {/* Banner */}
+  <SectionContainer background="#F0EFF4" sectionTitle="Skills" fullWidth>
     <Box height={{ xl: '100%' }}>
-      <Box background="#90BE6D" height="170px" />
+      {/* Banner */}
+      <Box
+        width="100%"
+        height="200px"
+        overflowX="hidden"
+        bgImage="/images/skillsImage.webp"
+        backgroundPosition="center"
+        backgroundSize="cover"
+      />
+
       <Grid
         templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
         gap={{ md: 3, xl: 10 }}
