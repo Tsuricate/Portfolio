@@ -2,17 +2,18 @@ import React from 'react';
 import { Box, Heading, Flex } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-const SectionContainer = ({ children, bgColor, sectionTitle, fullWidth }) => {
+const SectionContainer = ({ children, background, sectionTitle, fullWidth }) => {
   const paddingX = fullWidth ? 0 : { base: '7', lg: '16' };
   return (
     <Box
       height={{ xl: '100%' }}
       minHeight={{ base: '100%' }}
-      bg={bgColor}
       py="70px"
       px={paddingX}
       className="SectionContainer"
       id={sectionTitle}
+      background={background}
+      backgroundSize="24%"
     >
       <Flex direction="column" height={{ xl: '100%' }}>
         {sectionTitle && (
@@ -34,7 +35,7 @@ SectionContainer.defaultProps = {
 
 SectionContainer.propTypes = {
   children: PropTypes.node.isRequired,
-  bgColor: PropTypes.string.isRequired,
+  background: PropTypes.string.isRequired,
   sectionTitle: PropTypes.string,
   fullWidth: PropTypes.bool,
 };
