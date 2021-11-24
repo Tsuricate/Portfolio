@@ -10,7 +10,7 @@ const SkillsGroup = ({ groupTitle, skills }) => (
     alignItems={{ xl: 'center' }}
     spacing={{ xl: 20 }}
   >
-    <Box textAlign="center" mt={{ xl: '-25px' }}>
+    <Box textAlign="center" mt={{ xl: '-30px' }}>
       <Tag fontSize="1.5xl" height="50px" variant="subtle" border="1px solid black">
         {groupTitle}
       </Tag>

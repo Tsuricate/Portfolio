@@ -88,10 +88,14 @@ export const projects = [
         name: 'Chakra UI',
         icon: 'SiChakraui',
       },
+      {
+        name: 'Gimp',
+        icon: 'SiGimp',
+      },
     ],
   },
   {
-    title: 'Portfolio2',
+    title: 'Know Your Birds',
     image: 'https://cdn.pixabay.com/photo/2020/01/29/09/36/connection-4801974_960_720.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
