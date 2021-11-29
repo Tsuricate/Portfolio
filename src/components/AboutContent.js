@@ -16,7 +16,7 @@ import ActionButtons from './ActionButtons';
 import aboutSections from '../data/aboutSections';
 
 const AboutContent = () => (
-  <SectionContainer background="#F0F7F4" sectionTitle="About">
+  <SectionContainer background="#DAD7CD" sectionTitle="About">
     <SimpleGrid
       columns={{ base: 1, xl: 2 }}
       height={{ xl: '100%' }}

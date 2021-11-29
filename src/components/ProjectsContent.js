@@ -34,7 +34,7 @@ const ProjectsContent = () => {
 
   const ChakraCarousel = chakra(Carousel);
   return (
-    <SectionContainer background="#F7F7FF" sectionTitle="Projects">
+    <SectionContainer background="#DAD7CD" sectionTitle="Projects">
       {useCarousel ? (
         <ChakraCarousel responsive={responsive} height={{ lg: '100%' }} p={10} showDots centerMode>
           {projects.map((project) => (

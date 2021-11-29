@@ -4,7 +4,7 @@ import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
 
 const HomeContent = () => (
-  <SectionContainer background="lightGray">
+  <SectionContainer background="#E8E8E4">
     <Grid
       height={{ xl: '100%' }}
       templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}

@@ -8,7 +8,7 @@ const firstGroup = skills.slice(0, 3);
 const secondGroup = skills.slice(-1);
 
 const SkillsContent = () => (
-  <SectionContainer background="#F0EFF4" sectionTitle="Skills" fullWidth>
+  <SectionContainer background="#E8E8E4" sectionTitle="Skills" fullWidth>
     <Box height={{ xl: '100%' }}>
       {/* Banner */}
       <Box

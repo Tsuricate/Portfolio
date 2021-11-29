@@ -8,7 +8,7 @@ const SectionContainer = ({ children, background, sectionTitle, fullWidth }) => 
     <Box
       height={{ xl: '100%' }}
       minHeight={{ base: '100%' }}
-      py="70px"
+      py="90px"
       px={paddingX}
       className="SectionContainer"
       id={sectionTitle}

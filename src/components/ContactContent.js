@@ -7,7 +7,7 @@ const ContactContent = () => {
   return (
     <SectionContainer
       background={
-        'url("/images/leftHand.webp") no-repeat bottom left, url("/images/rightHand.webp") no-repeat top right, #F9EBE0'
+        'url("/images/leftHand.webp") no-repeat bottom left, url("/images/rightHand.webp") no-repeat top right, #E8E8E4'
       }
       sectionTitle="Contact"
     >
