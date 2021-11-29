@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, GridItem } from '@chakra-ui/react';
+import { Box, Grid, GridItem, useColorModeValue } from '@chakra-ui/react';
 import SectionContainer from './SectionContainer';
 import SkillsGroup from './SkillsGroup';
 import skills from '../data/skills';
@@ -8,7 +8,11 @@ const firstGroup = skills.slice(0, 3);
 const secondGroup = skills.slice(-1);
 
 const SkillsContent = () => (
-  <SectionContainer background="#E8E8E4" sectionTitle="Skills" fullWidth>
+  <SectionContainer
+    background={useColorModeValue('#E8E8E4', '#403f3f')}
+    sectionTitle="Skills"
+    fullWidth
+  >
     <Box height={{ xl: '100%' }}>
       {/* Banner */}
       <Box

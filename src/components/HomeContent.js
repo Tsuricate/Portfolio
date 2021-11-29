@@ -1,10 +1,19 @@
 import React from 'react';
-import { Grid, GridItem, Heading, Text, Wrap, Box, Image } from '@chakra-ui/react';
+import {
+  Grid,
+  GridItem,
+  Heading,
+  Text,
+  Wrap,
+  Box,
+  Image,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
 
 const HomeContent = () => (
-  <SectionContainer background="#E8E8E4">
+  <SectionContainer background={useColorModeValue('#E8E8E4', '#403f3f')}>
     <Grid
       height={{ xl: '100%' }}
       templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}

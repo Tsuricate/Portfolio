@@ -10,13 +10,14 @@ import {
   TabPanels,
   Stack,
   Image,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
 import aboutSections from '../data/aboutSections';
 
 const AboutContent = () => (
-  <SectionContainer background="#DAD7CD" sectionTitle="About">
+  <SectionContainer background={useColorModeValue('#DAD7CD', '#505050')} sectionTitle="About">
     <SimpleGrid
       columns={{ base: 1, xl: 2 }}
       height={{ xl: '100%' }}

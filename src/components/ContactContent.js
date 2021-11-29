@@ -1,14 +1,14 @@
-import { Button, Link, Stack, Text, Container } from '@chakra-ui/react';
+import { Button, Link, Stack, Text, Container, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import { FaLinkedin, FaRegEnvelope, FaUserCircle } from 'react-icons/fa';
 import SectionContainer from './SectionContainer';
 
 const ContactContent = () => {
+  const responsiveBgColor = useColorModeValue('#E8E8E4', '#403f3f');
+
   return (
     <SectionContainer
-      background={
-        'url("/images/leftHand.webp") no-repeat bottom left, url("/images/rightHand.webp") no-repeat top right, #E8E8E4'
-      }
+      background={`url("/images/leftHand.webp") no-repeat bottom left, url("/images/rightHand.webp") no-repeat top right, ${responsiveBgColor}`}
       sectionTitle="Contact"
     >
       <Container

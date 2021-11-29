@@ -24,7 +24,7 @@ const NavBar = () => {
   return (
     <>
       <Box
-        bg={useColorModeValue('#C4C1BB', 'gray.900')}
+        bg={useColorModeValue('#C4C1BB', '#2c2c2c')}
         boxShadow="0px 4px 22px -2px rgba(10,10,8,0.43)
         "
         px={{ base: 4, lg: 8 }}

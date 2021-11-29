@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Wrap, WrapItem, useBreakpointValue, chakra } from '@chakra-ui/react';
+import { Wrap, WrapItem, useBreakpointValue, chakra, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -11,7 +11,6 @@ const ProjectsContent = () => {
   const useCarousel = useBreakpointValue({ base: false, lg: true });
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -34,7 +33,7 @@ const ProjectsContent = () => {
 
   const ChakraCarousel = chakra(Carousel);
   return (
-    <SectionContainer background="#DAD7CD" sectionTitle="Projects">
+    <SectionContainer background={useColorModeValue('#DAD7CD', '#505050')} sectionTitle="Projects">
       {useCarousel ? (
         <ChakraCarousel responsive={responsive} height={{ lg: '100%' }} p={10} showDots centerMode>
           {projects.map((project) => (
