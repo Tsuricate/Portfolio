@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tag, Box, Stack } from '@chakra-ui/react';
+import { Tag, Box, Stack, useColorModeValue } from '@chakra-ui/react';
 import SkillsList from './SkillsList';
 
 const SkillsGroup = ({ groupTitle, skills }) => (
@@ -11,7 +11,13 @@ const SkillsGroup = ({ groupTitle, skills }) => (
     spacing={{ xl: 20 }}
   >
     <Box textAlign="center" mt={{ xl: '-30px' }}>
-      <Tag fontSize="1.5xl" height="50px" variant="subtle" border="1px solid black">
+      <Tag
+        fontSize="1.5xl"
+        height="50px"
+        color={useColorModeValue('black', 'white')}
+        background={useColorModeValue('white', 'gray')}
+        border="1px solid black"
+      >
         {groupTitle}
       </Tag>
     </Box>

@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, Image, Stack, Text, Wrap } from '@chakra-ui/react';
+import { Flex, Box, Heading, Image, Stack, Text, Wrap, useColorModeValue } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ProjectActionButtons from './ProjectActionButtons';
@@ -12,7 +12,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
       width={{ md: 'md' }}
       p={6}
       overflow="hidden"
-      bg="white"
+      bg={useColorModeValue('white', '#3B5C68')}
       boxShadow="2xl"
       borderRadius="15px"
     >
@@ -27,10 +27,10 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
         justifyContent={{ base: 'space-between', md: 'none' }}
       >
         <Stack height={{ md: 40 }}>
-          <Heading color="gray.700" fontSize="2xl">
+          <Heading color={useColorModeValue('gray.700', 'white.700')} fontSize="2xl">
             {name}
           </Heading>
-          <Text color="gray.500">{description}</Text>
+          <Text color={useColorModeValue('gray.500')}>{description}</Text>
         </Stack>
 
         <Stack height={{ md: 48 }}>

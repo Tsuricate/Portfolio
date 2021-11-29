@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Stack, Link } from '@chakra-ui/react';
+import { Button, Stack, Link, useColorModeValue } from '@chakra-ui/react';
 import { SiGithub } from 'react-icons/si';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 
@@ -10,6 +10,8 @@ const ProjectActionButtons = ({ url }) => (
       as={Link}
       href={url}
       isFullWidth
+      variant="outline"
+      colorScheme="black"
       fontSize="sm"
       borderRadius="10px"
       leftIcon={<SiGithub />}
@@ -22,8 +24,8 @@ const ProjectActionButtons = ({ url }) => (
       isFullWidth
       fontSize="sm"
       borderRadius="10px"
-      bg="blue.400"
-      color="white"
+      bg={useColorModeValue('#397E9D', 'white')}
+      color={useColorModeValue('white', 'black')}
       rightIcon={<ArrowForwardIcon />}
     >
       Visit website

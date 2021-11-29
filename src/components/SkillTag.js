@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tag, TagLeftIcon, TagLabel } from '@chakra-ui/react';
+import { Tag, TagLeftIcon, TagLabel, useColorModeValue } from '@chakra-ui/react';
 import * as SIcons from 'react-icons/si';
 
 const SkillTag = ({ name, icon }) => {
@@ -8,7 +8,13 @@ const SkillTag = ({ name, icon }) => {
   const TheIcon = icons[icon];
 
   return (
-    <Tag variant="subtle" size="lg" background="blackAlpha.300" p={2} borderRadius="5px">
+    <Tag
+      size="lg"
+      background={useColorModeValue('blackAlpha.300', 'whiteAlpha.800')}
+      color="black"
+      p={2}
+      borderRadius="5px"
+    >
       {icon && <TagLeftIcon as={TheIcon} />}
       <TagLabel>{name}</TagLabel>
     </Tag>

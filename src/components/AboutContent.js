@@ -37,10 +37,12 @@ const AboutContent = () => (
       </SimpleGrid>
 
       <Flex flexDirection="column" justifyContent={{ xl: 'center' }}>
-        <Tabs variant="soft-rounded" colorScheme="purple" isFitted>
+        <Tabs variant="soft-rounded" isFitted>
           <TabList>
             {aboutSections.map((section) => (
-              <Tab key={section.title}>{section.title}</Tab>
+              <Tab key={section.title} color={useColorModeValue('black', 'white')}>
+                {section.title}
+              </Tab>
             ))}
           </TabList>
 
