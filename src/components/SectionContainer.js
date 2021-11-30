@@ -17,7 +17,7 @@ const SectionContainer = ({ children, background, sectionTitle, fullWidth }) => 
     >
       <Flex direction="column" height={{ xl: '100%' }}>
         {sectionTitle && (
-          <Heading textAlign="center" pb={5}>
+          <Heading variant="page-title" textAlign="center" pb={5}>
             {sectionTitle}
           </Heading>
         )}

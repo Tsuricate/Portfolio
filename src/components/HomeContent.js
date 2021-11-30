@@ -25,14 +25,15 @@ const HomeContent = () => (
       <GridItem colSpan={1} mt={{ base: 10 }}>
         <Wrap direction="column" spacing={{ base: 5, md: 10, xl: 12 }}>
           <Box>
-            <Text fontSize={{ base: '3xl' }}>Hi, I&apos;m Zoé.</Text>
-            <Heading fontSize={{ base: '4xl' }}>Front-end web developper</Heading>
+            <Heading fontSize="3.5em">Hi, I&apos;m Zoé</Heading>
+            <Heading fontSize="2.2em" fontWeight="extrabold">
+              Front-end web developper
+            </Heading>
           </Box>
-          <Text>
+          <Text fontSize="1.1em">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dolor lacus, dapibus quis
             pharetra at, molestie nec lorem. Nullam sit amet maximus lectus, in auctor risus.
-            Praesent id velit ac ligula auctor accumsan. Phasellus consectetur enim dignissim
-            lobortis ultrices.
+            Praesent id velit ac ligula auctor accumsan.
           </Text>
           <ActionButtons />
         </Wrap>
