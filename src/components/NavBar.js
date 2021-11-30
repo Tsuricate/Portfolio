@@ -25,14 +25,13 @@ const NavBar = () => {
     <>
       <Box
         bg={useColorModeValue('#C4C1BB', '#2c2c2c')}
-        boxShadow="0px 4px 22px -2px rgba(10,10,8,0.43)
-        "
-        px={{ base: 4, lg: 8 }}
+        boxShadow="0px 4px 22px -2px rgba(10,10,8,0.43)"
+        px={{ base: 7, lg: 16 }}
         position="fixed"
         width="100%"
         zIndex={1}
       >
-        <Flex h={16} alignItems="center" justifyContent="space-between" height="60px">
+        <Flex alignItems="center" justifyContent="space-between" height="60px">
           <IconButton
             size="md"
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -41,7 +40,13 @@ const NavBar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack alignItems="center">
-            <HStack as="nav" spacing={8} display={{ base: 'none', md: 'flex' }}>
+            <HStack
+              as="nav"
+              spacing={{ md: 8, xl: 16 }}
+              display={{ base: 'none', md: 'flex' }}
+              textTransform="uppercase"
+              fontWeight="medium"
+            >
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
@@ -56,8 +61,8 @@ const NavBar = () => {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as="nav" spacing={4}>
+          <Box pb={4} display={{ md: 'none' }} textTransform="uppercase">
+            <Stack as="nav" spacing={5}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
