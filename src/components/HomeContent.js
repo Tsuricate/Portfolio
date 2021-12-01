@@ -6,6 +6,7 @@ import {
   Text,
   Wrap,
   Box,
+  Stack,
   Image,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -20,17 +21,17 @@ const HomeContent = () => (
       justifyItems="center"
       alignItems="center"
       gap={{ base: 9, md: 16, lg: 9 }}
-      pt={{ lg: 16 }}
+      pt={{ lg: 28, xl: 10 }}
     >
       <GridItem colSpan={1} mt={{ base: 10 }}>
         <Wrap direction="column" spacing={{ base: 5, md: 10, xl: 12 }}>
-          <Box>
-            <Heading fontSize="3.5em">Hi, I&apos;m Zoé</Heading>
-            <Heading fontSize="2.2em" fontWeight="extrabold">
+          <Stack>
+            <Heading fontSize={{ base: '1.7em', md: '2.1em', xl: '3em' }}>Hi, I&apos;m Zoé</Heading>
+            <Heading fontSize={{ base: '1.2em', md: '1.5em', xl: '2em' }}>
               Front-end web developper
             </Heading>
-          </Box>
-          <Text fontSize="1.1em">
+          </Stack>
+          <Text fontSize={{ xl: '1.1em' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dolor lacus, dapibus quis
             pharetra at, molestie nec lorem. Nullam sit amet maximus lectus, in auctor risus.
             Praesent id velit ac ligula auctor accumsan.
