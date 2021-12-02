@@ -8,7 +8,7 @@ const SectionContainer = ({ children, background, sectionTitle, fullWidth }) => 
     <Box
       height={{ xl: '100%' }}
       minHeight={{ base: '100%' }}
-      py={{ base: '50px', xl: '80px' }}
+      py="80px"
       px={paddingX}
       className="SectionContainer"
       id={sectionTitle}
@@ -17,9 +17,11 @@ const SectionContainer = ({ children, background, sectionTitle, fullWidth }) => 
     >
       <Flex direction="column" height={{ xl: '100%' }}>
         {sectionTitle && (
-          <Heading variant="page-title" textAlign="center" pb={{ base: '5', lg: '8' }}>
-            {sectionTitle}
-          </Heading>
+          <Flex justifyContent="center">
+            <Heading variant="pageTitle" textAlign="center" pb={{ base: '5', lg: '8' }}>
+              {sectionTitle}
+            </Heading>
+          </Flex>
         )}
         <Box flexGrow={{ xl: '1' }}>{children}</Box>
       </Flex>
