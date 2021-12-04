@@ -20,16 +20,15 @@ const AboutContent = () => (
   <SectionContainer background={useColorModeValue('#DAD7CD', '#505050')} sectionTitle="About">
     <SimpleGrid
       columns={{ base: 1, xl: 2 }}
-      height={{ xl: '100%' }}
       gap={{ base: 5, md: 10, xl: 20 }}
+      height={{ xl: '100%' }}
       alignItems={{ xl: 'center' }}
     >
       <SimpleGrid
         columns={3}
-        direction="row"
         justifyItems="center"
-        spacing={{ base: 1, md: 3 }}
-        p={{ xl: 10 }}
+        spacing={{ base: 1.5, md: 3 }}
+        p={{ lg: 5, xl: 8 }}
       >
         <Image src="/images/pano1.webp" width="100%" height="auto" objectFit="cover" />
         <Image src="/images/pano2.webp" width="100%" height="auto" objectFit="cover" />
@@ -37,11 +36,20 @@ const AboutContent = () => (
       </SimpleGrid>
 
       <Flex flexDirection="column" justifyContent={{ xl: 'center' }}>
-        <Tabs variant="soft-rounded" isFitted>
-          <TabList>
+        <Tabs variant="soft-rounded" isFitted isLazy lazyBehavior="unmount">
+          <TabList pb={{ md: 5 }}>
             {aboutSections.map((section) => (
-              <Tab key={section.title} color={useColorModeValue('black', 'white')}>
-                {section.title}
+              <Tab
+                key={section.title}
+                _selected={{
+                  bg: '#95928aa6',
+                  boxShadow: 'none',
+                }}
+                color={useColorModeValue('black', 'white')}
+              >
+                <Text fontWeight="semibold" fontSize={{ base: 'sm', md: 'lg' }}>
+                  {section.title}
+                </Text>
               </Tab>
             ))}
           </TabList>
