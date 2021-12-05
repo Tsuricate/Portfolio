@@ -15,6 +15,7 @@ import {
 import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
 import aboutSections from '../data/aboutSections';
+import customScrollbar from '../utils/customScrollbar';
 
 const AboutContent = () => (
   <SectionContainer background={useColorModeValue('#DAD7CD', '#505050')} sectionTitle="About">
@@ -35,26 +36,27 @@ const AboutContent = () => (
         <Image src="/images/pano3.webp" width="100%" height="auto" objectFit="cover" />
       </SimpleGrid>
 
-      <Flex flexDirection="column" justifyContent={{ xl: 'center' }}>
-        <Tabs variant="soft-rounded" isFitted isLazy lazyBehavior="unmount">
+      <Flex flexDirection="column" justifyContent={{ xl: 'center' }} height={{ xl: '100%' }}>
+        <Tabs variant="solid-rounded" isFitted isLazy lazyBehavior="unmount">
           <TabList pb={{ md: 5 }}>
             {aboutSections.map((section) => (
               <Tab
                 key={section.title}
                 _selected={{
-                  bg: '#95928aa6',
-                  boxShadow: 'none',
+                  bg: useColorModeValue('#bfd0dd', '#95928aa6'),
+                  boxShadow: 'rgba(0, 0, 0, 0.18) 0px 2px 4px;',
+                  color: useColorModeValue('#264653', '#F5F7FA'),
                 }}
-                color={useColorModeValue('black', 'white')}
+                color={useColorModeValue('#6B7676', '#C1C7C7')}
+                sx={{ WebkitTapHighlightColor: 'transparent' }}
+                borderRadius="10px"
               >
-                <Text fontWeight="semibold" fontSize={{ base: 'sm', md: 'lg' }}>
-                  {section.title}
-                </Text>
+                <Text fontSize={{ base: 'sm', md: 'lg' }}>{section.title}</Text>
               </Tab>
             ))}
           </TabList>
 
-          <TabPanels>
+          <TabPanels overflowY="auto" height={{ xl: '450px' }} sx={customScrollbar}>
             {aboutSections.map((section) => (
               <TabPanel key={section.title}>
                 <Stack direction="column" spacing={{ base: 5 }}>
