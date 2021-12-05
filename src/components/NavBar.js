@@ -29,7 +29,7 @@ const NavBar = () => {
         px={{ base: 7, lg: 16 }}
         position="fixed"
         width="100%"
-        zIndex={1}
+        zIndex={2}
       >
         <Flex alignItems="center" justifyContent="space-between" height="60px">
           <IconButton
