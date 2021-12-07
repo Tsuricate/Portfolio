@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Grid, GridItem, useColorModeValue } from '@chakra-ui/react';
+import { GiPineTree, GiSprout } from 'react-icons/gi';
 import SectionContainer from './SectionContainer';
 import SkillsGroup from './SkillsGroup';
 import skills from '../data/skills';
@@ -19,9 +20,8 @@ const SkillsContent = () => (
         width="100%"
         height="200px"
         overflowX="hidden"
-        bgImage="/images/skillsImage.webp"
-        backgroundPosition="center"
-        backgroundSize="cover"
+        bg="url(/images/skillsImage.webp) center"
+        filter="grayscale(50%) brightness(0.9)"
       />
 
       <Grid
@@ -31,10 +31,18 @@ const SkillsContent = () => (
         px={{ xl: 20 }}
       >
         <GridItem colSpan={{ base: 1, md: 3, xl: 4 }}>
-          <SkillsGroup groupTitle="I have already work with" skills={firstGroup} />
+          <SkillsGroup
+            groupTitle="I have already work with"
+            skills={firstGroup}
+            icon={GiPineTree}
+          />
         </GridItem>
         <GridItem colSpan={{ base: 1, md: 3, xl: 1 }}>
-          <SkillsGroup groupTitle="But I’m also interested in ..." skills={secondGroup} />
+          <SkillsGroup
+            groupTitle="But I’m also interested in "
+            skills={secondGroup}
+            icon={GiSprout}
+          />
         </GridItem>
       </Grid>
     </Box>
