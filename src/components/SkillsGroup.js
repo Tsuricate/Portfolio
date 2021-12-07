@@ -1,24 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tag, Box, Stack, useColorModeValue } from '@chakra-ui/react';
+import {
+  Tag,
+  Box,
+  Stack,
+  Heading,
+  useColorModeValue,
+  TagLabel,
+  TagLeftIcon,
+} from '@chakra-ui/react';
 import SkillsList from './SkillsList';
 
-const SkillsGroup = ({ groupTitle, skills }) => (
-  <Stack
-    pt={{ base: 5, xl: 0 }}
-    height={{ xl: '100%' }}
-    alignItems={{ xl: 'center' }}
-    spacing={{ xl: 20 }}
-  >
-    <Box textAlign="center" mt={{ xl: '-30px' }}>
+const SkillsGroup = ({ groupTitle, skills, icon }) => (
+  <Stack pt={{ base: 5, xl: 0 }} height={{ xl: '100%' }} alignItems={{ xl: 'center' }}>
+    <Box
+      textAlign="center"
+      mt={{ xl: '-25px' }}
+      mb={{ base: 5 }}
+      filter="drop-shadow(rgba(0, 0, 0, 0.16) 0px 3px 6px) drop-shadow( rgba(0, 0, 0, 0.23) 0px 3px 6px)"
+    >
       <Tag
-        fontSize="1.5xl"
+        p={{ base: 8 }}
         height="50px"
-        color={useColorModeValue('black', 'white')}
-        background={useColorModeValue('white', 'gray')}
-        border="1px solid black"
+        alignItems="center"
+        fontSize="1.5xl"
+        fontWeight="bold"
+        background={useColorModeValue('#bfd0dd', '#95B2B0')}
+        color={useColorModeValue('#2B4141', '#1D2A2A')}
+        clipPath="polygon(5% 0, 95% 0, 100% 25%, 100% 75%, 95% 100%, 5% 100%, 0 75%, 0 25%)"
       >
-        {groupTitle}
+        <TagLeftIcon boxSize="25px" as={icon} color={useColorModeValue('#2B4141', '#293D3D')} />
+        <TagLabel>
+          <Heading as="h3" fontSize={16} letterSpacing="1px">
+            {groupTitle}
+          </Heading>
+        </TagLabel>
       </Tag>
     </Box>
 
@@ -43,4 +59,5 @@ SkillsGroup.propTypes = {
       PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.array.isRequired])
     ).isRequired
   ).isRequired,
+  icon: PropTypes.func.isRequired,
 };
