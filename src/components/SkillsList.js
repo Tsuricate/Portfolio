@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Stack, Heading, Wrap, Text } from '@chakra-ui/react';
+import { Stack, Heading, Wrap, Box, Text, Link } from '@chakra-ui/react';
 import SkillTag from './SkillTag';
 
-const SkillsList = ({ category, skillList, text }) => (
+const SkillsList = ({ category, skillList }) => (
   <Stack
     minHeight={{ xl: 'sm' }}
     p={{ base: 3, md: 4, xl: 5 }}
@@ -26,9 +26,7 @@ const SkillsList = ({ category, skillList, text }) => (
       borderRadius: ' 1% 1% 2% 4% / 2% 6% 5% 4%',
     }}
   >
-    {text ? (
-      <Text>{text}</Text>
-    ) : (
+    {skillList ? (
       <>
         <Heading as="h4" textAlign="center" fontSize="lg">
           {category}
@@ -39,6 +37,23 @@ const SkillsList = ({ category, skillList, text }) => (
           ))}
         </Wrap>
       </>
+    ) : (
+      <Box p={5} zIndex={1}>
+        <Text>
+          &#8220;Maîtrise de la qualité en projet Web&#8220; délivré par{' '}
+          <Link color="teal.500" href="https://www.opquast.com/">
+            Opquast
+          </Link>{' '}
+          - Niveau experte (930 points)
+        </Text>
+        <Text>
+          -
+          <Link color="teal.500" href="https://directory.opquast.com/fr/certifies/">
+            Voir cette certification{' '}
+          </Link>
+          (clé X1UBZA)
+        </Text>
+      </Box>
     )}
   </Stack>
 );
@@ -48,7 +63,6 @@ export default SkillsList;
 SkillsList.defaultProps = {
   category: null,
   skillList: null,
-  text: null,
 };
 
 SkillsList.propTypes = {
@@ -59,5 +73,4 @@ SkillsList.propTypes = {
       icon: PropTypes.string,
     }).isRequired
   ),
-  text: PropTypes.string,
 };

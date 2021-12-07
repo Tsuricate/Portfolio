@@ -126,7 +126,6 @@ const skills = [
   },
   {
     title: 'Opquast',
-    text: '"Maîtrise de la qualité en projet Web" délivré par Opquast - niveau experte (930 points) Voir cette certification (clé X1UBZA)',
   },
 ];
 
