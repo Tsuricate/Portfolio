@@ -43,7 +43,12 @@ const SkillsGroup = ({ groupTitle, skills, icon }) => (
       justifyContent="center"
     >
       {skills.map((skill) => (
-        <SkillsList key={skill.title} category={skill.title} skillList={skill.list} />
+        <SkillsList
+          key={skill.title}
+          category={skill.title}
+          skillList={skill.list}
+          text={skill.text}
+        />
       ))}
     </Stack>
   </Stack>

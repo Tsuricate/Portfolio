@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Stack, Heading, Wrap } from '@chakra-ui/react';
+import { Stack, Heading, Wrap, Text } from '@chakra-ui/react';
 import SkillTag from './SkillTag';
 
-const SkillsList = ({ category, skillList }) => (
+const SkillsList = ({ category, skillList, text }) => (
   <Stack
     minHeight={{ xl: 'sm' }}
     p={{ base: 3, md: 4, xl: 5 }}
@@ -26,25 +26,38 @@ const SkillsList = ({ category, skillList }) => (
       borderRadius: ' 1% 1% 2% 4% / 2% 6% 5% 4%',
     }}
   >
-    <Heading as="h4" textAlign="center" fontSize="lg">
-      {category}
-    </Heading>
-    <Wrap spacing={5} justify="center">
-      {skillList.map((skill) => (
-        <SkillTag key={skill.name} name={skill.name} icon={skill.icon} />
-      ))}
-    </Wrap>
+    {text ? (
+      <Text>{text}</Text>
+    ) : (
+      <>
+        <Heading as="h4" textAlign="center" fontSize="lg">
+          {category}
+        </Heading>
+        <Wrap spacing={5} justify="center">
+          {skillList.map((skill) => (
+            <SkillTag key={skill.name} name={skill.name} icon={skill.icon} />
+          ))}
+        </Wrap>
+      </>
+    )}
   </Stack>
 );
 
 export default SkillsList;
 
+SkillsList.defaultProps = {
+  category: null,
+  skillList: null,
+  text: null,
+};
+
 SkillsList.propTypes = {
-  category: PropTypes.string.isRequired,
+  category: PropTypes.string,
   skillList: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      icon: PropTypes.string.isRequired,
+      icon: PropTypes.string,
     }).isRequired
-  ).isRequired,
+  ),
+  text: PropTypes.string,
 };

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Grid, GridItem, useColorModeValue } from '@chakra-ui/react';
-import { GiPineTree, GiSprout } from 'react-icons/gi';
+import { GiPineTree, GiSprout, GiRibbonMedal } from 'react-icons/gi';
 import SectionContainer from './SectionContainer';
 import SkillsGroup from './SkillsGroup';
 import skills from '../data/skills';
 
 const firstGroup = skills.slice(0, 3);
-const secondGroup = skills.slice(-1);
+const secondGroup = skills.slice(3, 4);
+const certifications = skills.slice(-1);
 
 const SkillsContent = () => (
   <SectionContainer
@@ -26,23 +27,25 @@ const SkillsContent = () => (
 
       <Grid
         templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
-        gap={{ md: 3, xl: 10 }}
         flexGrow={{ xl: '1' }}
-        px={{ xl: 20 }}
+        px={{ xl: 5 }}
       >
-        <GridItem colSpan={{ base: 1, lg: 3, xl: 4 }}>
+        <GridItem colSpan={{ base: 1, lg: 3, xl: 3 }}>
           <SkillsGroup
             groupTitle="I have already work with"
             skills={firstGroup}
             icon={GiPineTree}
           />
         </GridItem>
-        <GridItem colSpan={{ base: 1, lg: 3, xl: 1 }}>
+        <GridItem colSpan={{ base: 1, lg: 2, xl: 1 }}>
           <SkillsGroup
             groupTitle="But I’m also interested in "
             skills={secondGroup}
             icon={GiSprout}
           />
+        </GridItem>
+        <GridItem colSpan={{ base: 1, lg: 1, xl: 1 }}>
+          <SkillsGroup groupTitle="Certifications" skills={certifications} icon={GiRibbonMedal} />
         </GridItem>
       </Grid>
     </Box>
