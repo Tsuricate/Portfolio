@@ -10,13 +10,14 @@ const SkillTag = ({ name, icon }) => {
   return (
     <Tag
       size="lg"
-      background={useColorModeValue('blackAlpha.300', 'whiteAlpha.800')}
-      color="black"
-      p={2}
+      background={useColorModeValue('#e8e8e4', 'whiteAlpha.800')}
+      boxShadow="rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;"
+      color="#020202"
+      p={4}
       borderRadius="5px"
     >
-      {icon && <TagLeftIcon as={TheIcon} />}
-      <TagLabel>{name}</TagLabel>
+      {icon && <TagLeftIcon as={TheIcon} boxSize={5} />}
+      <TagLabel fontWeight="semibold">{name}</TagLabel>
     </Tag>
   );
 };

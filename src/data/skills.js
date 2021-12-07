@@ -1,6 +1,6 @@
 const skills = [
   {
-    title: 'Front-End',
+    title: '⦁ Front-end ⦁',
     list: [
       {
         name: 'HTML5',
@@ -37,7 +37,7 @@ const skills = [
     ],
   },
   {
-    title: 'Back-end',
+    title: '⦁ Back-end ⦁',
     list: [
       {
         name: 'PHP',
@@ -62,7 +62,7 @@ const skills = [
     ],
   },
   {
-    title: 'Tools',
+    title: '⦁ Tools ⦁',
     list: [
       {
         name: 'Git',
@@ -96,7 +96,7 @@ const skills = [
     ],
   },
   {
-    title: 'Other',
+    title: '',
     list: [
       {
         name: 'Next',

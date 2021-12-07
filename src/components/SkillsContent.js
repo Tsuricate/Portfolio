@@ -25,19 +25,19 @@ const SkillsContent = () => (
       />
 
       <Grid
-        templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
+        templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
         gap={{ md: 3, xl: 10 }}
         flexGrow={{ xl: '1' }}
         px={{ xl: 20 }}
       >
-        <GridItem colSpan={{ base: 1, md: 3, xl: 4 }}>
+        <GridItem colSpan={{ base: 1, lg: 3, xl: 4 }}>
           <SkillsGroup
             groupTitle="I have already work with"
             skills={firstGroup}
             icon={GiPineTree}
           />
         </GridItem>
-        <GridItem colSpan={{ base: 1, md: 3, xl: 1 }}>
+        <GridItem colSpan={{ base: 1, lg: 3, xl: 1 }}>
           <SkillsGroup
             groupTitle="But I’m also interested in "
             skills={secondGroup}

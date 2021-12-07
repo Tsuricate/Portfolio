@@ -6,7 +6,6 @@ import SkillTag from './SkillTag';
 
 const SkillsList = ({ category, skillList }) => (
   <Stack
-    width={{ base: 'full', xl: 'auto' }}
     minHeight={{ xl: 'sm' }}
     p={{ base: 3, md: 4, xl: 5 }}
     bg="#D9D9D3"
