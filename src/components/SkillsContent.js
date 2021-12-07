@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, GridItem, useColorModeValue } from '@chakra-ui/react';
+import { Flex, Box, Grid, GridItem, useColorModeValue } from '@chakra-ui/react';
 import { GiPineTree, GiSprout, GiRibbonMedal } from 'react-icons/gi';
 import SectionContainer from './SectionContainer';
 import SkillsGroup from './SkillsGroup';
@@ -15,7 +15,7 @@ const SkillsContent = () => (
     sectionTitle="Skills"
     fullWidth
   >
-    <Box height={{ xl: '100%' }}>
+    <Flex height={{ xl: '100%' }} flexDirection="column">
       {/* Banner */}
       <Box
         width="100%"
@@ -35,6 +35,7 @@ const SkillsContent = () => (
             groupTitle="I have already work with"
             skills={firstGroup}
             icon={GiPineTree}
+            cardHeight="sm"
           />
         </GridItem>
         <GridItem colSpan={{ base: 1, lg: 2, xl: 1 }}>
@@ -48,7 +49,7 @@ const SkillsContent = () => (
           <SkillsGroup groupTitle="Certifications" skills={certifications} icon={GiRibbonMedal} />
         </GridItem>
       </Grid>
-    </Box>
+    </Flex>
   </SectionContainer>
 );
 

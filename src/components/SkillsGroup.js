@@ -11,12 +11,12 @@ import {
 } from '@chakra-ui/react';
 import SkillsList from './SkillsList';
 
-const SkillsGroup = ({ groupTitle, skills, icon }) => (
-  <Stack height={{ xl: '100%' }} alignItems={{ xl: 'center' }} m={{ base: 5 }}>
+const SkillsGroup = ({ groupTitle, skills, icon, cardHeight }) => (
+  <Stack height={{ xl: '100%' }} mx={5}>
     <Box
       textAlign="center"
-      mt={{ xl: '-55px' }}
-      filter="drop-shadow(rgba(0, 0, 0, 0.16) 0px 3px 6px) drop-shadow( rgba(0, 0, 0, 0.23) 0px 3px 6px)"
+      filter="drop-shadow(rgba(50, 50, 93, 0.25) 0px 2px 5px) drop-shadow(rgba(0, 0, 0, 0.3) 0px 1px 3px)"
+      mt={{ base: 8, xl: '-32px' }}
     >
       <Tag
         p={8}
@@ -43,13 +43,22 @@ const SkillsGroup = ({ groupTitle, skills, icon }) => (
       justifyContent="center"
     >
       {skills.map((skill) => (
-        <SkillsList key={skill.title} category={skill.title} skillList={skill.list} />
+        <SkillsList
+          key={skill.title}
+          category={skill.title}
+          skillList={skill.list}
+          cardHeight={cardHeight}
+        />
       ))}
     </Stack>
   </Stack>
 );
 
 export default SkillsGroup;
+
+SkillsGroup.defaultProps = {
+  cardHeight: undefined,
+};
 
 SkillsGroup.propTypes = {
   groupTitle: PropTypes.string.isRequired,
@@ -59,4 +68,5 @@ SkillsGroup.propTypes = {
     ).isRequired
   ).isRequired,
   icon: PropTypes.func.isRequired,
+  cardHeight: PropTypes.string,
 };
