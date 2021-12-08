@@ -15,7 +15,7 @@ const variantPageTitle = (props) => ({
     content: '""',
     position: 'absolute',
     zIndex: '-1',
-    bottom: { base: '50%', lg: '62%' },
+    bottom: { base: '45%', lg: '55%' },
     width: '110%',
     height: '20%',
     transform: 'skew(-20deg) translateX(-10%)',

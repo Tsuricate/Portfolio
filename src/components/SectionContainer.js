@@ -18,7 +18,7 @@ const SectionContainer = ({ children, background, sectionTitle, fullWidth }) => 
       <Flex direction="column" height={{ xl: '100%' }}>
         {sectionTitle && (
           <Flex justifyContent="center">
-            <Heading variant="pageTitle" textAlign="center" pb={{ base: '7', lg: '16' }}>
+            <Heading variant="pageTitle" textAlign="center" pb={{ base: '7', lg: '10' }}>
               {sectionTitle}
             </Heading>
           </Flex>
