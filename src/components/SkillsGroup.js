@@ -57,7 +57,7 @@ const SkillsGroup = ({ groupTitle, skills, icon, cardHeight }) => (
 export default SkillsGroup;
 
 SkillsGroup.defaultProps = {
-  cardHeight: undefined,
+  cardHeight: '2xs',
 };
 
 SkillsGroup.propTypes = {

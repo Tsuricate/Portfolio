@@ -1,8 +1,19 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Stack, Heading, Wrap, Box, Text, Link, useColorModeValue } from '@chakra-ui/react';
+import {
+  Flex,
+  Stack,
+  Heading,
+  Wrap,
+  WrapItem,
+  Box,
+  Text,
+  Link,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
+import customScrollbar from '../utils/customScrollbar';
 import SkillTag from './SkillTag';
 
 const SkillsList = ({ category, skillList, cardHeight }) => (
@@ -11,7 +22,6 @@ const SkillsList = ({ category, skillList, cardHeight }) => (
     width="100%"
     p={{ base: 5, xl: 3 }}
     bg={useColorModeValue('#D9D9D3', '#7d7b76ad ')}
-    spacing={5}
     border="2px solid #AAAA9D"
     borderRadius="2% 6% 5% 4% / 1% 1% 2% 4%"
     position="relative"
@@ -29,16 +39,24 @@ const SkillsList = ({ category, skillList, cardHeight }) => (
     }}
   >
     {skillList ? (
-      <>
-        <Heading as="h4" textAlign="center" fontSize="lg" py={{ xl: 2 }}>
+      <Flex
+        height={{ xl: '100%' }}
+        flexDirection="column"
+        overflowY={{ lg: 'auto' }}
+        zIndex="1"
+        sx={customScrollbar}
+      >
+        <Heading as="h4" textAlign="center" fontSize="lg" py="3">
           {category}
         </Heading>
-        <Wrap spacing={{ base: 3, lg: 2, xl: 4 }} justify="center">
+        <Wrap spacing={{ base: 3, lg: 2, xl: 4 }} justify="center" flexGrow="1" margin="2">
           {skillList.map((skill) => (
-            <SkillTag key={skill.name} name={skill.name} icon={skill.icon} />
+            <WrapItem key={skill.name}>
+              <SkillTag name={skill.name} icon={skill.icon} />
+            </WrapItem>
           ))}
         </Wrap>
-      </>
+      </Flex>
     ) : (
       <Box
         p={{ base: 2, xl: 8 }}
@@ -78,7 +96,6 @@ export default SkillsList;
 SkillsList.defaultProps = {
   category: null,
   skillList: null,
-  cardHeight: '2xs',
 };
 
 SkillsList.propTypes = {
@@ -89,5 +106,5 @@ SkillsList.propTypes = {
       icon: PropTypes.string,
     }).isRequired
   ),
-  cardHeight: PropTypes.string,
+  cardHeight: PropTypes.string.isRequired,
 };
