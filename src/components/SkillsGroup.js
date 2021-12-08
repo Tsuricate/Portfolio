@@ -22,8 +22,8 @@ const SkillsGroup = ({ groupTitle, skills, icon, cardHeight }) => (
         p={8}
         mb={5}
         height="50px"
-        background={useColorModeValue('#bfd0dd', '#95B2B0')}
-        color={useColorModeValue('#2B4141', '#1D2A2A')}
+        background={useColorModeValue('#bfd0dd', '#5A6D73')}
+        color={useColorModeValue('#2B4141', '#DEDEDE')}
         clipPath="polygon(5% 0, 95% 0, 100% 25%, 100% 75%, 95% 100%, 5% 100%, 0 75%, 0 25%)"
       >
         <TagLeftIcon boxSize="30px" as={icon} />

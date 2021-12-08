@@ -29,6 +29,7 @@ const SkillsContent = () => (
         templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
         flexGrow={{ xl: '1' }}
         px={{ xl: 5 }}
+        gap={{ lg: 1 }}
       >
         <GridItem colSpan={{ base: 1, lg: 3, xl: 3 }}>
           <SkillsGroup
