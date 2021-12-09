@@ -18,7 +18,7 @@ import SkillTag from './SkillTag';
 
 const SkillsList = ({ category, skillList, cardHeight }) => (
   <Stack
-    height={{ lg: cardHeight, xl: 'md' }}
+    height={{ lg: cardHeight, xl: 'sm' }}
     width="100%"
     p={{ base: 5, xl: 3 }}
     bg={useColorModeValue('#D9D9D3', '#7d7b76ad ')}
@@ -39,17 +39,18 @@ const SkillsList = ({ category, skillList, cardHeight }) => (
     }}
   >
     {skillList ? (
-      <Flex
-        height={{ xl: '100%' }}
-        flexDirection="column"
-        overflowY={{ lg: 'auto' }}
-        zIndex="1"
-        sx={customScrollbar}
-      >
-        <Heading as="h4" textAlign="center" fontSize="lg" py="3">
+      <Flex height={{ xl: '100%' }} flexDirection="column" zIndex="1" sx={customScrollbar}>
+        <Heading as="h4" textAlign="center" fontSize="lg" pb={4}>
           {category}
         </Heading>
-        <Wrap spacing={{ base: 3, lg: 2, xl: 4 }} justify="center" flexGrow="1" margin="2">
+        <Wrap
+          spacing={{ base: 3, lg: 2, xl: 4 }}
+          justify="center"
+          flexGrow="1"
+          overflowY={{ base: 'hidden', xl: 'auto' }}
+          overflowX="hidden"
+          sx={customScrollbar}
+        >
           {skillList.map((skill) => (
             <WrapItem key={skill.name}>
               <SkillTag name={skill.name} icon={skill.icon} />
