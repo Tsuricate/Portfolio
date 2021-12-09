@@ -9,13 +9,31 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
     <Flex
       direction="column"
       width={{ md: 'lg' }}
+      height={{ lg: 'xl' }}
       p={6}
       overflow="hidden"
-      bg={useColorModeValue('white', '#3B5C68')}
+      bg={useColorModeValue('#E8E8E4', '#3B5C68')}
       borderRadius="15px"
+      position={{ lg: 'relative' }}
     >
-      <Box mt={-6} mx={-6} mb={6} height={{ base: 48, md: 56 }} borderWidth="1px" overflow="hidden">
-        <Image fit="cover" src={image} alt="Image representing project" />
+      <Box
+        mt={-6}
+        mx={-6}
+        mb={6}
+        height={{ base: 48, md: 72, lg: '100%' }}
+        width={{ lg: '100%' }}
+        borderWidth="1px"
+        overflow={{ base: 'hidden', lg: 'visible' }}
+        position={{ lg: 'absolute' }}
+      >
+        <Image
+          src={image}
+          alt="Image representing project"
+          height={{ base: 48, md: 72, lg: '100%' }}
+          width="100%"
+          fit="cover"
+          align={{ base: '50% 50%', lg: 'unset' }}
+        />
       </Box>
 
       <Stack
@@ -23,6 +41,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
         flexGrow="1"
         spacing={{ base: 5, lg: 0 }}
         justifyContent={{ base: 'space-between', md: 'none' }}
+        zIndex={{ lg: 1 }}
       >
         <Stack height={{ lg: 40 }}>
           <Heading color={useColorModeValue('gray.700', 'white.700')} fontSize="2xl">
@@ -32,7 +51,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
         </Stack>
 
         <Stack height={{ lg: 56 }}>
-          <Text>Specs : </Text>
+          <Text>Technologies : </Text>
           <Wrap spacing={2}>
             {specs.map((spec) => (
               <SkillTag key={spec.name} name={spec.name} icon={spec.icon} />
