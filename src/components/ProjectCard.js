@@ -8,12 +8,10 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
   return (
     <Flex
       direction="column"
-      maxWidth="md"
-      width={{ md: 'md' }}
+      width={{ md: 'lg' }}
       p={6}
       overflow="hidden"
       bg={useColorModeValue('white', '#3B5C68')}
-      boxShadow="2xl"
       borderRadius="15px"
     >
       <Box mt={-6} mx={-6} mb={6} height={{ base: 48, md: 56 }} borderWidth="1px" overflow="hidden">
@@ -23,17 +21,17 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
       <Stack
         direction="column"
         flexGrow="1"
-        spacing={{ base: 5, md: 0 }}
+        spacing={{ base: 5, lg: 0 }}
         justifyContent={{ base: 'space-between', md: 'none' }}
       >
-        <Stack height={{ md: 40 }}>
+        <Stack height={{ lg: 40 }}>
           <Heading color={useColorModeValue('gray.700', 'white.700')} fontSize="2xl">
             {name}
           </Heading>
           <Text color={useColorModeValue('gray.500')}>{description}</Text>
         </Stack>
 
-        <Stack height={{ md: 48 }}>
+        <Stack height={{ lg: 56 }}>
           <Text>Specs : </Text>
           <Wrap spacing={2}>
             {specs.map((spec) => (
@@ -41,8 +39,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
             ))}
           </Wrap>
         </Stack>
-
-        <ProjectActionButtons url={url} />
+        <ProjectActionButtons url={url} py={{ lg: 10 }} />
       </Stack>
     </Flex>
   );

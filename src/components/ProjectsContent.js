@@ -14,28 +14,40 @@ const ProjectsContent = () => {
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
-    desktop: {
+    largeDesktop: {
       breakpoint: { max: 3000, min: 1985 },
       items: 3,
       slidesToSlide: 1,
     },
-    smallDesktop: {
-      breakpoint: { max: 1985, min: 1525 },
+    desktop: {
+      breakpoint: { max: 1985, min: 1700 },
       items: 2,
       slidesToSlide: 1,
     },
-    superSmallDesktop: {
-      breakpoint: { max: 1525, min: 992 },
+    smallDesktop: {
+      breakpoint: { max: 1700, min: 1200 },
       items: 1,
+      slidesToSlide: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1200, min: 992 },
+      items: 0.5,
       slidesToSlide: 1,
     },
   };
 
   const ChakraCarousel = chakra(Carousel);
+
   return (
     <SectionContainer background={useColorModeValue('#DAD7CD', '#505050')} sectionTitle="Projects">
       {useCarousel ? (
-        <ChakraCarousel responsive={responsive} height={{ lg: '100%' }} p={10} showDots centerMode>
+        <ChakraCarousel
+          responsive={responsive}
+          height={{ xl: '100%' }}
+          p={10}
+          showDots
+          centerMode={{ xl: true }}
+        >
           {projects.map((project) => (
             <ProjectCard
               key={project.title}
