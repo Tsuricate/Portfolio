@@ -12,15 +12,15 @@ const ProjectsContent = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 4,
     },
     largeDesktop: {
-      breakpoint: { max: 3000, min: 1985 },
+      breakpoint: { max: 3000, min: 2300 },
       items: 3,
       slidesToSlide: 1,
     },
     desktop: {
-      breakpoint: { max: 1985, min: 1700 },
+      breakpoint: { max: 2300, min: 1700 },
       items: 2,
       slidesToSlide: 1,
     },
@@ -60,7 +60,7 @@ const ProjectsContent = () => {
           ))}
         </ChakraCarousel>
       ) : (
-        <Wrap spacing={5} justify="center" align="center" p={3}>
+        <Wrap spacing={5} justify="center" p={3}>
           {projects.map((project) => (
             <WrapItem key={project.title}>
               <ProjectCard
