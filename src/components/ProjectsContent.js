@@ -43,8 +43,8 @@ const ProjectsContent = () => {
       {useCarousel ? (
         <ChakraCarousel
           responsive={responsive}
-          height={{ xl: '100%' }}
-          p={10}
+          height={{ lg: '100%' }}
+          pb={{ lg: 10 }}
           showDots
           centerMode={{ xl: true }}
         >
