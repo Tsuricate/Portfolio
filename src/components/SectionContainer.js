@@ -7,18 +7,17 @@ const SectionContainer = ({ children, background, sectionTitle, fullWidth }) => 
   return (
     <Box
       height={{ xl: '100%' }}
-      minHeight={{ base: '100%' }}
       py={{ base: '40px', lg: '80px' }}
       px={paddingX}
       className="SectionContainer"
       id={sectionTitle}
       background={background}
-      backgroundSize="24%"
+      backgroundSize={{ base: '20%', lg: '24%' }}
     >
       <Flex direction="column" height={{ xl: '100%' }}>
         {sectionTitle && (
           <Flex justifyContent="center">
-            <Heading variant="pageTitle" textAlign="center" pb={{ base: '7', lg: '10' }}>
+            <Heading variant="pageTitle" textAlign="center" pb={10}>
               {sectionTitle}
             </Heading>
           </Flex>

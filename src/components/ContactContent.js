@@ -1,4 +1,4 @@
-import { Button, Link, Stack, Text, Container, useColorModeValue } from '@chakra-ui/react';
+import { Button, Link, Stack, Text, Container, Heading, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import { FaLinkedin, FaRegEnvelope, FaUserCircle } from 'react-icons/fa';
 import SectionContainer from './SectionContainer';
@@ -11,22 +11,19 @@ const ContactContent = () => {
       background={`url("/images/leftHand.webp") no-repeat bottom left, url("/images/rightHand.webp") no-repeat top right, ${responsiveBgColor}`}
       sectionTitle="Contact"
     >
-      <Container
-        maxW={{ base: 'container.2xs', lg: 'container.md', xl: 'container.lg' }}
-        align="center"
-        height={{ xl: '100%' }}
-      >
+      <Container maxW={{ lg: 'container.md', xl: 'container.lg' }} height={{ xl: '100%' }}>
         <Stack
           p={{ md: 8 }}
-          direction="column"
           spacing={{ base: 8, md: 14, xl: 20 }}
+          align="center"
           height={{ xl: '100%' }}
           justify={{ xl: 'center' }}
-          align="center"
         >
-          <Stack direction="column" spacing={{ base: 4, md: 8, xl: 12 }} px={{ md: 5 }}>
-            <Text fontSize={{ base: '2xl', md: '3xl', xl: '4xl' }}>Let&apos;s get in touch !</Text>
-            <Text fontSize={{ base: 'lg', md: '2xl', lg: 'lg', xl: '2xl' }}>
+          <Stack spacing={{ base: 5, md: 8, xl: 12 }} textAlign="center">
+            <Heading fontSize={{ base: '2xl', md: '3xl', xl: '4xl' }} fontWeight="bold">
+              Let&apos;s get in touch !
+            </Heading>
+            <Text fontSize={{ md: 'lg', xl: '2xl' }}>
               Suspendisse vitae elit ante. Duis et efficitur velit, nec finibus massa. Phasellus
               facilisis facilisis ipsum non maximus. Morbi sit amet ultricies eros. Etiam volutpat
               nulla vel iaculis iaculis. Proin urna enim, hendrerit at rhoncus vitae, gravida
@@ -35,13 +32,18 @@ const ContactContent = () => {
               lobortis.
             </Text>
           </Stack>
-          <Container>
-            <Stack direction={{ base: 'column', xl: 'row' }} spacing={{ base: 4, xl: 10 }}>
+          <Container pb={{ base: 5, md: 14, lg: 20 }}>
+            <Stack
+              direction={{ base: 'column', lg: 'row' }}
+              spacing={{ base: 4, xl: 10 }}
+              justify="center"
+            >
               <Button
                 as={Link}
                 href="mailto:zoeamat.pro@gmail.com"
                 leftIcon={<FaRegEnvelope />}
-                isFullWidth={{ xl: true }}
+                variant="variantContrast"
+                px={10}
               >
                 Email
               </Button>
@@ -49,7 +51,8 @@ const ContactContent = () => {
                 as={Link}
                 href="https://www.linkedin.com/in/zo%C3%A9amat/"
                 leftIcon={<FaLinkedin />}
-                isFullWidth={{ xl: true }}
+                variant="outline"
+                colorScheme="blue"
               >
                 Linkedin
               </Button>
@@ -57,7 +60,8 @@ const ContactContent = () => {
                 as={Link}
                 href="https://welovedevs.com/app/developer/zoe-developpeuse-react"
                 leftIcon={<FaUserCircle />}
-                isFullWidth={{ xl: true }}
+                variant="outline"
+                colorScheme="purple"
               >
                 WeLoveDevs
               </Button>

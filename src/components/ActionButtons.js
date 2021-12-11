@@ -22,9 +22,7 @@ const ActionButtons = () => (
       as={HashLink}
       to="#Contact"
       smooth
-      color="white"
-      bg="black"
-      variant="solid"
+      variant="variantContrast"
       p={6}
       isFullWidth={{ md: true }}
     >
