@@ -10,10 +10,11 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
       direction="column"
       width={{ md: 'lg' }}
       height={{ lg: '2xl' }}
-      p={{ base: 6 }}
+      p={6}
       overflow="hidden"
       bg={useColorModeValue('#E8E8E4', '#3B5C68')}
       borderRadius="15px"
+      boxShadow="rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px"
     >
       <Box
         mt={-6}
@@ -35,14 +36,18 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
 
       <Stack direction="column" flexGrow="1" spacing={{ base: 5, lg: 0 }}>
         <Stack height={{ lg: 36 }}>
-          <Heading color={useColorModeValue('gray.700', 'white.700')} fontSize="2xl">
+          <Heading
+            color={useColorModeValue('blue.700', '#EBF8FF')}
+            fontSize="2xl"
+            letterSpacing={5}
+          >
             {name}
           </Heading>
-          <Text color={useColorModeValue('gray.500')}>{description}</Text>
+          <Text>{description}</Text>
         </Stack>
 
         <Stack height={{ lg: 56, xl: 48 }}>
-          <Text>Technologies : </Text>
+          <Text textDecoration="underline">Technologies</Text>
           <Wrap spacing={2}>
             {specs.map((spec) => (
               <SkillTag key={spec.name} name={spec.name} icon={spec.icon} />

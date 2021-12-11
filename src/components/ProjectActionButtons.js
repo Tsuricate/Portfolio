@@ -27,6 +27,9 @@ const ProjectActionButtons = ({ url }) => (
       bg={useColorModeValue('#397E9D', 'white')}
       color={useColorModeValue('white', 'black')}
       rightIcon={<ArrowForwardIcon />}
+      _hover={{
+        bg: '#738C94',
+      }}
     >
       Visit website
     </Button>
