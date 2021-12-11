@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: 'TaleMe',
-    image: 'https://cdn.pixabay.com/photo/2020/05/15/13/31/illumination-5173540_960_720.jpg',
+    image: '/images/TaleMe.webp',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
     url: '/',
@@ -43,7 +43,7 @@ export const projects = [
   },
   {
     title: 'YAAC',
-    image: 'https://cdn.pixabay.com/photo/2020/05/19/13/32/cartoon-5190837_960_720.jpg',
+    image: '/images/YAAC.webp',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
     url: '/',
@@ -75,7 +75,7 @@ export const projects = [
   },
   {
     title: 'Portfolio',
-    image: 'https://cdn.pixabay.com/photo/2020/01/29/09/36/connection-4801974_960_720.jpg',
+    image: '/images/Portfolio.webp',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
     url: '/',
@@ -96,7 +96,7 @@ export const projects = [
   },
   {
     title: 'Know Your Birds',
-    image: 'https://cdn.pixabay.com/photo/2020/01/29/09/36/connection-4801974_960_720.jpg',
+    image: '/images/KYB.webp',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
     url: '/',
