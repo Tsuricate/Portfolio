@@ -24,16 +24,33 @@ const AboutContent = () => (
       gap={{ base: 5, md: 10, xl: 20 }}
       height={{ xl: '100%' }}
       alignItems={{ xl: 'center' }}
+      justifyItems={{ lg: 'center' }}
     >
-      <SimpleGrid
-        columns={3}
-        justifyItems="center"
-        spacing={{ base: 1.5, md: 3 }}
-        p={{ lg: 5, xl: 8 }}
-      >
-        <Image src="/images/pano1.webp" width="100%" height="auto" objectFit="cover" />
-        <Image src="/images/pano2.webp" width="100%" height="auto" objectFit="cover" />
-        <Image src="/images/pano3.webp" width="100%" height="auto" objectFit="cover" />
+      <SimpleGrid columns={3} spacing={{ base: 1.5, md: 3 }} width={{ lg: '75%', xl: '100%' }}>
+        <Image
+          src="/images/pano1.webp"
+          alt="Image reprensenting woman in Japan part 1"
+          width="100%"
+          height="auto"
+          objectFit="cover"
+          loading="lazy"
+        />
+        <Image
+          src="/images/pano2.webp"
+          alt="Image reprensenting woman in Japan part 2"
+          width="100%"
+          height="auto"
+          objectFit="cover"
+          loading="lazy"
+        />
+        <Image
+          src="/images/pano3.webp"
+          alt="Image reprensenting woman in Japan part 3"
+          width="100%"
+          height="auto"
+          objectFit="cover"
+          loading="lazy"
+        />
       </SimpleGrid>
 
       <Flex flexDirection="column" justifyContent={{ xl: 'center' }} height={{ xl: '100%' }}>

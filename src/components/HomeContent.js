@@ -42,7 +42,11 @@ const HomeContent = () => (
 
       <GridItem colSpan={{ base: 1, xl: 2 }}>
         <Box>
-          <Image src="/images/homeImage.webp" />
+          <Image
+            src="/images/homeImage.webp"
+            alt="Picture representing web developper"
+            loading="lazy"
+          />
         </Box>
       </GridItem>
     </Grid>

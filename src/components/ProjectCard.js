@@ -16,17 +16,10 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
       borderRadius="15px"
       boxShadow="rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px"
     >
-      <Box
-        mt={-6}
-        mx={-6}
-        mb={6}
-        borderWidth="1px"
-        overflow={{ base: 'hidden' }}
-        height={{ base: 48, md: 72 }}
-      >
+      <Box mt={-6} mx={-6} mb={6} overflow={{ base: 'hidden' }} height={{ base: 48, md: 72 }}>
         <Image
           src={image}
-          alt="Image representing project"
+          alt="Illustration representing project"
           height="100%"
           width="100%"
           fit="cover"
