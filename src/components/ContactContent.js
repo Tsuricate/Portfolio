@@ -1,6 +1,7 @@
 import { Button, Link, Stack, Text, Container, Heading, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import { FaLinkedin, FaRegEnvelope, FaUserCircle } from 'react-icons/fa';
+import BackToTopButton from './BackToTopButton';
 import SectionContainer from './SectionContainer';
 
 const ContactContent = () => {
@@ -11,7 +12,7 @@ const ContactContent = () => {
       background={`url("/images/leftHand.webp") no-repeat bottom left, url("/images/rightHand.webp") no-repeat top right, ${responsiveBgColor}`}
       sectionTitle="Contact"
     >
-      <Container maxW={{ lg: 'container.md', xl: 'container.lg' }} height={{ xl: '100%' }}>
+      <Container maxW={{ lg: 'container.md', xl: 'container.lg' }} height={{ xl: '90%' }}>
         <Stack
           p={{ md: 8 }}
           spacing={{ base: 8, md: 14, xl: 20 }}
@@ -32,7 +33,7 @@ const ContactContent = () => {
               lobortis.
             </Text>
           </Stack>
-          <Container pb={{ base: 5, md: 14, lg: 20 }}>
+          <Container pb={{ base: 5, md: 0 }}>
             <Stack
               direction={{ base: 'column', lg: 'row' }}
               spacing={{ base: 4, xl: 10 }}
@@ -69,6 +70,7 @@ const ContactContent = () => {
           </Container>
         </Stack>
       </Container>
+      <BackToTopButton />
     </SectionContainer>
   );
 };

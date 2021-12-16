@@ -40,7 +40,7 @@ const SkillsList = ({ category, skillList, cardHeight }) => (
   >
     {skillList ? (
       <Flex height={{ xl: '100%' }} flexDirection="column" zIndex="1" sx={customScrollbar}>
-        <Heading as="h4" textAlign="center" fontSize="lg" pb={4}>
+        <Heading as="h4" textAlign="center" fontSize="lg" pb={{ base: 4, xl: 10 }}>
           {category}
         </Heading>
         <Wrap
