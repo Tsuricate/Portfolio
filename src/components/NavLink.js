@@ -1,14 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { HashLink } from 'react-router-hash-link';
+import { chakra, useColorModeValue } from '@chakra-ui/react';
 
 const NavLink = ({ children, onClose }) => {
+  const ChakraHashLink = chakra(HashLink);
   const anchor = children === 'Home' ? '#' : `#${children}`;
 
   return (
-    <HashLink smooth to={anchor} px={2} py={1} rounded="md" onClick={onClose}>
+    <ChakraHashLink
+      smooth
+      to={anchor}
+      _hover={{
+        borderBottom: `1px solid ${useColorModeValue(
+          'rgba(0, 0, 0, 0.64)',
+          'rgba(255, 255, 255, 0.64)'
+        )}`,
+      }}
+      onClick={onClose}
+    >
       {children}
-    </HashLink>
+    </ChakraHashLink>
   );
 };
 
