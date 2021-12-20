@@ -5,6 +5,7 @@ import AboutContent from './components/AboutContent';
 import SkillsContent from './components/SkillsContent';
 import ProjectsContent from './components/ProjectsContent';
 import ContactContent from './components/ContactContent';
+import Footer from './components/Footer';
 
 const App = () => (
   <>
@@ -14,6 +15,7 @@ const App = () => (
     <SkillsContent />
     <ProjectsContent />
     <ContactContent />
+    <Footer />
   </>
 );
 
