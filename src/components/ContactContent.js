@@ -1,11 +1,13 @@
 import { Button, Link, Stack, Text, Container, Heading, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import { FaLinkedin, FaRegEnvelope, FaUserCircle } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import BackToTopButton from './BackToTopButton';
 import SectionContainer from './SectionContainer';
 
 const ContactContent = () => {
   const responsiveBgColor = useColorModeValue('#E8E8E4', '#403f3f');
+  const { t } = useTranslation();
 
   return (
     <SectionContainer
@@ -24,14 +26,7 @@ const ContactContent = () => {
             <Heading fontSize={{ base: '2xl', md: '3xl', xl: '4xl' }} fontWeight="bold">
               Let&apos;s get in touch !
             </Heading>
-            <Text fontSize={{ md: 'lg', xl: '2xl' }}>
-              Suspendisse vitae elit ante. Duis et efficitur velit, nec finibus massa. Phasellus
-              facilisis facilisis ipsum non maximus. Morbi sit amet ultricies eros. Etiam volutpat
-              nulla vel iaculis iaculis. Proin urna enim, hendrerit at rhoncus vitae, gravida
-              elementum risus. Curabitur nec euismod lectus. Curabitur aliquet eleifend sagittis.
-              Donec sit amet porttitor tortor, sit amet luctus nunc. Nam ac enim id orci lacinia
-              lobortis.
-            </Text>
+            <Text fontSize={{ md: 'lg', xl: '2xl' }}>{t('contact.text')}</Text>
           </Stack>
           <Container pb={{ base: 5, md: 0 }}>
             <Stack
