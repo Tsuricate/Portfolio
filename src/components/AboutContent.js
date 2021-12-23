@@ -12,12 +12,15 @@ import {
   Image,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
 import aboutSections from '../data/aboutSections';
 import customScrollbar from '../utils/customScrollbar';
 
 const AboutContent = () => {
+  const { t } = useTranslation();
+
   const aboutImages = ['/images/pano1.webp', '/images/pano2.webp', '/images/pano3.webp'];
   return (
     <SectionContainer background={useColorModeValue('#DAD7CD', '#505050')} sectionTitle="About">
@@ -48,7 +51,7 @@ const AboutContent = () => {
             <TabList pb={{ md: 5 }}>
               {aboutSections.map((section) => (
                 <Tab
-                  key={section.title}
+                  key={t(section.title)}
                   _selected={{
                     bg: useColorModeValue('#bfd0dd', '#95928aa6'),
                     boxShadow: 'rgba(0, 0, 0, 0.18) 0px 2px 4px;',
@@ -58,18 +61,18 @@ const AboutContent = () => {
                   sx={{ WebkitTapHighlightColor: 'transparent' }}
                   borderRadius="10px"
                 >
-                  <Text fontSize={{ base: 'sm', md: 'lg' }}>{section.title}</Text>
+                  <Text fontSize={{ base: 'sm', md: 'lg' }}>{t(section.title)}</Text>
                 </Tab>
               ))}
             </TabList>
 
             <TabPanels overflowY="auto" height={{ xl: '450px' }} sx={customScrollbar}>
               {aboutSections.map((section) => (
-                <TabPanel key={section.title}>
+                <TabPanel key={t(section.title)}>
                   <Stack direction="column" spacing={{ base: 5 }}>
                     {section.texts.map((text) => (
-                      <Text key={text} lineHeight={1.7}>
-                        {text}
+                      <Text key={t(text)} lineHeight={1.7}>
+                        {t(text)}
                       </Text>
                     ))}
                   </Stack>

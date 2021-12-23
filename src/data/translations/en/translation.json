@@ -1,0 +1,35 @@
+{
+  "home": {
+    "salutation": "Hi, I’m Zoé",
+    "role": "Front-end web developer",
+    "presentation": "I like to create modern, intuitive and responsive web applications. I mainly work with React and Redux but I'm very enthusiastic about expanding my technical stack."
+  },
+  "about": {
+    "background": {
+      "title": "Background",
+      "studies": "🎓 After obtaining my Bachelor's degree in literature, I went to university to strengthen my skills in english, then I spent two years learning chinese.",
+      "working": "💼 Then, for my first professional experience, I worked two years in a retail store of a major french brand.",
+      "training": "💻 I discovered that web development was a thing in 2018. Out of curiosity, I took some free courses on OpenClassrooms and just like that, I made my very first websites. I was excited - and still am - to find out all the things that I could create with a bit of logic and creativity. I registered at O'Clock school for an intensive six month remote training course. During the first three months, I learned the basics of web development (HTML, CSS, JavaScript, PHP, MySQL). \n Then, as I felt really attracted by front-end and user interfaces, I chose React for my specialization course. The final month, I had the great opportunity to create a project from scratch and work with five other developers. From project management to final product development, following the scrum framework (sprints, daily meetings, retrospective), this project allowed me to apply the various skills I learned from the previous months.",
+      "diploma":  "I’ve been certified by Opquast in 'Mastering Web Quality Assurance' and obtained a 'Web and Mobile Web Developer' state diploma in may 2021."
+    },
+    "hobbies": {
+      "title": "Hobbies",
+      "traveling": "🗺️ Traveling around the world : For the past ten years, in self-organization, I’ve had the chance to explore and discover 21 countries. I am quite simply unable to tell which one was the most incredible ; it has always been a series of unique experiences and encounters, but Japan and Greece definitely have a special place in my heart.",
+      "hiking":  "⛰️ Hiking : As a child already, I spent every summer hiking in the Pyrenees with my family, and I never lost that interest while growing up. From Austrian Tyrol and Bulgarian Pirin National Park to impressive Norwegian fjords, every country I visited gave me opportunities to nurture this passion.",
+      "gaming": "🎮 Video & board games : Either independant or big licenses games, RPG, TPS, strategy, open-world, … I’m curious enough to try every game that tickles my curiosity. All time favorites - at this time - : Hollow Knight, Outer Wilds, Stardew Valley. As for board games, I am more inclined to play cooperative games but I’m always up for a friendly competition.",
+      "reading": "📚 Reading : Voracious reader, I especially enjoy reading fantasy and science-fiction novels."
+    }
+  },
+  "skills": {
+    "known": "I have already worked with",
+    "unknown": "But I’m also interested in",
+    "certification": "Certifications",
+    "tools": "Tools",
+    "opquast": {
+      "label": "Mastering Web Quality Assurance delivered by",
+      "level": "Expert level (930 points)",
+      "checking": "See certification",
+      "key": "(key X1UBZA)"
+    }
+  }
+}

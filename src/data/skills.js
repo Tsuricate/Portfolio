@@ -62,7 +62,7 @@ const skills = [
     ],
   },
   {
-    title: '⦁ Tools ⦁',
+    title: 'skills.tools',
     list: [
       {
         name: 'Git',
