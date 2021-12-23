@@ -57,5 +57,11 @@
   },
   "contact": {
     "text": "J’habite actuellement à Lille, France, mais je suis ouverte aux opportunités internationales. Je m’intéresse à tout ce qui touche au front-end et aspire à travailler sur des projets engagés socialement. N’hésitez pas à me contacter, je vous répondrai aussi rapidement que possible !"
+  },
+  "buttons": {
+    "backToTop": "Retour en haut",
+    "website": "Voir le site",
+    "resume": "Télécharger mon CV",
+    "contact": "Me contacter"
   }
 }

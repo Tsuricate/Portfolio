@@ -49,5 +49,11 @@
   },
   "contact": {
     "text": "I’m currently living in Lille, France but I’m open to international opportunities. I’m interested in the entire frontend spectrum and in working on socially engaged projects with positive people. Whether you have a question or just want to say hi, I’ll get back to you as soon as I can !"
+  },
+  "buttons": {
+    "backToTop": "Back to top",
+    "website": "See website",
+    "resume": "Download my resume",
+    "contact": "Contact me"
   }
 }
