@@ -16,7 +16,13 @@ import { useTranslation } from 'react-i18next';
 import NavLink from './NavLink';
 import LanguageToggle from './LanguageToggle';
 
-const Links = ['navbar.home', 'navbar.about', 'navbar.skills', 'navbar.projects', 'navbar.contact'];
+const Links = [
+  'sectionTitle.home',
+  'sectionTitle.about',
+  'sectionTitle.skills',
+  'sectionTitle.projects',
+  'Contact',
+];
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -72,8 +78,8 @@ const NavBar = () => {
           <Box py={4} display={{ md: 'none' }} textTransform="uppercase">
             <Stack as="nav" spacing={5}>
               {Links.map((link) => (
-                <NavLink key={link} onClose={onClose}>
-                  {link}
+                <NavLink key={t(link)} onClose={onClose}>
+                  {t(link)}
                 </NavLink>
               ))}
             </Stack>

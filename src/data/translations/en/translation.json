@@ -1,10 +1,9 @@
 {
-  "navbar": {
+  "sectionTitle": {
     "home": "Home",
     "about": "About",
     "skills": "Skills",
-    "projects": "Projects",
-    "contact": "Contact"
+    "projects": "Projects"
   },
   "home": {
     "salutation": "Hi, I’m Zoé",

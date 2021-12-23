@@ -41,7 +41,10 @@ const ProjectsContent = () => {
   const { t } = useTranslation();
 
   return (
-    <SectionContainer background={useColorModeValue('#DAD7CD', '#505050')} sectionTitle="Projects">
+    <SectionContainer
+      background={useColorModeValue('#DAD7CD', '#505050')}
+      sectionTitle={t('sectionTitle.projects')}
+    >
       {useCarousel ? (
         <ChakraCarousel
           responsive={responsive}

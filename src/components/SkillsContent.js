@@ -15,7 +15,7 @@ const SkillsContent = () => {
   return (
     <SectionContainer
       background={useColorModeValue('#E8E8E4', '#403f3f')}
-      sectionTitle="Skills"
+      sectionTitle={t('sectionTitle.skills')}
       fullWidth
     >
       <Flex height={{ xl: '100%' }} flexDirection="column">

@@ -23,7 +23,10 @@ const AboutContent = () => {
 
   const aboutImages = ['/images/pano1.webp', '/images/pano2.webp', '/images/pano3.webp'];
   return (
-    <SectionContainer background={useColorModeValue('#DAD7CD', '#505050')} sectionTitle="About">
+    <SectionContainer
+      background={useColorModeValue('#DAD7CD', '#505050')}
+      sectionTitle={t('sectionTitle.about')}
+    >
       <SimpleGrid
         columns={{ base: 1, xl: 2 }}
         gap={{ base: 5, md: 10, xl: 20 }}
