@@ -1,10 +1,12 @@
 import { Flex, Box, Heading, Image, Stack, Text, Wrap, useColorModeValue } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ProjectActionButtons from './ProjectActionButtons';
 import SkillTag from './SkillTag';
 
 const ProjectCard = ({ image, name, description, url, specs }) => {
+  const { t } = useTranslation();
   return (
     <Flex
       direction="column"
@@ -40,7 +42,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
         </Stack>
 
         <Stack height={{ lg: 56, xl: 48 }}>
-          <Text textDecoration="underline">Technologies</Text>
+          <Text textDecoration="underline">{t('projects.stack')}</Text>
           <Wrap spacing={2}>
             {specs.map((spec) => (
               <SkillTag key={spec.name} name={spec.name} icon={spec.icon} />

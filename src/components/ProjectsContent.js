@@ -3,6 +3,7 @@ import { Wrap, WrapItem, useBreakpointValue, chakra, useColorModeValue } from '@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { useTranslation } from 'react-i18next';
 import { projects } from '../data/projects';
 import ProjectCard from './ProjectCard';
 import SectionContainer from './SectionContainer';
@@ -37,6 +38,7 @@ const ProjectsContent = () => {
   };
 
   const ChakraCarousel = chakra(Carousel);
+  const { t } = useTranslation();
 
   return (
     <SectionContainer background={useColorModeValue('#DAD7CD', '#505050')} sectionTitle="Projects">
@@ -53,7 +55,7 @@ const ProjectsContent = () => {
               key={project.title}
               image={project.image}
               name={project.title}
-              description={project.description}
+              description={t(project.description)}
               url={project.url}
               specs={project.skills}
             />

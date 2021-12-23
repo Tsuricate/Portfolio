@@ -31,5 +31,28 @@
       "checking": "Voir cette certification",
       "key": "(clé X1UBZA)"
     }
+  },
+  "projects": {
+    "stack": "Technologies",
+    "taleMe": {
+      "image": "/images/TaleMe.webp",
+      "description": "Projet de fin d'étude. TaleMe est une application inspirée des “Livres dont vous êtes le Héros” qui permet de vivre, d’écrire et de partager des histoires interactives avec d’autres utilisateurs. Réalisée en un mois, en suivant la méthodologie Scrum dans une équipe de 5 personnes.",
+      "skills": ""
+    },
+    "yaac": {
+      "image": "/images/YAAC.webp",
+      "description": "Application web permettant la création d'un avatar unique, personnalisable, et son téléchargement. Projet réalisé en collaboration avec une dessinatrice Lilloise.",
+      "skills": ""
+    },
+    "portfolio": {
+      "image": "/images/Portfolio.webp",
+      "description": "Portfolio regroupant les différents projets sur lesquels j'ai eu l'opportunité de travailler.",
+      "skills": ""
+    },
+    "kyb": {
+      "image": "/images/KYB.webp",
+      "description": "En construction",
+      "skills": ""
+    }
   }
 }

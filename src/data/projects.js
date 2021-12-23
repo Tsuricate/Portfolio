@@ -2,8 +2,7 @@ export const projects = [
   {
     title: 'TaleMe',
     image: '/images/TaleMe.webp',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
+    description: 'projects.taleMe.description',
     url: '/',
     skills: [
       {
@@ -44,8 +43,7 @@ export const projects = [
   {
     title: 'YAAC',
     image: '/images/YAAC.webp',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
+    description: 'projects.yaac.description',
     url: '/',
     skills: [
       {
@@ -76,8 +74,7 @@ export const projects = [
   {
     title: 'Portfolio',
     image: '/images/Portfolio.webp',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
+    description: 'projects.portfolio.description',
     url: '/',
     skills: [
       {
@@ -97,8 +94,7 @@ export const projects = [
   {
     title: 'Know Your Birds',
     image: '/images/KYB.webp',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis ac dui ut porta. Nunc a efficitur eros. Phasellus et efficitur libero. Nulla arcu odio, accumsan sed aliquet eget, lobortis ut eros.',
+    description: 'projects.kyb.description',
     url: '/',
     skills: [
       {

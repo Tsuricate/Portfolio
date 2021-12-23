@@ -31,5 +31,20 @@
       "checking": "See certification",
       "key": "(key X1UBZA)"
     }
+  },
+  "projects": {
+    "stack": "Stack",
+    "taleMe": {
+      "description": "Final month school project. Using the series 'The book where you're the hero' as a source of inspiration, TaleMe allows you to read, create and share interactive stories with other users. App created in a month, following Scrum methodology, in a team of 5 developers."
+    },
+    "yaac": {
+      "description": "Web application that allows you to create a unique, personalized avatar and to download it. Project in tandem with a designer from Lille."
+    },
+    "portfolio": {
+      "description": "Portfolio of websites and web applications I have had the opportunity to work on."
+    },
+    "kyb": {
+      "description": "In construction"
+    }
   }
 }
