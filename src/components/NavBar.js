@@ -12,14 +12,16 @@ import {
 } from '@chakra-ui/react';
 
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { useTranslation } from 'react-i18next';
 import NavLink from './NavLink';
 import LanguageToggle from './LanguageToggle';
 
-const Links = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
+const Links = ['navbar.home', 'navbar.about', 'navbar.skills', 'navbar.projects', 'navbar.contact'];
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -49,7 +51,7 @@ const NavBar = () => {
               letterSpacing="1.2px"
             >
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={t(link)}>{t(link)}</NavLink>
               ))}
             </HStack>
           </HStack>

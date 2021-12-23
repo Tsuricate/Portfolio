@@ -1,4 +1,11 @@
 {
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
   "home": {
     "salutation": "Hi, I’m Zoé",
     "role": "Front-end web developer",
