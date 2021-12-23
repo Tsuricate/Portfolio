@@ -1,6 +1,6 @@
 const skills = [
   {
-    title: '⦁ Front-end ⦁',
+    title: 'skills.frontEnd',
     list: [
       {
         name: 'HTML5',
@@ -37,7 +37,7 @@ const skills = [
     ],
   },
   {
-    title: '⦁ Back-end ⦁',
+    title: 'skills.backEnd',
     list: [
       {
         name: 'PHP',

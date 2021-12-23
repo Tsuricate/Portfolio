@@ -21,7 +21,7 @@ const Links = [
   'sectionTitle.about',
   'sectionTitle.skills',
   'sectionTitle.projects',
-  'Contact',
+  'sectionTitle.contact',
 ];
 
 const NavBar = () => {

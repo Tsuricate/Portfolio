@@ -12,7 +12,7 @@ const ContactContent = () => {
   return (
     <SectionContainer
       background={`url("/images/leftHand.webp") no-repeat bottom left, url("/images/rightHand.webp") no-repeat top right, ${responsiveBgColor}`}
-      sectionTitle="Contact"
+      sectionTitle={t('sectionTitle.contact')}
     >
       <Container maxW={{ lg: 'container.md', xl: 'container.lg' }} height={{ xl: '90%' }}>
         <Stack
@@ -24,7 +24,7 @@ const ContactContent = () => {
         >
           <Stack spacing={{ base: 5, md: 8, xl: 12 }} textAlign="center">
             <Heading fontSize={{ base: '2xl', md: '3xl', xl: '4xl' }} fontWeight="bold">
-              Let&apos;s get in touch !
+              {t('contact.subtitle')}
             </Heading>
             <Text fontSize={{ md: 'lg', xl: '2xl' }}>{t('contact.text')}</Text>
           </Stack>

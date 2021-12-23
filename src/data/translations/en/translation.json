@@ -3,7 +3,8 @@
     "home": "Home",
     "about": "About",
     "skills": "Skills",
-    "projects": "Projects"
+    "projects": "Projects",
+    "contact": "Contact"
   },
   "home": {
     "salutation": "Hi, I’m Zoé",
@@ -30,9 +31,11 @@
     "known": "I have already worked with",
     "unknown": "But I’m also interested in",
     "certification": "Certifications",
+    "frontEnd": "Front-end",
+    "backEnd": "Back-end",
     "tools": "Tools",
     "opquast": {
-      "label": "Mastering Web Quality Assurance delivered by",
+      "label": "“Mastering Web Quality Assurance” delivered by",
       "level": "Expert level (930 points)",
       "checking": "See certification",
       "key": "(key X1UBZA)"
@@ -54,6 +57,7 @@
     }
   },
   "contact": {
+    "subtitle": "Let's get in touch !",
     "text": "I’m currently living in Lille, France but I’m open to international opportunities. I’m interested in the entire frontend spectrum and in working on socially engaged projects with positive people. Whether you have a question or just want to say hi, I’ll get back to you as soon as I can !"
   },
   "buttons": {

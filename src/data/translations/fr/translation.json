@@ -32,7 +32,7 @@
     "certification": "Certifications",
     "tools": "Outils",
     "opquast": {
-      "label": "Maîtrise de la qualité en projet Web délivré par",
+      "label": "“Maîtrise de la qualité en projet Web” délivré par",
       "level": "Niveau experte (930 points)",
       "checking": "Voir cette certification",
       "key": "(clé X1UBZA)"
@@ -62,10 +62,11 @@
     }
   },
   "contact": {
+    "subtitle": "Discutons !",
     "text": "J’habite actuellement à Lille, France, mais je suis ouverte aux opportunités internationales. Je m’intéresse à tout ce qui touche au front-end et aspire à travailler sur des projets engagés socialement. N’hésitez pas à me contacter, je vous répondrai aussi rapidement que possible !"
   },
   "buttons": {
-    "backToTop": "Retour en haut",
+    "backToTop": "Revenir à l'accueil",
     "website": "Voir le site",
     "resume": "Télécharger mon CV",
     "contact": "Me contacter"
