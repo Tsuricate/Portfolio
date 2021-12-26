@@ -15,15 +15,15 @@
       "title": "Parcours",
       "studies": "🎓 Après avoir obtenu mon bac littéraire, j’ai poursuivi mes études à l’université, où j’ai renforcé mes connaissances en anglais avant de me tourner vers l’apprentissage du chinois.",
       "working": "💼 J’ai ensuite fait mes premiers pas dans le monde professionnel en travaillant deux ans pour une grande enseigne commerciale française, en contact avec la clientèle.",
-      "training": "💻 C’est en 2018 que j’ai découvert le développement web en suivant, par curiosité, quelques cours sur OpenClassrooms qui m’ont permis de réaliser mes premiers sites web. J’étais - et le suis toujours - enthousiaste de voir ce que je pouvais créer avec un peu de logique et un peu de créativité. J’ai concrétisé cette reconversion grâce à une formation intensive de six mois, en téléprésentiel, à l'école O’Clock.  Après trois mois à apprendre les bases du développement (HTML, CSS, Javascript, PHP, MySQL), mon appétence pour le front-end et les interfaces utilisateurs m’a poussée à choisir la spécialisation React. Cette formation s’est achevée par la création d’un projet, à partir de zéro, dans une équipe de cinq développeurs. De la conception jusqu’au développement du produit final, en suivant la méthodologie Scrum (sprints, daily meetings, rétrospective), j’ai pu ainsi mettre à profit toutes les compétences acquises précédemment.",
-      "diploma": "J’ai ensuite passé ma certification <Maîtrise de la qualité en projet web> délivrée par Opquast, puis obtenu en mai 2021 mon Titre Professionnel <Développeuse Web et Web Mobile>."
+      "training": "💻 C’est en 2018 que j’ai découvert le développement web en suivant, par curiosité, quelques cours sur OpenClassrooms qui m’ont permis de réaliser mes premiers sites web. J’étais - et le suis toujours - enthousiaste de voir ce que je pouvais créer avec un peu de logique et un peu de créativité.<br /> J’ai concrétisé cette reconversion grâce à une formation intensive de six mois, en téléprésentiel, à l'école <a href='https://oclock.io/'>O’clock</a>.  Après trois mois à apprendre les bases du développement (HTML, CSS, Javascript, PHP, MySQL), mon appétence pour le front-end et les interfaces utilisateurs m’a poussée à choisir la spécialisation React.<br /> Cette formation s’est achevée par la création d’un projet, à partir de zéro, dans une équipe de cinq développeurs. De la conception jusqu’au développement du produit final, en suivant la méthodologie Scrum (sprints, daily meetings, rétrospective), j’ai pu ainsi mettre à profit toutes les compétences acquises précédemment.",
+      "diploma": "J’ai ensuite passé ma certification “Maîtrise de la qualité en projet web” délivrée par Opquast, puis obtenu en mai 2021 mon Titre Professionnel “Développeuse Web et Web Mobile”."
     },
     "hobbies": {
       "title": "Centres d'intérêt",
-      "traveling": "🗺️ Voyager: Ces dix dernières années, en auto-organisation, j’ai eu la chance de visiter et de découvrir 21 pays. Je serai bien incapable de dire lequel a été le plus mémorable car ils ont tous été, sans exception, une suite de rencontres et d’expériences uniques, mais le Japon et la Grèce m’ont tout particulièrement touchée.",
-      "hiking":  "⛰️ Randonnées : Enfant, j’allais chaque été randonner dans les Pyrénées en famille et j’ai poursuivi cette activité en grandissant. Du Tyrol autrichien au Parc national du Pirin en Bulgarie, en passant par les fjords impressionnants de Norvège, chaque pays que j’ai visité m’a permis d'entretenir cette passion.",
-      "gaming": "🎮 Jeux vidéos & de société : Jeux indépendants ou grosses licences, RPG, TPS, stratégie, open-world… J’ai la curiosité de jouer à tout ce qui attire mon attention. Mes préférés - à ce jour - restent : Hollow Knight, Outer Wilds, Stardew Valley. Quant aux jeux de société, si j’ai une préférence pour les jeux coopératifs, je suis toujours partante une compétition entre amis.",
-      "reading": "📚 Lecture: Grande lectrice, je suis plus particulièrement adepte de science-fiction et de fantasy."
+      "traveling": "🗺️ <b>Voyager</b> : Ces dix dernières années, en auto-organisation, j’ai eu la chance de visiter et de découvrir 21 pays. Je serai bien incapable de dire lequel a été le plus mémorable car ils ont tous été, sans exception, une suite de rencontres et d’expériences uniques, mais le Japon et la Grèce m’ont tout particulièrement touchée.",
+      "hiking":  "⛰️ <b>Randonnées</b> : Enfant, j’allais chaque été randonner dans les Pyrénées en famille et j’ai poursuivi cette activité en grandissant. Du Tyrol autrichien au Parc national du Pirin en Bulgarie, en passant par les fjords impressionnants de Norvège, chaque pays que j’ai visité m’a permis d'entretenir cette passion.",
+      "gaming": "🎮 <b>Jeux vidéos & de société</b> : Jeux indépendants ou grosses licences, RPG, TPS, stratégie, open-world… J’ai la curiosité de jouer à tout ce qui attire mon attention. Mes préférés - à ce jour - restent : Hollow Knight, Outer Wilds, Stardew Valley. Quant aux jeux de société, si j’ai une préférence pour les jeux coopératifs, je suis toujours partante une compétition entre amis.",
+      "reading": "📚 <b>Lecture</b> : Grande lectrice, je suis plus particulièrement adepte de science-fiction et de fantasy."
     }
   },
   "skills": {
@@ -64,6 +64,11 @@
   "contact": {
     "subtitle": "Discutons !",
     "text": "J’habite actuellement à Lille, France, mais je suis ouverte aux opportunités internationales. Je m’intéresse à tout ce qui touche au front-end et aspire à travailler sur des projets engagés socialement. N’hésitez pas à me contacter, je vous répondrai aussi rapidement que possible !"
+  },
+  "footer": {
+    "by": "par",
+    "and": "et",
+    "on": "via"
   },
   "buttons": {
     "backToTop": "Revenir à l'accueil",
