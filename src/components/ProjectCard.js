@@ -2,6 +2,7 @@ import { Flex, Box, Heading, Image, Stack, Text, Wrap, useColorModeValue } from 
 import PropTypes from 'prop-types';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import customScrollbar from '../utils/customScrollbar';
 import ProjectActionButtons from './ProjectActionButtons';
 import SkillTag from './SkillTag';
 
@@ -30,7 +31,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
       </Box>
 
       <Stack direction="column" flexGrow="1" spacing={{ base: 5, lg: 0 }}>
-        <Stack height={{ lg: 36 }}>
+        <Stack height={{ lg: 36 }} overflowY={{ lg: 'auto' }} sx={customScrollbar}>
           <Heading
             color={useColorModeValue('blue.700', '#EBF8FF')}
             fontSize="2xl"
@@ -38,11 +39,13 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
           >
             {name}
           </Heading>
-          <Text>{description}</Text>
+          <Text pr={{ lg: 2 }}>{description}</Text>
         </Stack>
 
         <Stack height={{ lg: 56, xl: 48 }}>
-          <Text textDecoration="underline">{t('projects.stack')}</Text>
+          <Text mt={{ lg: 2 }} textDecoration="underline">
+            {t('projects.stack')}
+          </Text>
           <Wrap spacing={2}>
             {specs.map((spec) => (
               <SkillTag key={spec.name} name={spec.name} icon={spec.icon} />
