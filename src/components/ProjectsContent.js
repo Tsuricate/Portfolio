@@ -72,7 +72,7 @@ const ProjectsContent = () => {
                 key={project.title}
                 image={project.image}
                 name={project.title}
-                description={project.description}
+                description={t(project.description)}
                 url={project.url}
                 specs={project.skills}
               />
