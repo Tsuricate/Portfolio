@@ -28,7 +28,7 @@ const SkillsGroup = ({ groupTitle, skills, icon, cardHeight }) => (
       >
         <TagLeftIcon boxSize="30px" as={icon} />
         <TagLabel>
-          <Heading as="h3" fontSize={16} letterSpacing="1px">
+          <Heading as="h3" fontSize={16} letterSpacing="1px" whiteSpace="pre-wrap">
             {groupTitle}
           </Heading>
         </TagLabel>
