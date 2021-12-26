@@ -74,9 +74,18 @@ const AboutContent = () => {
                 <TabPanel key={t(section.title)}>
                   <Stack direction="column" spacing={{ base: 5 }}>
                     {section.texts.map((text) => (
-                      <Text key={t(text)} lineHeight={1.7}>
-                        {t(text)}
-                      </Text>
+                      <Text
+                        key={t(text)}
+                        lineHeight={1.7}
+                        dangerouslySetInnerHTML={{
+                          __html: t(text),
+                        }}
+                        sx={{
+                          '& a': {
+                            textDecoration: 'underline',
+                          },
+                        }}
+                      />
                     ))}
                   </Stack>
                 </TabPanel>
