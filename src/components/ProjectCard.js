@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import customScrollbar from '../utils/customScrollbar';
 import ProjectActionButtons from './ProjectActionButtons';
 import SkillTag from './SkillTag';
+import { fade } from '../utils/animations';
 
 const ProjectCard = ({ image, name, description, url, specs }) => {
   const { t } = useTranslation();
@@ -18,6 +19,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
       bg={useColorModeValue('#E8E8E4', '#3B5C68')}
       borderRadius="15px"
       boxShadow="rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px"
+      {...fade}
     >
       <Box mt={-6} mx={-6} mb={6} overflow={{ base: 'hidden' }} height={{ base: 48, md: 72 }}>
         <Image

@@ -4,6 +4,7 @@ import { FaLinkedin, FaRegEnvelope, FaUserCircle } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import BackToTopButton from './BackToTopButton';
 import SectionContainer from './SectionContainer';
+import { fadeDown, fadeRight, fadeUp } from '../utils/animations';
 
 const ContactContent = () => {
   const responsiveBgColor = useColorModeValue('#E8E8E4', '#403f3f');
@@ -23,16 +24,23 @@ const ContactContent = () => {
           justify={{ xl: 'center' }}
         >
           <Stack spacing={{ base: 5, md: 8, xl: 12 }} textAlign="center">
-            <Heading fontSize={{ base: '2xl', md: '3xl', xl: '4xl' }} fontWeight="bold">
+            <Heading
+              fontSize={{ base: '2xl', md: '3xl', xl: '4xl' }}
+              fontWeight="bold"
+              {...fadeDown}
+            >
               {t('contact.subtitle')}
             </Heading>
-            <Text fontSize={{ md: 'lg', xl: '2xl' }}>{t('contact.text')}</Text>
+            <Text fontSize={{ md: 'lg', xl: '2xl' }} {...fadeRight}>
+              {t('contact.text')}
+            </Text>
           </Stack>
           <Container pb={{ base: 5, md: 0 }}>
             <Stack
               direction={{ base: 'column', lg: 'row' }}
               spacing={{ base: 4, xl: 10 }}
               justify="center"
+              {...fadeUp}
             >
               <Button
                 as={Link}

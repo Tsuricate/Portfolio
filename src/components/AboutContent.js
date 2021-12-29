@@ -17,6 +17,7 @@ import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
 import aboutSections from '../data/aboutSections';
 import customScrollbar from '../utils/customScrollbar';
+import { fade } from '../utils/animations';
 
 const AboutContent = () => {
   const { t } = useTranslation();
@@ -45,6 +46,7 @@ const AboutContent = () => {
               objectFit="cover"
               loading="lazy"
               filter="saturate(75%)"
+              {...fade}
             />
           ))}
         </SimpleGrid>

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -15,6 +14,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import customScrollbar from '../utils/customScrollbar';
+import { fade } from '../utils/animations';
 import SkillTag from './SkillTag';
 
 const SkillsList = ({ category, skillList, cardHeight }) => {
@@ -40,6 +40,7 @@ const SkillsList = ({ category, skillList, cardHeight }) => {
         transform: 'translate3d(-49%, -49%, 0) scale(1.015) rotate(0.5deg)',
         borderRadius: ' 1% 1% 2% 4% / 2% 6% 5% 4%',
       }}
+      {...fade}
     >
       {skillList ? (
         <Flex height={{ xl: '100%' }} flexDirection="column" zIndex="1" sx={customScrollbar}>

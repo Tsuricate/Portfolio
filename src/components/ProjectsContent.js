@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { Wrap, WrapItem, useBreakpointValue, chakra, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import Carousel from 'react-multi-carousel';

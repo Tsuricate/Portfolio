@@ -13,6 +13,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
+import { fadeDown, fadeRight, fade } from '../utils/animations';
 
 const HomeContent = () => {
   const { t } = useTranslation();
@@ -30,14 +31,16 @@ const HomeContent = () => {
         <GridItem colSpan={1} mt={{ base: 10 }}>
           <Wrap direction="column" spacing={{ base: 5, md: 10, xl: 12 }}>
             <Stack>
-              <Heading fontSize={{ base: '1.7em', md: '2.1em', xl: '3em' }}>
+              <Heading fontSize={{ base: '1.7em', md: '2.1em', xl: '3em' }} {...fadeDown}>
                 {t('home.salutation')}
               </Heading>
-              <Heading fontSize={{ base: '1.2em', md: '1.5em', xl: '2em' }}>
+              <Heading fontSize={{ base: '1.2em', md: '1.5em', xl: '2em' }} {...fadeDown}>
                 {t('home.role')}
               </Heading>
             </Stack>
-            <Text fontSize={{ xl: '1.1em' }}>{t('home.presentation')}</Text>
+            <Text {...fadeRight} fontSize={{ xl: '1.1em' }}>
+              {t('home.presentation')}
+            </Text>
             <ActionButtons />
           </Wrap>
         </GridItem>
@@ -48,6 +51,7 @@ const HomeContent = () => {
               src="/images/homeImage.webp"
               alt="Picture representing web developper"
               loading="lazy"
+              {...fade}
             />
           </Box>
         </GridItem>

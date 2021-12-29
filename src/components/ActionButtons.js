@@ -2,6 +2,7 @@ import React from 'react';
 import { Stack, Button, useColorModeValue } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { HashLink } from 'react-router-hash-link';
+import { fadeUp } from '../utils/animations';
 
 const ActionButtons = () => {
   const { t } = useTranslation();
@@ -10,6 +11,7 @@ const ActionButtons = () => {
       direction={{ base: 'column', sm: 'row' }}
       spacing={{ base: 3, md: 8 }}
       pt={{ base: 6, md: 8 }}
+      {...fadeUp}
     >
       <Button
         colorScheme="black"
