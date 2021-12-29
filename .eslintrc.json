@@ -24,8 +24,6 @@
             "extensions": [".js", ".jsx"]
         }
         ],
-        "react/jsx-props-no-spreading": [{
-            "custom": "enforce"
-        }]
+        "react/jsx-props-no-spreading": "off"
     }
 }
