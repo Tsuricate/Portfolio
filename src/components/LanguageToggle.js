@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
@@ -11,10 +9,8 @@ const languages = [
 
 const LanguageToggle = () => {
   const { i18n } = useTranslation();
-  // const [activeLanguage, setActiveLanguage] = useState('FR');
 
   const handleClick = (languageSelected) => {
-    // setActiveLanguage(languageSelected);
     i18n.changeLanguage(languageSelected);
   };
 
