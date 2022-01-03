@@ -24,7 +24,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
       <Box mt={-6} mx={-6} mb={6} overflow={{ base: 'hidden' }} height={{ base: 48, md: 72 }}>
         <Image
           src={image}
-          alt="Illustration representing project"
+          alt={`Illustration representing project ${name}`}
           height="100%"
           width="100%"
           fit="cover"
