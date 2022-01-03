@@ -67,7 +67,7 @@ const ContactContent = () => {
               </Button>
               <Button
                 as={Link}
-                href="https://welovedevs.com/app/developer/zoe-developpeuse-react"
+                href="https://zoe-amat.welovedevs.com"
                 leftIcon={<FaUserCircle />}
                 variant="outline"
                 colorScheme="purple"
