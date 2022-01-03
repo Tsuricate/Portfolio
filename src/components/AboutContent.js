@@ -77,6 +77,7 @@ const AboutContent = () => {
                   <Stack direction="column" spacing={{ base: 5 }}>
                     {section.texts.map((text) => (
                       <Text
+                        maxW={{ xl: '82ch' }}
                         key={t(text)}
                         lineHeight={1.7}
                         dangerouslySetInnerHTML={{
@@ -85,6 +86,9 @@ const AboutContent = () => {
                         sx={{
                           '& a': {
                             textDecoration: 'underline',
+                          },
+                          '& ul': {
+                            paddingLeft: '40px',
                           },
                         }}
                       />

@@ -89,6 +89,9 @@ export const projects = [
         name: 'Gimp',
         icon: 'SiGimp',
       },
+      {
+        name: 'i18next',
+      },
     ],
   },
   {
