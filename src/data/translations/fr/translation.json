@@ -42,24 +42,16 @@
   "projects": {
     "stack": "Technologies",
     "taleMe": {
-      "image": "/images/TaleMe.webp",
-      "description": "Projet de fin d'étude. TaleMe est une application inspirée des “Livres dont vous êtes le Héros” qui permet de vivre, d’écrire et de partager des histoires interactives avec d’autres utilisateurs. Réalisée en un mois, en suivant la méthodologie Scrum (daily meeting, sprint planning et retrospective) dans une équipe de 5 personnes.",
-      "skills": ""
+      "description": "Projet de fin d'étude. TaleMe est une application inspirée des “Livres dont vous êtes le Héros” qui permet de vivre, d’écrire et de partager des histoires interactives avec d’autres utilisateurs. Réalisée en un mois, en suivant la méthodologie Scrum (daily meeting, sprint planning et retrospective) dans une équipe de 5 personnes."
     },
     "yaac": {
-      "image": "/images/YAAC.webp",
-      "description": "Application web permettant la création d'un avatar unique, personnalisable, et son téléchargement. Projet réalisé en collaboration avec une dessinatrice Lilloise.",
-      "skills": ""
+      "description": "Application web permettant la création d'un avatar unique, personnalisable, et son téléchargement. Projet réalisé en collaboration avec une dessinatrice Lilloise."
     },
     "portfolio": {
-      "image": "/images/Portfolio.webp",
-      "description": "Portfolio regroupant les différents projets sur lesquels j'ai eu l'opportunité de travailler.",
-      "skills": ""
+      "description": "Portfolio regroupant les différents projets sur lesquels j'ai eu l'opportunité de travailler."
     },
-    "kyb": {
-      "image": "/images/KYB.webp",
-      "description": "En construction 🚧",
-      "skills": ""
+    "wingsCo": {
+      "description": "Application permettant d'enregister et de comparer les scores obtenus en jouant au jeu de plateau “Wingspan”. En construction 🚧"
     }
   },
   "contact": {

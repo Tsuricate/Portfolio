@@ -95,14 +95,22 @@ export const projects = [
     ],
   },
   {
-    title: 'Know Your Birds',
-    image: '/images/KYB.webp',
-    description: 'projects.kyb.description',
+    title: 'Wingspan Companion',
+    image: '/images/wingsCo.webp',
+    description: 'projects.wingsCo.description',
     url: '/',
     skills: [
       {
-        name: 'React',
-        icon: 'SiReact',
+        name: 'Next',
+        icon: 'SiNextdotjs',
+      },
+      {
+        name: 'TypeScript',
+        icon: 'SiTypescript',
+      },
+      {
+        name: 'GraphQL',
+        icon: 'SiGraphql',
       },
       {
         name: 'Chakra UI',
