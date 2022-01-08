@@ -58,6 +58,7 @@ const ProjectsContent = () => {
               image={project.image}
               name={project.title}
               description={t(project.description)}
+              githubUrl={project.githubUrl}
               url={project.url}
               specs={project.skills}
             />

@@ -3,7 +3,8 @@ export const projects = [
     title: 'TaleMe',
     image: '/images/TaleMe.webp',
     description: 'projects.taleMe.description',
-    url: '/',
+    githubUrl: '',
+    url: 'https://www.youtube.com/watch?v=suuRCm9YBKE&t=6040s',
     skills: [
       {
         name: 'React',
@@ -44,7 +45,8 @@ export const projects = [
     title: 'YAAC',
     image: '/images/YAAC.webp',
     description: 'projects.yaac.description',
-    url: '/',
+    githubUrl: 'https://github.com/Tsuricate/YAAC_front',
+    url: 'https://yetanotheravatarcreator.vercel.app/',
     skills: [
       {
         name: 'React',
@@ -75,7 +77,8 @@ export const projects = [
     title: 'Portfolio',
     image: '/images/Portfolio.webp',
     description: 'projects.portfolio.description',
-    url: '/',
+    githubUrl: 'https://github.com/Tsuricate/Portfolio',
+    url: '',
     skills: [
       {
         name: 'React',
@@ -98,7 +101,8 @@ export const projects = [
     title: 'Wingspan Companion',
     image: '/images/wingsCo.webp',
     description: 'projects.wingsCo.description',
-    url: '/',
+    githubUrl: '',
+    url: '',
     skills: [
       {
         name: 'Next',

@@ -5,13 +5,13 @@ import { useTranslation } from 'react-i18next';
 import { SiGithub } from 'react-icons/si';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 
-const ProjectActionButtons = ({ url }) => {
+const ProjectActionButtons = ({ githubUrl, url }) => {
   const { t } = useTranslation();
   return (
     <Stack direction="row" spacing={4}>
       <Button
         as={Link}
-        href={url}
+        href={githubUrl}
         isFullWidth
         variant="outline"
         colorScheme="black"
@@ -41,6 +41,7 @@ const ProjectActionButtons = ({ url }) => {
 };
 
 ProjectActionButtons.propTypes = {
+  githubUrl: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
 

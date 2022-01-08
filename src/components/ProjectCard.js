@@ -7,7 +7,7 @@ import ProjectActionButtons from './ProjectActionButtons';
 import SkillTag from './SkillTag';
 import { fade } from '../utils/animations';
 
-const ProjectCard = ({ image, name, description, url, specs }) => {
+const ProjectCard = ({ image, name, description, githubUrl, url, specs }) => {
   const { t } = useTranslation();
   return (
     <Flex
@@ -54,7 +54,7 @@ const ProjectCard = ({ image, name, description, url, specs }) => {
             ))}
           </Wrap>
         </Stack>
-        <ProjectActionButtons url={url} />
+        <ProjectActionButtons githubUrl={githubUrl} url={url} />
       </Stack>
     </Flex>
   );
@@ -64,6 +64,7 @@ ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  githubUrl: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   specs: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired).isRequired).isRequired,
 };
