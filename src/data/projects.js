@@ -4,6 +4,7 @@ export const projects = [
     image: '/images/TaleMe.webp',
     description: 'projects.taleMe.description',
     githubUrl: '',
+    githubMessage: 'This repository is private',
     url: 'https://www.youtube.com/watch?v=suuRCm9YBKE&t=6040s',
     skills: [
       {
@@ -78,7 +79,7 @@ export const projects = [
     image: '/images/Portfolio.webp',
     description: 'projects.portfolio.description',
     githubUrl: 'https://github.com/Tsuricate/Portfolio',
-    url: '',
+    url: '/',
     skills: [
       {
         name: 'React',
@@ -102,7 +103,9 @@ export const projects = [
     image: '/images/wingsCo.webp',
     description: 'projects.wingsCo.description',
     githubUrl: '',
+    githubMessage: 'This repository is private for now',
     url: '',
+    urlMessage: "This project hasn't been release yet",
     skills: [
       {
         name: 'Next',

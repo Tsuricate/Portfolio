@@ -7,7 +7,16 @@ import ProjectActionButtons from './ProjectActionButtons';
 import SkillTag from './SkillTag';
 import { fade } from '../utils/animations';
 
-const ProjectCard = ({ image, name, description, githubUrl, url, specs }) => {
+const ProjectCard = ({
+  image,
+  name,
+  description,
+  githubUrl,
+  githubMessage,
+  url,
+  urlMessage,
+  specs,
+}) => {
   const { t } = useTranslation();
   return (
     <Flex
@@ -54,18 +63,31 @@ const ProjectCard = ({ image, name, description, githubUrl, url, specs }) => {
             ))}
           </Wrap>
         </Stack>
-        <ProjectActionButtons githubUrl={githubUrl} url={url} />
+        <ProjectActionButtons
+          githubUrl={githubUrl}
+          url={url}
+          githubMessage={githubMessage}
+          urlMessage={urlMessage}
+        />
       </Stack>
     </Flex>
   );
+};
+
+ProjectCard.defaultProps = {
+  githubUrl: undefined,
+  githubMessage: undefined,
+  urlMessage: undefined,
 };
 
 ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  githubUrl: PropTypes.string.isRequired,
+  githubUrl: PropTypes.string,
+  githubMessage: PropTypes.string,
   url: PropTypes.string.isRequired,
+  urlMessage: PropTypes.string,
   specs: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired).isRequired).isRequired,
 };
 
