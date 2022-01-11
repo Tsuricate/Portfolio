@@ -6,9 +6,10 @@ import { fadeUp } from '../utils/animations';
 
 const ActionButtons = () => {
   const { i18n, t } = useTranslation();
+  console.log('Used language: ', i18n.language);
 
   const downloadResume = () => {
-    const resume = i18n.language === 'fr' ? 'CV_Zoe_AMAT.pdf' : 'Resume_Zoe_AMAT.pdf';
+    const resume = i18n.language.includes('fr') ? 'CV_Zoe_AMAT.pdf' : 'Resume_Zoe_AMAT.pdf';
     const link = document.createElement('a');
     link.download = resume;
     link.href = resume;
