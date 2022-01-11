@@ -15,7 +15,7 @@ const ContactContent = () => {
       background={`url("/images/leftHand.webp") no-repeat bottom left, url("/images/rightHand.webp") no-repeat top right, ${responsiveBgColor}`}
       sectionTitle={t('sectionTitle.contact')}
     >
-      <Container maxW={{ lg: 'container.md', xl: 'container.lg' }} height={{ xl: '90%' }}>
+      <Container maxW={{ md: 'container.sm', xl: 'container.lg' }} height={{ xl: '90%' }}>
         <Stack
           p={{ md: 8 }}
           spacing={{ base: 8, md: 14, xl: 20 }}
@@ -23,17 +23,22 @@ const ContactContent = () => {
           height={{ xl: '100%' }}
           justify={{ xl: 'center' }}
         >
-          <Stack spacing={{ base: 5, md: 8, xl: 12 }} textAlign="center">
+          <Stack spacing={{ base: 5, md: 8, xl: 12 }}>
             <Heading
               fontSize={{ base: '2xl', md: '3xl', xl: '4xl' }}
               fontWeight="bold"
+              textAlign="center"
               {...fadeDown}
             >
               {t('contact.subtitle')}
             </Heading>
-            <Text fontSize={{ md: 'lg', xl: '2xl' }} {...fadeRight}>
-              {t('contact.text')}
-            </Text>
+            <Text
+              fontSize={{ md: 'lg', xl: '2xl' }}
+              dangerouslySetInnerHTML={{
+                __html: t('contact.text'),
+              }}
+              {...fadeRight}
+            />
           </Stack>
           <Container pb={{ base: 5, md: 0 }}>
             <Stack
@@ -62,7 +67,7 @@ const ContactContent = () => {
               </Button>
               <Button
                 as={Link}
-                href="https://welovedevs.com/app/developer/zoe-developpeuse-react"
+                href="https://zoe-amat.welovedevs.com"
                 leftIcon={<FaUserCircle />}
                 variant="outline"
                 colorScheme="purple"

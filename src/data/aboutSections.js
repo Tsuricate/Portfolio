@@ -4,6 +4,7 @@ const aboutSections = [
     texts: [
       'about.background.studies',
       'about.background.working',
+      'about.background.discovering',
       'about.background.training',
       'about.background.diploma',
     ],

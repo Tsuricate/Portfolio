@@ -9,15 +9,16 @@
   "home": {
     "salutation": "Hi, I’m Zoé",
     "role": "Front-end web developer",
-    "presentation": "I like to create modern, intuitive and responsive web applications. I mainly work with React and Redux but I'm very enthusiastic about expanding my technical stack."
+    "presentation": "I like to create modern, intuitive and responsive web applications. I mainly work with React and Redux."
   },
   "about": {
     "background": {
       "title": "Background",
       "studies": "🎓 After obtaining my Bachelor's degree in literature, I went to university to strengthen my skills in english, then I spent two years learning chinese.",
       "working": "💼 Then, for my first professional experience, I worked two years in a retail store of a major french brand.",
-      "training": "💻 I discovered that web development was a thing in 2018. Out of curiosity, I took some free courses on OpenClassrooms and just like that, I made my very first websites. I was excited - and still am - to find out all the things that I could create with a bit of logic and creativity. <br /> I registered at <a href='https://oclock.io/'>O'clock</a> school for an intensive six month remote training course. During the first three months, I learned the basics of web development (HTML, CSS, JavaScript, PHP, MySQL). Then, as I felt really attracted by front-end and user interfaces, I chose React for my specialization course.<br /> The final month, I had the great opportunity to create a project from scratch and work with five other developers. From project management to final product development, following the scrum framework (sprints, daily meetings, retrospective), this project allowed me to apply the various skills I learned from the previous months.",
-      "diploma":  "I’ve been certified by Opquast in 'Mastering Web Quality Assurance' and obtained a 'Web and Mobile Web Developer' state diploma in may 2021."
+      "discovering": "🌱 I discovered that web development was a thing in 2018. Out of curiosity, I took some free online courses and just like that, I made my very first websites. I was excited - and still am - to find out all the things that I could create with a bit of logic and creativity.",
+      "training": "💻 I registered at <a href='https://oclock.io/'>O'clock</a> school for an intensive six month remote training course: <ul><li>Three months to learn the basics of web development (HTML, CSS, JavaScript, PHP, MySQL).</li><li>One month of React - Redux specialization.</li> <li>One month project in a team of five developers, following Scrum framework.</li></ul>",
+      "diploma":  "✔️ I’ve been certified by Opquast in 'Mastering Web Quality Assurance' and obtained a 'Web and Mobile Web Developer' state diploma in may 2021 (BTEC Higher National Diploma)."
     },
     "hobbies": {
       "title": "Hobbies",
@@ -44,21 +45,24 @@
   "projects": {
     "stack": "Stack",
     "taleMe": {
-      "description": "Final month school project. Using the series 'The book where you're the hero' as a source of inspiration, TaleMe allows you to read, create and share interactive stories with other users. App created in a month, following Scrum methodology, in a team of 5 developers."
+      "description": "Final month school project. Using the series 'The book where you're the hero' as a source of inspiration, TaleMe allows you to read, create and share interactive stories with other users. App created in a month, following Scrum methodology (daily meeting, sprint planning and retrospective), in a team of 5 developers.",
+      "githubMessage": "This repository is private."
     },
     "yaac": {
-      "description": "Web application that allows you to create a unique, personalized avatar and to download it. Project in tandem with a designer from Lille."
+      "description": "Web application that allows you to create a unique, personalized avatar and to download it. Project in tandem with an illustration designer from Lille."
     },
     "portfolio": {
       "description": "Portfolio of websites and web applications I have had the opportunity to work on."
     },
-    "kyb": {
-      "description": "In construction"
+    "wingsCo": {
+      "description": "Application for logging and comparing scores obtained in “Wingspan” board game. Under construction 🚧",
+      "githubMessage": "This repository is private for now",
+      "urlMessage": "This project hasn't been released yet"
     }
   },
   "contact": {
     "subtitle": "Let's get in touch !",
-    "text": "I’m currently living in Lille, France but I’m open to international opportunities. I’m interested in the entire frontend spectrum and in working on socially engaged projects with positive people. Whether you have a question or just want to say hi, I’ll get back to you as soon as I can !"
+    "text": "I’m currently living in Lille, France but I’m open to international opportunities. I’m interested in the entire frontend spectrum and in working on socially engaged or cultural projects with positive people.<br /> Whether you have a question or just want to say hi, I’ll get back to you as soon as I can !"
   },
   "footer": {
     "by": "by",
