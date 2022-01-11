@@ -19,7 +19,7 @@ const LanguageToggle = () => {
       {languages.map((language) => (
         <Button
           key={language.key}
-          variant={i18n.language === language.key ? 'activeLanguage' : 'outline'}
+          variant={i18n.resolvedLanguage.includes(language.key) ? 'activeLanguage' : 'outline'}
           onClick={() => handleClick(language.key)}
         >
           {language.label}
