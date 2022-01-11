@@ -4,7 +4,7 @@ export const projects = [
     image: '/images/TaleMe.webp',
     description: 'projects.taleMe.description',
     githubUrl: '',
-    githubMessage: 'This repository is private',
+    githubMessage: 'projects.taleMe.githubMessage',
     url: 'https://www.youtube.com/watch?v=suuRCm9YBKE&t=6040s',
     skills: [
       {
@@ -103,9 +103,9 @@ export const projects = [
     image: '/images/wingsCo.webp',
     description: 'projects.wingsCo.description',
     githubUrl: '',
-    githubMessage: 'This repository is private for now',
+    githubMessage: 'projects.wingsCo.githubMessage',
     url: '',
-    urlMessage: "This project hasn't been release yet",
+    urlMessage: 'projects.wingsCo.urlMessage',
     skills: [
       {
         name: 'Next',

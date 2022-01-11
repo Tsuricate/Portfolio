@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Popover,
   PopoverArrow,
@@ -6,8 +8,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@chakra-ui/react';
-import PropTypes from 'prop-types';
-import React from 'react';
 
 const PopoverMessage = ({ children, isOpen, message }) =>
   isOpen ? (

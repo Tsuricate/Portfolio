@@ -42,7 +42,8 @@
   "projects": {
     "stack": "Technologies",
     "taleMe": {
-      "description": "Projet de fin d'étude. TaleMe est une application inspirée des “Livres dont vous êtes le Héros” qui permet de vivre, d’écrire et de partager des histoires interactives avec d’autres utilisateurs. Réalisée en un mois, en suivant la méthodologie Scrum (daily meeting, sprint planning et retrospective) dans une équipe de 5 personnes."
+      "description": "Projet de fin d'étude. TaleMe est une application inspirée des “Livres dont vous êtes le Héros” qui permet de vivre, d’écrire et de partager des histoires interactives avec d’autres utilisateurs. Réalisée en un mois, en suivant la méthodologie Scrum (daily meeting, sprint planning et retrospective) dans une équipe de 5 personnes.",
+      "githubMessage": "Le repository est privé."
     },
     "yaac": {
       "description": "Application web permettant la création d'un avatar unique, personnalisable, et son téléchargement. Projet réalisé en collaboration avec une dessinatrice Lilloise."
@@ -51,7 +52,9 @@
       "description": "Portfolio regroupant les différents projets sur lesquels j'ai eu l'opportunité de travailler."
     },
     "wingsCo": {
-      "description": "Application permettant d'enregister et de comparer les scores obtenus en jouant au jeu de plateau “Wingspan”. En construction 🚧"
+      "description": "Application permettant d'enregister et de comparer les scores obtenus en jouant au jeu de plateau “Wingspan”. En construction 🚧",
+      "githubMessage": "Le repository est privé pour l'instant.",
+      "urlMessage": "Le projet n'est pas en ligne pour l'instant"
     }
   },
   "contact": {

@@ -59,8 +59,8 @@ const ProjectsContent = () => {
               name={project.title}
               description={t(project.description)}
               githubUrl={project.githubUrl}
-              githubMessage={project.githubMessage}
-              urlMessage={project.urlMessage}
+              githubMessage={t(project.githubMessage)}
+              urlMessage={t(project.urlMessage)}
               url={project.url}
               specs={project.skills}
             />
