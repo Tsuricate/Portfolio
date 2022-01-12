@@ -79,7 +79,7 @@ export const projects = [
     image: '/images/Portfolio.webp',
     description: 'projects.portfolio.description',
     githubUrl: 'https://github.com/Tsuricate/Portfolio',
-    url: '/',
+    url: 'https://zoe-amat.vercel.app/',
     skills: [
       {
         name: 'React',
