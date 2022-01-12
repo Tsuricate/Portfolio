@@ -12,7 +12,7 @@ Personal portfolio regrouping projects I've worked on.
 
 ### Step 2 : Install dependencies
 
-`cd YAAC_front`
+`cd Portfolio`
 
 Using yarn : `yarn`
 
