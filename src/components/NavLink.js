@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { HashLink } from 'react-router-hash-link';
 import { chakra, useColorModeValue } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 const NavLink = ({ children, onClose }) => {
   const ChakraHashLink = chakra(HashLink);
-  const anchor = children === 'Home' ? '#' : `#${children}`;
+  const { t } = useTranslation();
+  const anchor = t('sectionTitle.home') === children ? '#' : `#${children}`;
 
   return (
     <ChakraHashLink
