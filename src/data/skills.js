@@ -23,6 +23,14 @@ const skills = [
         icon: 'SiRedux',
       },
       {
+        name: 'Next',
+        icon: 'SiNextdotjs',
+      },
+      {
+        name: 'Typescript',
+        icon: 'SiTypescript',
+      },
+      {
         name: 'Bootstrap',
         icon: 'SiBootstrap',
       },
@@ -54,6 +62,10 @@ const skills = [
       {
         name: 'Express',
         icon: 'SiExpress',
+      },
+      {
+        name: 'GraphQL',
+        icon: 'SiGraphql',
       },
       {
         name: 'Lumen',
@@ -99,10 +111,6 @@ const skills = [
     title: null,
     list: [
       {
-        name: 'Next',
-        icon: 'SiNextdotjs',
-      },
-      {
         name: 'Vue',
         icon: 'SiVuedotjs',
       },
@@ -113,10 +121,6 @@ const skills = [
       {
         name: 'Svelte',
         icon: 'SiSvelte',
-      },
-      {
-        name: 'Typescript',
-        icon: 'SiTypescript',
       },
       {
         name: 'Python',
