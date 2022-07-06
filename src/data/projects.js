@@ -102,8 +102,7 @@ export const projects = [
     title: 'Wingspan Companion',
     image: '/images/wingsCo.webp',
     description: 'projects.wingsCo.description',
-    githubUrl: '',
-    githubMessage: 'projects.wingsCo.githubMessage',
+    githubUrl: 'https://github.com/Tsuricate/wingco',
     url: '',
     urlMessage: 'projects.wingsCo.urlMessage',
     skills: [
