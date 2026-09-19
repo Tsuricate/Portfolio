@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Box, Grid, GridItem, useColorModeValue } from '@chakra-ui/react';
+import { Flex, Box, Grid, GridItem } from '@chakra-ui/react';
 import { GiPineTree, GiSprout, GiRibbonMedal } from 'react-icons/gi';
 import { useTranslation } from 'react-i18next';
 import SectionContainer from './SectionContainer';
@@ -14,7 +14,7 @@ const SkillsContent = () => {
   const { t } = useTranslation();
   return (
     <SectionContainer
-      background={useColorModeValue('#E8E8E4', '#403f3f')}
+      background='#E8E8E4'
       sectionTitle={t('sectionTitle.skills')}
       fullWidth
     >
@@ -37,18 +37,16 @@ const SkillsContent = () => {
           <GridItem colSpan={{ base: 1, lg: 3, xl: 3 }}>
             <SkillsGroup
               groupTitle={t('skills.known')}
-              skills={firstGroup}
               icon={GiPineTree}
               cardHeight="sm"
             />
           </GridItem>
           <GridItem colSpan={{ base: 1, lg: 2, xl: 1 }}>
-            <SkillsGroup groupTitle={t('skills.unknown')} skills={secondGroup} icon={GiSprout} />
+            <SkillsGroup groupTitle={t('skills.unknown')} icon={GiSprout} />
           </GridItem>
           <GridItem colSpan={{ base: 1, lg: 1, xl: 1 }}>
             <SkillsGroup
               groupTitle={t('skills.certification')}
-              skills={certifications}
               icon={GiRibbonMedal}
             />
           </GridItem>

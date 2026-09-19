@@ -1,11 +1,23 @@
-import { Flex, Box, Heading, Image, Stack, Text, Wrap, useColorModeValue } from '@chakra-ui/react';
-import PropTypes from 'prop-types';
-import React from 'react';
+import { Flex, Box, Heading, Image, Stack, Text, Wrap } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import customScrollbar from '../utils/customScrollbar';
 import ProjectActionButtons from './ProjectActionButtons';
 import SkillTag from './SkillTag';
 import { fade } from '../utils/animations';
+
+interface ProjectCardProps {
+  image: string;
+  name: string;
+  description: string;
+  githubUrl?: string;
+  githubMessage?: string;
+  url: string;
+  urlMessage?: string;
+  specs?: {
+    name: string;
+    icon: React.ElementType;
+  }[];
+}
 
 const ProjectCard = ({
   image,
@@ -16,7 +28,7 @@ const ProjectCard = ({
   url,
   urlMessage,
   specs,
-}) => {
+}: ProjectCardProps) => {
   const { t } = useTranslation();
   return (
     <Flex
@@ -25,7 +37,6 @@ const ProjectCard = ({
       height={{ lg: '2xl' }}
       p={6}
       overflow="hidden"
-      bg={useColorModeValue('#E8E8E4', '#3B5C68')}
       borderRadius="15px"
       boxShadow="rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px"
       {...fade}
@@ -41,10 +52,9 @@ const ProjectCard = ({
         />
       </Box>
 
-      <Stack direction="column" flexGrow="1" spacing={{ base: 5, lg: 0 }}>
-        <Stack height={{ lg: 36 }} overflowY={{ lg: 'auto' }} sx={customScrollbar}>
+      <Stack direction="column" flexGrow="1" gap={{ base: 5, lg: 0 }}>
+        <Stack height={{ lg: 36 }} overflowY={{ lg: 'auto' }}>
           <Heading
-            color={useColorModeValue('blue.700', '#EBF8FF')}
             fontSize="2xl"
             letterSpacing={5}
           >
@@ -57,9 +67,9 @@ const ProjectCard = ({
           <Text mt={{ lg: 2 }} textDecoration="underline">
             {t('projects.stack')}
           </Text>
-          <Wrap spacing={2}>
-            {specs.map((spec) => (
-              <SkillTag key={spec.name} name={spec.name} icon={spec.icon} />
+          <Wrap gap={2}>
+            {specs?.map((spec) => (
+              <SkillTag key={spec.name} name={spec.name} />
             ))}
           </Wrap>
         </Stack>
@@ -72,23 +82,6 @@ const ProjectCard = ({
       </Stack>
     </Flex>
   );
-};
-
-ProjectCard.defaultProps = {
-  githubUrl: undefined,
-  githubMessage: undefined,
-  urlMessage: undefined,
-};
-
-ProjectCard.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  githubUrl: PropTypes.string,
-  githubMessage: PropTypes.string,
-  url: PropTypes.string.isRequired,
-  urlMessage: PropTypes.string,
-  specs: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired).isRequired).isRequired,
 };
 
 export default ProjectCard;

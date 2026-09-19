@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Grid,
   GridItem,
@@ -8,7 +7,6 @@ import {
   Box,
   Stack,
   Image,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import SectionContainer from './SectionContainer';
@@ -19,7 +17,7 @@ const HomeContent = () => {
   const { t } = useTranslation();
 
   return (
-    <SectionContainer background={useColorModeValue('#E8E8E4', '#403f3f')}>
+    <SectionContainer background='#E8E8E4'>
       <Grid
         height={{ xl: '100%' }}
         templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}
@@ -29,7 +27,7 @@ const HomeContent = () => {
         pt={{ lg: 28, xl: 10 }}
       >
         <GridItem colSpan={1} mt={{ base: 10 }}>
-          <Wrap direction="column" spacing={{ base: 5, md: 10, xl: 12 }}>
+          <Wrap direction="column" gap={{ base: 5, md: 10, xl: 12 }}>
             <Stack>
               <Heading fontSize={{ base: '1.7em', md: '2.1em', xl: '3em' }} {...fadeDown}>
                 {t('home.salutation')}

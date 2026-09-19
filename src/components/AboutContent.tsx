@@ -1,16 +1,10 @@
-import React from 'react';
 import {
   SimpleGrid,
   Tabs,
   Flex,
-  TabList,
   Text,
-  Tab,
-  TabPanel,
-  TabPanels,
   Stack,
   Image,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import SectionContainer from './SectionContainer';
@@ -23,9 +17,10 @@ const AboutContent = () => {
   const { t } = useTranslation();
 
   const aboutImages = ['/images/pano1.webp', '/images/pano2.webp', '/images/pano3.webp'];
+
   return (
     <SectionContainer
-      background={useColorModeValue('#DAD7CD', '#505050')}
+      background='#505050'
       sectionTitle={t('sectionTitle.about')}
     >
       <SimpleGrid
@@ -35,12 +30,16 @@ const AboutContent = () => {
         alignItems={{ xl: 'center' }}
         justifyItems={{ lg: 'center' }}
       >
-        <SimpleGrid columns={3} spacing={{ base: 1.5, md: 3 }} width={{ lg: '75%', xl: '100%' }}>
+        <SimpleGrid
+          columns={3}
+          gap={{ base: 1.5, md: 3 }}
+          width={{ lg: '75%', xl: '100%' }}
+        >
           {aboutImages.map((image) => (
             <Image
               key={image}
               src={image}
-              alt="A third of the image reprensenting woman in Japan"
+              alt="A third of the image representing woman in Japan"
               width="100%"
               height="auto"
               objectFit="cover"
@@ -51,39 +50,57 @@ const AboutContent = () => {
           ))}
         </SimpleGrid>
 
-        <Flex flexDirection="column" justifyContent={{ xl: 'center' }} height={{ xl: '100%' }}>
-          <Tabs variant="solid-rounded" isFitted isLazy lazyBehavior="unmount">
-            <TabList pb={{ md: 5 }}>
+        <Flex
+          flexDirection="column"
+          justifyContent={{ xl: 'center' }}
+          height={{ xl: '100%' }}
+        >
+          <Tabs.Root
+            defaultValue={aboutSections[0]?.title}
+            fitted
+            lazyMount
+            unmountOnExit
+          >
+            <Tabs.List paddingBottom={{ md: 5 }}>
               {aboutSections.map((section) => (
-                <Tab
-                  key={t(section.title)}
-                  _selected={{
-                    bg: useColorModeValue('#bfd0dd', '#95928aa6'),
-                    boxShadow: 'rgba(0, 0, 0, 0.18) 0px 2px 4px;',
-                    color: useColorModeValue('#264653', '#F5F7FA'),
-                  }}
-                  color={useColorModeValue('#6B7676', '#C1C7C7')}
-                  sx={{ WebkitTapHighlightColor: 'transparent' }}
+                <Tabs.Trigger
+                  key={section.title}
+                  value={section.title}
+                  color={{ base: '#6B7676', _dark: '#C1C7C7' }}
                   borderRadius="10px"
+                  css={{
+                    WebkitTapHighlightColor: 'transparent',
+                  }}
+                  _selected={{
+                    bg: { base: '#bfd0dd', _dark: '#95928aa6' },
+                    boxShadow: 'rgba(0, 0, 0, 0.18) 0px 2px 4px',
+                    color: { base: '#264653', _dark: '#F5F7FA' },
+                  }}
                 >
-                  <Text fontSize={{ base: 'sm', md: 'lg' }}>{t(section.title)}</Text>
-                </Tab>
+                  <Text fontSize={{ base: 'sm', md: 'lg' }}>
+                    {t(section.title)}
+                  </Text>
+                </Tabs.Trigger>
               ))}
-            </TabList>
+            </Tabs.List>
 
-            <TabPanels overflowY="auto" height={{ xl: '450px' }} sx={customScrollbar}>
+            <Tabs.ContentGroup
+              overflowY="auto"
+              height={{ xl: '450px' }}
+              css={customScrollbar}
+            >
               {aboutSections.map((section) => (
-                <TabPanel key={t(section.title)}>
-                  <Stack direction="column" spacing={{ base: 5 }}>
+                <Tabs.Content key={section.title} value={section.title}>
+                  <Stack direction="column" gap={{ base: 5 }}>
                     {section.texts.map((text) => (
                       <Text
                         maxW={{ xl: '82ch' }}
-                        key={t(text)}
+                        key={text}
                         lineHeight={1.7}
                         dangerouslySetInnerHTML={{
                           __html: t(text),
                         }}
-                        sx={{
+                        css={{
                           '& a': {
                             textDecoration: 'underline',
                           },
@@ -94,10 +111,10 @@ const AboutContent = () => {
                       />
                     ))}
                   </Stack>
-                </TabPanel>
+                </Tabs.Content>
               ))}
-            </TabPanels>
-          </Tabs>
+            </Tabs.ContentGroup>
+          </Tabs.Root>
 
           <ActionButtons />
         </Flex>

@@ -1,14 +1,16 @@
-import { Wrap, WrapItem, useBreakpointValue, chakra, useColorModeValue } from '@chakra-ui/react';
-import React from 'react';
+import { chakra, SimpleGrid, useBreakpointValue } from '@chakra-ui/react';
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import { useTranslation } from 'react-i18next';
 import { projects } from '../data/projects';
 import ProjectCard from './ProjectCard';
 import SectionContainer from './SectionContainer';
 
 const ProjectsContent = () => {
-  const useCarousel = useBreakpointValue({ base: false, lg: true });
+  const useCarousel = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -41,16 +43,15 @@ const ProjectsContent = () => {
 
   return (
     <SectionContainer
-      background={useColorModeValue('#DAD7CD', '#505050')}
+      background='#DAD7CD'
       sectionTitle={t('sectionTitle.projects')}
     >
       {useCarousel ? (
         <ChakraCarousel
           responsive={responsive}
           height={{ lg: '100%' }}
-          pb={{ lg: 10 }}
+          paddingBottom={{ lg: 10 }}
           showDots
-          centerMode={{ xl: true }}
         >
           {projects.map((project) => (
             <ProjectCard
@@ -59,33 +60,36 @@ const ProjectsContent = () => {
               name={project.title}
               description={t(project.description)}
               githubUrl={project.githubUrl}
-              githubMessage={t(project.githubMessage)}
-              urlMessage={t(project.urlMessage)}
+              urlMessage=""
               url={project.url}
-              specs={project.skills}
             />
           ))}
         </ChakraCarousel>
       ) : (
-        <Wrap spacing={5} justify="center" p={3}>
-          {projects.map((project) => (
-            <WrapItem key={project.title}>
-              <ProjectCard
-                key={project.title}
-                image={project.image}
-                name={project.title}
-                description={t(project.description)}
-                githubUrl={project.githubUrl}
-                githubMessage={t(project.githubMessage)}
-                urlMessage={t(project.urlMessage)}
-                url={project.url}
-                specs={project.skills}
-              />
-            </WrapItem>
-          ))}
-        </Wrap>
+     <SimpleGrid
+  columns={{ base: 1, md: 2, xl: 3 }}
+  gap={5}
+  justifyItems="center"
+  p={3}
+>
+  {projects.map((project) => (
+    <ProjectCard
+      key={project.title}
+      image={project.image}
+      name={project.title}
+      description={t(project.description)}
+      githubUrl={project.githubUrl}
+      githubMessage=""
+      urlMessage=""
+      url={project.url}
+    />
+
+  ))}
+
+</SimpleGrid>
       )}
     </SectionContainer>
   );
 };
+
 export default ProjectsContent;
