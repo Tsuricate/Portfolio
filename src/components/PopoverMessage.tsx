@@ -6,12 +6,16 @@ import {
   PopoverTrigger,
   Portal,
 } from '@chakra-ui/react';
-import PropTypes from 'prop-types';
-import React from 'react';
 
-const PopoverMessage = ({ children, isOpen, message }) =>
+interface PopoverMessageProps {
+  children: React.ReactNode;
+  isOpen?: boolean;
+  message?: string;
+}
+
+const PopoverMessage = ({ children, isOpen, message }: PopoverMessageProps) =>
   isOpen ? (
-    <Popover>
+    <Popover.Root>
       <PopoverTrigger>{children}</PopoverTrigger>
       <Portal>
         <PopoverContent width="auto" maxW={{ base: '2xs' }} mr={{ base: 5 }}>
@@ -19,20 +23,9 @@ const PopoverMessage = ({ children, isOpen, message }) =>
           <PopoverBody>{message}</PopoverBody>
         </PopoverContent>
       </Portal>
-    </Popover>
+    </Popover.Root>
   ) : (
     <>{children}</>
   );
-
-PopoverMessage.defaultProps = {
-  isOpen: false,
-  message: undefined,
-};
-
-PopoverMessage.propTypes = {
-  children: PropTypes.node.isRequired,
-  isOpen: PropTypes.bool,
-  message: PropTypes.string,
-};
 
 export default PopoverMessage;

@@ -1,6 +1,4 @@
-import React from 'react';
-import { Flex, LinkBox, Stack, LinkOverlay, useColorModeValue } from '@chakra-ui/react';
-import { HashLink } from 'react-router-hash-link';
+import { Flex, LinkBox, Stack, LinkOverlay } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { FaAngleDoubleUp } from 'react-icons/fa';
 
@@ -17,10 +15,9 @@ const BackToTopButton = () => {
           align="center"
           p={{ base: 2, md: 4, xl: 5 }}
           borderRadius={5}
-          bg={useColorModeValue('whiteAlpha.500', 'blackAlpha.500')}
         >
           <FaAngleDoubleUp color="#738C94" />
-          <LinkOverlay as={HashLink} to="#" smooth fontSize="smaller">
+          <LinkOverlay href="#" fontSize="smaller">
             {t('buttons.backToTop')}
           </LinkOverlay>
         </Stack>

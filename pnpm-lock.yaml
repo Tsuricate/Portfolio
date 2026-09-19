@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@chakra-ui/icons':
-        specifier: ^2.2.4
-        version: 2.2.4(@chakra-ui/react@3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)
       '@chakra-ui/react':
         specifier: ^3.37.0
         version: 3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -170,12 +167,6 @@ packages:
   '@babel/types@7.29.8':
     resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
-
-  '@chakra-ui/icons@2.2.4':
-    resolution: {integrity: sha512-l5QdBgwrAg3Sc2BRqtNkJpfuLw/pWRDwwT58J6c4PqQT6wzXxyNa8Q0PForu1ltB5qEiFb1kxr/F/HO1EwNa6g==}
-    peerDependencies:
-      '@chakra-ui/react': '>=2.0.0'
-      react: '>=18'
 
   '@chakra-ui/react@3.37.0':
     resolution: {integrity: sha512-TaFju5LTT7GEZ8brcyZOhM7fNN54tJ/rMaMFvUAD7UE8tsUJb/j3zCUYPjchkoVXD1vinXtN9S31cp2QcOTUPg==}
@@ -1923,11 +1914,6 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
-
-  '@chakra-ui/icons@2.2.4(@chakra-ui/react@3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)':
-    dependencies:
-      '@chakra-ui/react': 3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      react: 19.3.0
 
   '@chakra-ui/react@3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
