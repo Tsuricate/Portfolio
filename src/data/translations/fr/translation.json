@@ -7,8 +7,8 @@
   },
   "home": {
     "salutation": "Hey, moi c'est Zoé,",
-    "role": "Développeuse web front-end",
-    "presentation": "J'aime créer des applications modernes, intuitives et adaptées à tous les écrans. Je travaille principalement avec React et Redux."
+    "role": "Développeuse web fullstack",
+    "presentation": "J'aime créer des applications modernes, intuitives et adaptées à tous les écrans"
   },
   "about": {
     "background": {
@@ -22,7 +22,7 @@
     "hobbies": {
       "title": "Centres d'intérêt",
       "traveling": "🗺️ <b>Voyager</b> : Ces dix dernières années, en auto-organisation, j’ai eu la chance de visiter et de découvrir 21 pays. Je serai bien incapable de dire lequel a été le plus mémorable car ils ont tous été, sans exception, une suite de rencontres et d’expériences uniques, mais le Japon et la Grèce m’ont tout particulièrement touchée.",
-      "hiking":  "⛰️ <b>Randonnées</b> : Enfant, j’allais chaque été randonner dans les Pyrénées en famille et j’ai poursuivi cette activité en grandissant. Du Tyrol autrichien au Parc national du Pirin en Bulgarie, en passant par les fjords impressionnants de Norvège, chaque pays que j’ai visité m’a permis d'entretenir cette passion.",
+      "hiking": "⛰️ <b>Randonnées</b> : Enfant, j’allais chaque été randonner dans les Pyrénées en famille et j’ai poursuivi cette activité en grandissant. Du Tyrol autrichien au Parc national du Pirin en Bulgarie, en passant par les fjords impressionnants de Norvège, chaque pays que j’ai visité m’a permis d'entretenir cette passion.",
       "gaming": "🎮 <b>Jeux vidéos & de société</b> : Jeux indépendants ou grosses licences, RPG, TPS, stratégie, open-world… J’ai la curiosité de jouer à tout ce qui attire mon attention. Mes préférés - à ce jour - restent : Hollow Knight, Outer Wilds, Stardew Valley. Quant aux jeux de société, si j’ai une préférence pour les jeux coopératifs, je suis toujours partante une compétition entre amis.",
       "reading": "📚 <b>Lecture</b> : Grande lectrice, je suis plus particulièrement adepte de science-fiction et de fantasy."
     }

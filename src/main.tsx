@@ -1,20 +1,21 @@
-import '@fontsource/prata';
-import '@fontsource/epilogue';
-
-import React from 'react';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { ChakraProvider, defaultSystem } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
+import { system } from './theme/theme';
+import { ColorModeProvider } from './components/ui/color-mode';
 
 import './i18n';
 import App from './App';
 
 createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <StrictMode>
     <BrowserRouter>
-      <ChakraProvider value={defaultSystem}>
-        <App />
-      </ChakraProvider>
+      <ColorModeProvider>
+        <ChakraProvider value={system}>
+          <App />
+        </ChakraProvider>
+      </ColorModeProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </StrictMode>
 );

@@ -8,8 +8,8 @@
   },
   "home": {
     "salutation": "Hi, I’m Zoé",
-    "role": "Front-end web developer",
-    "presentation": "I like to create modern, intuitive and responsive web applications. I mainly work with React and Redux."
+    "role": "Fullstack web developer",
+    "presentation": "I like to create modern, intuitive and responsive web applications"
   },
   "about": {
     "background": {
@@ -18,12 +18,12 @@
       "working": "💼 Then, for my first professional experience, I worked two years in a retail store of a major french brand.",
       "discovering": "🌱 I discovered that web development was a thing in 2018. Out of curiosity, I took some free online courses and just like that, I made my very first websites. I was excited - and still am - to find out all the things that I could create with a bit of logic and creativity.",
       "training": "💻 I registered at <a href='https://oclock.io/'>O'clock</a> school for an intensive six month remote training course: <ul><li>Three months to learn the basics of web development (HTML, CSS, JavaScript, PHP, MySQL).</li><li>One month of React - Redux specialization.</li> <li>One month project in a team of five developers, following Scrum framework.</li></ul>",
-      "diploma":  "✔️ I’ve been certified by Opquast in 'Mastering Web Quality Assurance' and obtained a 'Web and Mobile Web Developer' state diploma in may 2021 (BTEC Higher National Diploma)."
+      "diploma": "✔️ I’ve been certified by Opquast in 'Mastering Web Quality Assurance' and obtained a 'Web and Mobile Web Developer' state diploma in may 2021 (BTEC Higher National Diploma)."
     },
     "hobbies": {
       "title": "Hobbies",
       "traveling": "🗺️ <b>Traveling around the world</b> : For the past ten years, in self-organization, I’ve had the chance to explore and discover 21 countries. I am quite simply unable to tell which one was the most incredible ; it has always been a series of unique experiences and encounters, but Japan and Greece definitely have a special place in my heart.",
-      "hiking":  "⛰️ <b>Hiking</b> : As a child already, I spent every summer hiking in the Pyrenees with my family, and I never lost that interest while growing up. From Austrian Tyrol and Bulgarian Pirin National Park to impressive Norwegian fjords, every country I visited gave me opportunities to nurture this passion.",
+      "hiking": "⛰️ <b>Hiking</b> : As a child already, I spent every summer hiking in the Pyrenees with my family, and I never lost that interest while growing up. From Austrian Tyrol and Bulgarian Pirin National Park to impressive Norwegian fjords, every country I visited gave me opportunities to nurture this passion.",
       "gaming": "🎮<b>Video & board games</b> : Either independant or big licenses games, RPG, TPS, strategy, open-world, … I’m curious enough to try every game that tickles my curiosity. All time favorites - at this time - : Hollow Knight, Outer Wilds, Stardew Valley. As for board games, I am more inclined to play cooperative games but I’m always up for a friendly competition.",
       "reading": "📚 <b>Reading</b> : Voracious reader, I especially enjoy reading fantasy and science-fiction novels."
     }

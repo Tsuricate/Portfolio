@@ -1,23 +1,35 @@
 import { Box, Heading, Flex } from '@chakra-ui/react';
 
 interface SectionContainerProps {
+  id: string;
   children: React.ReactNode;
   background: string;
+  backgroundImage?: string;
+  backgroundRepeat?: string;
+  backgroundSize?: string;
   sectionTitle?: string | null;
   fullWidth?: boolean;
 }
 
-const SectionContainer = ({ children, background, sectionTitle, fullWidth }: SectionContainerProps) => {
-  const paddingX = fullWidth ? 0 : { base: '7', lg: '16' };
+const SectionContainer = ({
+  id,
+  children,
+  background,
+  backgroundImage,
+  backgroundSize,
+  backgroundRepeat,
+  sectionTitle,
+}: SectionContainerProps) => {
   return (
     <Box
+      id={id}
       height={{ xl: '100%' }}
-      py={{ base: '65px', lg: '80px' }}
-      px={paddingX}
       className="SectionContainer"
       key={sectionTitle}
       background={background}
-      backgroundSize={{ base: '20%', lg: '24%' }}
+      backgroundImage={backgroundImage}
+      backgroundRepeat={backgroundRepeat}
+      backgroundSize={backgroundSize}
     >
       <Flex direction="column" height={{ xl: '100%' }}>
         {sectionTitle && (
