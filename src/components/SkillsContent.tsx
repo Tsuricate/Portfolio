@@ -1,58 +1,75 @@
-import React from 'react';
-import { Flex, Box, Grid, GridItem } from '@chakra-ui/react';
-import { GiPineTree, GiSprout, GiRibbonMedal } from 'react-icons/gi';
+import { Flex, Box, Grid, Heading, Text } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
-import SectionContainer from './SectionContainer';
 import SkillsGroup from './SkillsGroup';
-import skills from '../data/skills';
 
-const firstGroup = skills.slice(0, 3);
-const secondGroup = skills.slice(3, 4);
-const certifications = skills.slice(-1);
+interface SkillContentProps {
+  skillGroups: {
+    title: string;
+    skills: string[];
+    rotation: string;
+    counterRotation: string;
+  }[];
+}
 
-const SkillsContent = () => {
-  const { t } = useTranslation();
+const SkillContent = ({ skillGroups }: SkillContentProps) => {
+  const { t } = useTranslation('about');
   return (
-    <SectionContainer
-      background='#E8E8E4'
-      sectionTitle={t('sectionTitle.skills')}
-      fullWidth
-    >
-      <Flex height={{ xl: '100%' }} flexDirection="column">
-        {/* Banner */}
+    <Box>
+      <Flex align="flex-start" gap={4} mb={10}>
+        <Box width="12px" height="42px" bg="orange.100" flexShrink={0} />
+
+        <Box>
+          <Heading
+            fontSize={{ base: '2.5rem', md: '3.6rem' }}
+            lineHeight="0.9"
+            textTransform="uppercase"
+          >
+            {t('toolbox.title')}
+          </Heading>
+
+          <Text
+            mt={3}
+            fontSize="0.75rem"
+            fontWeight="800"
+            letterSpacing="0.16em"
+            textTransform="uppercase"
+            color="orange.300"
+          >
+            {t('toolbox.subtitle')}
+          </Text>
+        </Box>
+      </Flex>
+
+      <Box position="relative">
         <Box
-          width="100%"
-          height="200px"
-          overflowX="hidden"
-          bg="url(/images/skillsImage.webp) center"
-          filter="grayscale(50%) brightness(0.9)"
+          display={{ base: 'none', md: 'block' }}
+          position="absolute"
+          left="0"
+          right="0"
+          top="50%"
+          height="18px"
+          bg="orange.200"
+          opacity={0.23}
+          transform="translateY(-50%) rotate(0.8deg)"
+          zIndex={0}
         />
 
         <Grid
-          templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
-          flexGrow={{ xl: '1' }}
-          px={{ xl: 5 }}
-          gap={{ lg: 1 }}
+          templateColumns={{
+            base: '1fr',
+            md: 'repeat(2, 1fr)',
+            lg: 'repeat(4, 1fr)',
+          }}
+          gap={{ base: 6, lg: 8 }}
+          position="relative"
+          zIndex={1}
         >
-          <GridItem colSpan={{ base: 1, lg: 3, xl: 3 }}>
-            <SkillsGroup
-              groupTitle={t('skills.known')}
-              icon={GiPineTree}
-              cardHeight="sm"
-            />
-          </GridItem>
-          <GridItem colSpan={{ base: 1, lg: 2, xl: 1 }}>
-            <SkillsGroup groupTitle={t('skills.unknown')} icon={GiSprout} />
-          </GridItem>
-          <GridItem colSpan={{ base: 1, lg: 1, xl: 1 }}>
-            <SkillsGroup
-              groupTitle={t('skills.certification')}
-              icon={GiRibbonMedal}
-            />
-          </GridItem>
+          {skillGroups.map((skill, index) => (
+            <SkillsGroup skill={skill} index={index} />
+          ))}
         </Grid>
-      </Flex>
-    </SectionContainer>
+      </Box>
+    </Box>
   );
 };
-export default SkillsContent;
+export default SkillContent;

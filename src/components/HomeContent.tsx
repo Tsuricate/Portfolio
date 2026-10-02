@@ -4,10 +4,14 @@ import SectionContainer from './SectionContainer';
 import ActionButtons from './ActionButtons';
 
 const HomeContent = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
 
   return (
-    <SectionContainer background="light.100" id="home">
+    <SectionContainer
+      id="home"
+      background="paper.100"
+      backgroundImage="linear-gradient(to bottom, #EDDFC8 85%, #F1E5D2 100%)"
+    >
       <Flex minH="100vh" pt={{ base: '130px', lg: 0 }} direction={{ base: 'column', lg: 'row' }}>
         <Box
           order={{ base: 2, lg: 1 }}

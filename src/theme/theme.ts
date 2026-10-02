@@ -7,6 +7,11 @@ const fonts = defineTokens.fonts({
 });
 
 const colors = defineTokens.colors({
+  paper: {
+    100: { value: '#EDDFC8' },
+    200: { value: '#E9DBC4' },
+    300: { value: '#DFD0B3' },
+  },
   light: {
     50: { value: '#F4EEDF' },
     100: { value: '#EDDFC8' },
@@ -14,7 +19,10 @@ const colors = defineTokens.colors({
     200: { value: '#E5DCCC' },
   },
   orange: {
+    50: { value: '#E6D2B8' },
     100: { value: '#D08A54' },
+    200: { value: '#AA806D' },
+    300: { value: '#86784A' },
   },
   black: {
     100: { value: '#1A1B1B' },

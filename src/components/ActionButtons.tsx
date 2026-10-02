@@ -12,7 +12,7 @@ const ScreenprintButton = ({ variant, children, onClick }: ScreenprintButtonProp
     <Box
       position="absolute"
       inset="0"
-      bg="#1A1B1B"
+      bg="black.100"
       borderRadius="5px 3px 4px 5px"
       transform="translate(5px, 5px) rotate(0.5deg)"
     />

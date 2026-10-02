@@ -1,62 +1,71 @@
-import React from 'react';
-import {
-  Tag,
-  Box,
-  Stack,
-  Heading,
-  TagLabel,
-  TagStartElement,
-} from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import SkillsList from './SkillsList';
 
-interface SkillsGroupProps {
-  groupTitle: string;
-  skills?: {
-    title?: string;
-    list?: string[];
-  }[];
-  icon: React.ElementType;
-  cardHeight?: string;
+interface SkillGroupProps {
+  skill: {
+    title: string;
+    skills: string[];
+    rotation: string;
+    counterRotation: string;
+  };
+  index: number;
 }
 
-const SkillsGroup = ({ groupTitle, skills, icon, cardHeight }: SkillsGroupProps) => (
-  <Stack height={{ xl: '100%' }} mx={5}>
-    <Box
-      textAlign="center"
-      filter="drop-shadow(rgba(50, 50, 93, 0.25) 0px 2px 5px) drop-shadow(rgba(0, 0, 0, 0.3) 0px 1px 3px)"
-      mt={{ base: 8, xl: '-32px' }}
-    >
-      <Tag.Root
-        p={8}
-        mb={5}
-        height="50px"
-        clipPath="polygon(5% 0, 95% 0, 100% 25%, 100% 75%, 95% 100%, 5% 100%, 0 75%, 0 25%)"
-      >
-        <TagStartElement boxSize="30px" as={icon} />
-        <TagLabel>
-          <Heading as="h3" fontSize={16} letterSpacing="1px" whiteSpace="pre-wrap">
-            {groupTitle}
-          </Heading>
-        </TagLabel>
-      </Tag.Root>
-    </Box>
+const SkillGroup = ({ skill, index }: SkillGroupProps) => (
+  <Box
+    key={skill.title}
+    position="relative"
+    bg="#EADBC8"
+    border="2px solid #1A1B1B"
+    transform={`rotate(${skill.rotation})`}
+    px={{ base: 3, md: 6 }}
+    py={6}
+    minH="235px"
+    overflow="hidden"
+    _before={{
+      content: "''",
+      position: 'absolute',
+      inset: '-1px',
+      border: '1px solid #1A1B1B',
+      transform: 'translate(4px, 4px)',
+      zIndex: -1,
+    }}
+  >
+    <Box transform={`rotate(${skill.counterRotation})`}>
+      <Box position="relative" minH="64px">
+        <Text
+          position="absolute"
+          left="-10px"
+          top="-22px"
+          fontSize="5.5rem"
+          lineHeight="1"
+          fontWeight="900"
+          color="orange.200"
+          opacity={0.12}
+          pointerEvents="none"
+          aria-hidden="true"
+        >
+          {String(index + 1).padStart(2, '0')}
+        </Text>
 
-    <Stack
-      flexGrow={{ xl: '1' }}
-      direction={{ base: 'column', lg: 'row' }}
-      gap={{ base: 5, md: 10, xl: 5 }}
-      alignItems={{ base: 'center' }}
-      justifyContent="center"
-    >
-      {skills?.map((skill) => (
-        <SkillsList
-          key={skill.title}
-          category={skill.title}
-          cardHeight={cardHeight || 'sm'}
-        />
-      ))}
-    </Stack>
-  </Stack>
+        <Box position="relative" pt={4} pl={{ base: 3, md: 5 }}>
+          <Text
+            fontSize={{ base: '1.15rem', md: '1.3rem' }}
+            lineHeight="1"
+            fontWeight="900"
+            letterSpacing="0.1em"
+            textTransform="uppercase"
+            color="#1A1B1B"
+          >
+            {skill.title}
+          </Text>
+
+          <Box mt={3} mb={6} width="52px" height="4px" bg="orange.100" />
+          <SkillsList skills={skill.skills} />
+        </Box>
+      </Box>
+    </Box>
+  </Box>
 );
 
-export default SkillsGroup;
+export default SkillGroup;

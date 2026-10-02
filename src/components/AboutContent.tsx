@@ -1,124 +1,112 @@
-import {
-  SimpleGrid,
-  Tabs,
-  Flex,
-  Text,
-  Stack,
-  Image,
-} from '@chakra-ui/react';
+import { Box, Heading, Stack, Text, Flex, Image } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
+
 import SectionContainer from './SectionContainer';
-import ActionButtons from './ActionButtons';
-import aboutSections from '../data/aboutSections';
-import customScrollbar from '../utils/customScrollbar';
-import { fade } from '../utils/animations';
+import { skillGroups } from '../data/skills';
+import SkillsContent from './SkillsContent';
 
 const AboutContent = () => {
-  const { t } = useTranslation();
-
-  const aboutImages = ['/images/pano1.webp', '/images/pano2.webp', '/images/pano3.webp'];
+  const { t } = useTranslation('about');
 
   return (
-    <SectionContainer
-      background='#505050'
-      sectionTitle={t('sectionTitle.about')}
-    >
-      <SimpleGrid
-        columns={{ base: 1, xl: 2 }}
-        gap={{ base: 5, md: 10, xl: 20 }}
-        height={{ xl: '100%' }}
-        alignItems={{ xl: 'center' }}
-        justifyItems={{ lg: 'center' }}
+    <SectionContainer id="about" background="paper.100" fullWidth sectionDivider>
+      <Stack
+        minH={{ lg: '100vh' }}
+        px={{ base: 6, md: 10, xl: 16 }}
+        pt={{ base: 24, md: 20, lg: 14 }}
+        pb={{ base: 10, lg: 16 }}
+        gap={{ base: 14, lg: 20 }}
+        justify={{ base: 'flex-start', lg: 'center' }}
       >
-        <SimpleGrid
-          columns={3}
-          gap={{ base: 1.5, md: 3 }}
-          width={{ lg: '75%', xl: '100%' }}
-        >
-          {aboutImages.map((image) => (
-            <Image
-              key={image}
-              src={image}
-              alt="A third of the image representing woman in Japan"
-              width="100%"
-              height="auto"
-              objectFit="cover"
-              loading="lazy"
-              filter="saturate(75%)"
-              {...fade}
-            />
-          ))}
-        </SimpleGrid>
-
         <Flex
-          flexDirection="column"
-          justifyContent={{ xl: 'center' }}
-          height={{ xl: '100%' }}
+          direction={{ base: 'column', lg: 'row' }}
+          align="center"
+          gap={{ base: 12, lg: 8, xl: 16 }}
         >
-          <Tabs.Root
-            defaultValue={aboutSections[0]?.title}
-            fitted
-            lazyMount
-            unmountOnExit
+          <Box
+            flex={{ base: 'none', lg: '1 1 58%', xl: '1 1 48%' }}
+            minW={0}
+            w={{ base: '100%', lg: 'auto' }}
           >
-            <Tabs.List paddingBottom={{ md: 5 }}>
-              {aboutSections.map((section) => (
-                <Tabs.Trigger
-                  key={section.title}
-                  value={section.title}
-                  color={{ base: '#6B7676', _dark: '#C1C7C7' }}
-                  borderRadius="10px"
-                  css={{
-                    WebkitTapHighlightColor: 'transparent',
-                  }}
-                  _selected={{
-                    bg: { base: '#bfd0dd', _dark: '#95928aa6' },
-                    boxShadow: 'rgba(0, 0, 0, 0.18) 0px 2px 4px',
-                    color: { base: '#264653', _dark: '#F5F7FA' },
-                  }}
-                >
-                  <Text fontSize={{ base: 'sm', md: 'lg' }}>
-                    {t(section.title)}
-                  </Text>
-                </Tabs.Trigger>
-              ))}
-            </Tabs.List>
-
-            <Tabs.ContentGroup
-              overflowY="auto"
-              height={{ xl: '450px' }}
-              css={customScrollbar}
+            <Text
+              fontSize="sm"
+              fontWeight="800"
+              letterSpacing="0.15em"
+              textTransform="uppercase"
+              color="orange.100"
             >
-              {aboutSections.map((section) => (
-                <Tabs.Content key={section.title} value={section.title}>
-                  <Stack direction="column" gap={{ base: 5 }}>
-                    {section.texts.map((text) => (
-                      <Text
-                        maxW={{ xl: '82ch' }}
-                        key={text}
-                        lineHeight={1.7}
-                        dangerouslySetInnerHTML={{
-                          __html: t(text),
-                        }}
-                        css={{
-                          '& a': {
-                            textDecoration: 'underline',
-                          },
-                          '& ul': {
-                            paddingLeft: '40px',
-                          },
-                        }}
-                      />
-                    ))}
-                  </Stack>
-                </Tabs.Content>
-              ))}
-            </Tabs.ContentGroup>
-          </Tabs.Root>
+              {t('intro.eyebrow')}
+            </Text>
 
-          <ActionButtons />
+            <Heading
+              mt={4}
+              fontSize={{ base: '3.5rem', md: '5rem', lg: '6rem' }}
+              lineHeight="0.8"
+              textTransform="uppercase"
+            >
+              {t('intro.title.line1')}
+              <br />
+              {t('intro.title.line2')}
+            </Heading>
+
+            <Text mt={8} maxW="600px" fontSize={{ base: '1rem', md: '1.1rem' }} lineHeight="1.75">
+              {t('intro.description')}
+            </Text>
+
+            <Text mt={5} maxW="600px" fontSize={{ base: '1rem', md: '1.05rem' }} lineHeight="1.75">
+              {t('intro.approach')}
+            </Text>
+          </Box>
+
+          <Flex
+            flex={{ base: 'none', lg: '1 1 42%', xl: '1 1 52%' }}
+            minW={0}
+            w="100%"
+            justify="center"
+            align="center"
+            position="relative"
+          >
+            <Box
+              position="relative"
+              width="100%"
+              maxW={{ base: '340px', md: '390px', lg: '330px', xl: '480px' }}
+              height={{ base: '260px', md: '310px', lg: '290px', xl: '350px' }}
+            >
+              <Image
+                src="/images/aboutImage.png"
+                alt="..."
+                width="100%"
+                height="100%"
+                objectFit="contain"
+                display="block"
+              />
+
+              <Box
+                position="absolute"
+                bottom="5%"
+                left="0"
+                px={4}
+                py={3}
+                bg="black.100"
+                color="#EDDFC8"
+                transform="rotate(-2deg)"
+                zIndex={2}
+              >
+                <Text
+                  fontSize="xs"
+                  fontWeight="800"
+                  letterSpacing="0.12em"
+                  textTransform="uppercase"
+                >
+                  {t('intro.illustrationLabel')}
+                </Text>
+              </Box>
+            </Box>
+          </Flex>
         </Flex>
-      </SimpleGrid>
+
+        <SkillsContent skillGroups={skillGroups} />
+      </Stack>
     </SectionContainer>
   );
 };
