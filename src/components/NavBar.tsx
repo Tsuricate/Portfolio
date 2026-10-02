@@ -15,8 +15,43 @@ const links = [
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [activeSection, setActiveSection] = useState('home');
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const root = document.getElementById('root');
+
+    if (!root) return;
+
+    let lastScrollTop = root.scrollTop;
+
+    const handleScroll = () => {
+      const currentScrollTop = root.scrollTop;
+      const scrollDifference = currentScrollTop - lastScrollTop;
+
+      if (Math.abs(scrollDifference) < 8) {
+        return;
+      }
+
+      if (currentScrollTop <= 20) {
+        setIsVisible(true);
+      } else if (scrollDifference > 0) {
+        setIsVisible(false);
+        setIsOpen(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollTop = currentScrollTop;
+    };
+
+    root.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      root.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const sections = links
@@ -53,9 +88,12 @@ const NavBar = () => {
       right={{ base: 4, lg: '5%' }}
       width={{ base: 'auto', lg: '45%' }}
       zIndex="sticky"
-      pointerEvents="none"
+      opacity={isVisible ? 1 : 0}
+      visibility={isVisible ? 'visible' : 'hidden'}
+      transition="opacity 0.25s ease, visibility 0.25s ease"
+      pointerEvents={isVisible ? 'auto' : 'none'}
     >
-      <Box width="100%" px={{ base: 0, lg: { md: 8, xl: 10 } }} pointerEvents="auto">
+      <Box width="100%" px={{ base: 0, lg: { md: 8, xl: 10 } }}>
         <Flex minH="48px" align="center" justify="flex-end">
           <Box display={{ base: 'block', lg: 'none' }} position="relative">
             <IconButton
