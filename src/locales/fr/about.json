@@ -1,0 +1,16 @@
+{
+  "intro": {
+    "eyebrow": "Un peu de moi",
+    "title": {
+      "line1": "Curieuse",
+      "line2": "par nature."
+    },
+    "description": "Développeuse full-stack JavaScript et TypeScript, je m’intéresse particulièrement à la création d’expériences utilisateur accessibles et agréables à utiliser.",
+    "approach": "J’aime comprendre comment les choses fonctionnent, voir comment les différentes pièces s’articulent et chercher comment faire en sorte que l’ensemble soit cohérent, autant pour les personnes qui les utilisent que pour celles qui les construisent.",
+    "illustrationLabel": "En chemin"
+  },
+  "toolbox": {
+    "title": "Mes outils",
+    "subtitle": "Ce que j’utilise"
+  }
+}

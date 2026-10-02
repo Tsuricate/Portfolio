@@ -1,0 +1,19 @@
+{
+  "sectionTitle": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "backToTop": "Revenir à l'accueil",
+    "website": "Voir le site",
+    "resume": "Télécharger mon CV",
+    "contact": "Me contacter"
+  },
+  "footer": {
+    "by": "par",
+    "and": "et",
+    "on": "via"
+  }
+}
