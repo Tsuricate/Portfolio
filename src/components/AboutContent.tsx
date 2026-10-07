@@ -9,7 +9,12 @@ const AboutContent = () => {
   const { t } = useTranslation('about');
 
   return (
-    <SectionContainer id="about" background="paper.100" fullWidth sectionDivider>
+    <SectionContainer
+      id="about"
+      background="linear-gradient(to bottom, #F1E5D2 85%, #E8DCCB 100%)"
+      fullWidth
+      sectionDivider
+    >
       <Stack
         minH={{ lg: '100vh' }}
         px={{ base: 6, md: 10, xl: 16 }}
@@ -74,7 +79,7 @@ const AboutContent = () => {
             >
               <Image
                 src="/images/aboutImage.png"
-                alt="..."
+                alt=""
                 width="100%"
                 height="100%"
                 objectFit="contain"

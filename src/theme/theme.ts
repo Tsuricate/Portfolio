@@ -8,21 +8,28 @@ const fonts = defineTokens.fonts({
 
 const colors = defineTokens.colors({
   paper: {
+    50: { value: '#F1E5D2' },
     100: { value: '#EDDFC8' },
     200: { value: '#E9DBC4' },
     300: { value: '#DFD0B3' },
   },
   light: {
     50: { value: '#F4EEDF' },
-    100: { value: '#EDDFC8' },
+    100: { value: '#F0E3D1' },
     150: { value: '#F3EBDD' },
     200: { value: '#E5DCCC' },
   },
   orange: {
-    50: { value: '#E6D2B8' },
     100: { value: '#D08A54' },
     200: { value: '#AA806D' },
     300: { value: '#86784A' },
+  },
+  brown: {
+    100: { value: '#6F6258' },
+  },
+  beige: {
+    100: { value: '#D0B9A2' },
+    200: { value: '#D0C2B1' },
   },
   black: {
     100: { value: '#1A1B1B' },
@@ -48,7 +55,7 @@ const config = defineConfig({
       width: '100%',
       margin: 0,
       overflowX: 'hidden',
-      bg: { _light: 'light.100', _dark: 'brown.900' },
+      bg: { _light: 'paper.100', _dark: 'brown.900' },
       color: { _light: 'dark.100', _dark: 'light.200' },
     },
   },

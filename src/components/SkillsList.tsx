@@ -9,13 +9,13 @@ const SkillsList = ({ skills }: SkillsListProps) => (
     <Flex wrap="wrap" align="center" columnGap={2} rowGap={3}>
       {skills.map((skill, index) => (
         <Flex key={skill} align="center" gap={2}>
-          <Box px={2.5} py={2} border="2px solid #1A1B1B" bg="#D0B9A2">
+          <Box px={2.5} py={2} border="2px solid #1A1B1B" bg="beige.100">
             <Text
               fontSize="1.05rem"
               lineHeight="1"
               fontWeight="900"
               letterSpacing="0.04em"
-              color="#black.100"
+              color="black.100"
               whiteSpace="nowrap"
             >
               {skill}
