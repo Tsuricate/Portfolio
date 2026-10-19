@@ -12,22 +12,15 @@ interface NavLinkProps {
 const NavLink = ({ children, href, active = false, mobile = false, onClose }: NavLinkProps) => (
   <Link
     href={href}
-    position="relative"
-    display="inline-flex"
-    alignItems="center"
+    variant="navLink"
     justifyContent={mobile ? 'flex-start' : 'center'}
     height={mobile ? '50px' : '48px'}
     width={mobile ? '100%' : 'auto'}
     px={mobile ? 3 : { md: 3, lg: 4 }}
     fontSize={mobile ? '18px' : { md: '17px', lg: '19px' }}
-    fontWeight="800"
     letterSpacing={mobile ? '0.08em' : '0.065em'}
-    textTransform="uppercase"
-    whiteSpace="nowrap"
+
     color={active ? 'light.50' : 'black.100'}
-    textDecoration="none"
-    isolation="isolate"
-    transition="color .2s ease"
     _before={
       mobile
         ? {

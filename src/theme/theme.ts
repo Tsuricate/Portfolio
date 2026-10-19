@@ -1,5 +1,5 @@
 import { createSystem, defaultConfig, defineConfig, defineTokens } from '@chakra-ui/react';
-import { buttonRecipe } from './recipes';
+import { buttonRecipe, linkRecipe } from './recipes';
 
 const fonts = defineTokens.fonts({
   heading: { value: 'Fraunces' },
@@ -80,6 +80,7 @@ const config = defineConfig({
     },
     recipes: {
       button: buttonRecipe,
+      link: linkRecipe,
     },
   },
 });

@@ -1,4 +1,4 @@
-import { Box, Heading, Flex } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
 interface SectionContainerProps {
   id: string;
@@ -7,8 +7,6 @@ interface SectionContainerProps {
   backgroundImage?: string;
   backgroundRepeat?: string;
   backgroundSize?: string;
-  sectionTitle?: string | null;
-  fullWidth?: boolean;
   sectionDivider?: boolean;
 }
 
@@ -19,14 +17,14 @@ const SectionContainer = ({
   backgroundImage,
   backgroundSize,
   backgroundRepeat,
-  sectionTitle,
   sectionDivider = false,
 }: SectionContainerProps) => (
   <Box
     id={id}
     position="relative"
     minH="100dvh"
-    className="SectionContainer"
+    display="flex"
+    flexDirection="column"
     background={background}
     backgroundImage={backgroundImage}
     backgroundRepeat={backgroundRepeat}
@@ -34,7 +32,7 @@ const SectionContainer = ({
     overflow="visible"
   >
     {sectionDivider && (
-      <>
+      <Box>
         <Box
           position="absolute"
           top={{ base: '28px', md: '16px', lg: '0' }}
@@ -53,11 +51,7 @@ const SectionContainer = ({
         <Box
           position="absolute"
           top={{ base: '28px', md: '16px', lg: '0' }}
-          left={{
-            base: '50%',
-            md: '50%',
-            lg: 'calc(72px + 36%)',
-          }}
+          left={{ base: '50%', md: '50%', lg: 'calc(72px + 36%)' }}
           width={{ base: '15px', md: '16px' }}
           height={{ base: '15px', md: '16px' }}
           bg="orange.100"
@@ -66,21 +60,11 @@ const SectionContainer = ({
           transform="translate(-50%, -50%)"
           zIndex={4}
         />
-      </>
+      </Box>
     )}
 
-    <Box position="relative" zIndex={1}>
-      <Flex direction="column" minH="100dvh">
-        {sectionTitle && (
-          <Flex justifyContent="center">
-            <Heading textAlign="center" pb={10}>
-              {sectionTitle}
-            </Heading>
-          </Flex>
-        )}
-
-        <Box flexGrow={1}>{children}</Box>
-      </Flex>
+    <Box flex="1" display="flex" flexDirection="column">
+      {children}
     </Box>
   </Box>
 );

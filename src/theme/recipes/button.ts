@@ -40,6 +40,7 @@ export const buttonRecipe = defineRecipe({
           transform: 'translateY(-2px)',
         },
       },
+      contact: {},
     },
   },
 
