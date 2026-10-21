@@ -55,8 +55,7 @@ const config = defineConfig({
       width: '100%',
       margin: 0,
       overflowX: 'hidden',
-      bg: { _light: 'paper.100', _dark: 'brown.900' },
-      color: { _light: 'dark.100', _dark: 'light.200' },
+      color: 'dark.100',
     },
   },
   theme: {
