@@ -37,8 +37,8 @@ export const projects: Project[] = [
     title: 'BlablaBook',
     translationKey: 'blablaBook',
     image: '/images/blablaBook.png',
-    githubUrl: 'https://github.com/',
-    url: 'https://example.com/',
+    githubUrl: 'https://github.com/Tsuricate/BlablaBook',
+    url: 'https://www.blablabook.pro/',
     specs: [
       { name: 'React', icon: FaReact },
       { name: 'TypeScript', icon: SiTypescript },
@@ -54,8 +54,7 @@ export const projects: Project[] = [
     title: 'Wingco',
     translationKey: 'wingco',
     image: '/images/wingco.png',
-    githubUrl: 'https://github.com/',
-    url: 'https://example.com/',
+    githubUrl: 'https://github.com/Tsuricate/wingco',
     specs: [
       { name: 'Next.js', icon: SiNextdotjs },
       { name: 'TypeScript', icon: SiTypescript },
@@ -70,8 +69,8 @@ export const projects: Project[] = [
     title: 'Yet Another Avatar Creator',
     translationKey: 'avatarCreator',
     image: '/images/avatarCreator.png',
-    githubUrl: 'https://github.com/',
-    url: 'https://example.com/',
+    githubUrl: 'https://github.com/Tsuricate/YAAC_front',
+    url: 'https://yetanotheravatarcreator.vercel.app/',
     specs: [
       { name: 'React', icon: FaReact },
       { name: 'Chakra UI', icon: SiChakraui },
@@ -83,7 +82,7 @@ export const projects: Project[] = [
     title: 'Portfolio',
     translationKey: 'portfolio',
     image: '/images/portfolio.png',
-    githubUrl: 'https://github.com/',
+    githubUrl: 'https://github.com/Tsuricate/Portfolio',
     specs: [
       { name: 'React', icon: FaReact },
       { name: 'TypeScript', icon: SiTypescript },
@@ -95,7 +94,7 @@ export const projects: Project[] = [
     title: 'TaleMe',
     translationKey: 'taleMe',
     image: '/images/taleMe.png',
-    githubUrl: 'https://github.com/',
+    githubUrl: 'https://github.com/O-clock-Lyra-PHP/Vous-etes-le-heros/tree/main',
     specs: [
       { name: 'React', icon: FaReact },
       { name: 'Redux', icon: SiRedux },

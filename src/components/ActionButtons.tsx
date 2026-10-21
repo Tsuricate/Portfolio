@@ -1,13 +1,13 @@
-import { Box, Stack, Button, Text } from '@chakra-ui/react';
+import { Box, Stack, Button, Text, Link } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 
 interface ScreenprintButtonProps {
-  variant: 'primary' | 'secondary';
   children: React.ReactNode;
   onClick?: () => void;
+  href?: string;
 }
 
-const ScreenprintButton = ({ variant, children, onClick }: ScreenprintButtonProps) => (
+const ScreenprintButton = ({ children, onClick, href }: ScreenprintButtonProps) => (
   <Box position="relative">
     <Box
       position="absolute"
@@ -25,9 +25,15 @@ const ScreenprintButton = ({ variant, children, onClick }: ScreenprintButtonProp
       transform="rotate(-0.5deg)"
     />
 
-    <Button width="100%" variant={variant} position="relative" zIndex={1} onClick={onClick}>
-      {children}
-    </Button>
+    {href ? (
+      <Link href={href} variant="actionButton" position="relative" zIndex={1}>
+        {children}
+      </Link>
+    ) : (
+      <Button width="100%" variant="primary" position="relative" zIndex={1} onClick={onClick}>
+        {children}
+      </Button>
+    )}
   </Box>
 );
 
@@ -50,11 +56,11 @@ const ActionButtons = () => {
       pt={{ base: 6, md: 8 }}
       w={{ base: '100%', md: 'min(100%, 420px)', xl: '460px' }}
     >
-      <ScreenprintButton variant="primary" onClick={downloadResume}>
+      <ScreenprintButton onClick={downloadResume}>
         <Text>{t('buttons.resume')}</Text>
       </ScreenprintButton>
 
-      <ScreenprintButton variant="secondary">
+      <ScreenprintButton href="mailto:zoeamat.pro@gmail.com">
         <Text>{t('buttons.contact')}</Text>
       </ScreenprintButton>
     </Stack>

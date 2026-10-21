@@ -13,27 +13,22 @@ const ProjectsContent = () => {
   const archivedProjects = projects.slice(3);
 
   return (
-    <SectionContainer id="projects" background="#E8DCCB" fullWidth>
+    <SectionContainer
+      id="projects"
+      background="linear-gradient(to bottom, #F4E9D8 85%, #F8F0E3 100%)"
+    >
       <VStack
-        minH={{ lg: '100vh' }}
         align="stretch"
         justify={{ base: 'flex-start', lg: 'space-between' }}
-        px={{ base: 5, sm: 6, md: 10, lg: 12, xl: 16, '2xl': 20 }}
+        px={{ base: 6, md: 10, lg: 12, xl: 16, '2xl': 20 }}
         pt={{ base: 16, md: 20, lg: 20, xl: 24 }}
-        pb={{ base: 16, md: 20, lg: 14 }}
+        pb={{ base: 5, md: 20, lg: 14 }}
         gap={{ base: 12, lg: 14, xl: 16 }}
       >
         <Box>
-          <Grid
-            templateColumns="1fr auto"
-            templateRows="auto auto"
-            columnGap={{ base: 3, sm: 4, md: 6, lg: 8 }}
-            rowGap={{ base: 6, sm: 3, md: 2 }}
-          >
+          <VStack align="stretch" gap={{ base: 6, md: 5 }}>
             <Heading
-              gridColumn="2"
-              gridRow="1"
-              justifySelf="end"
+              alignSelf={{ base: 'start', md: 'flex-end' }}
               fontSize={{ base: '3rem', sm: '3.5rem', md: '5rem', lg: '6rem' }}
               fontWeight="600"
               letterSpacing="0.045em"
@@ -43,7 +38,7 @@ const ProjectsContent = () => {
               {t('common:sectionTitle.projects')}
             </Heading>
 
-            <HStack gridColumn="1 / -1" gridRow="2" minW={0}>
+            <HStack gap={0} minW={0}>
               <Heading
                 flexShrink={0}
                 fontSize={{ base: '1.25rem', sm: '1.4rem', md: '1.8rem', lg: '2rem' }}
@@ -57,16 +52,14 @@ const ProjectsContent = () => {
             </HStack>
 
             <Text
-              gridColumn="1 / -1"
-              mt={{ base: 0, md: 3 }}
               ml={{ base: '0.5rem', md: '1rem', lg: '1.25rem' }}
-              maxW={{ base: '240px', md: '420px', lg: '600px' }}
+              maxW={{ md: '420px', lg: '600px' }}
               color="brown.100"
               lineHeight="1.5"
             >
               {t('intro')}
             </Text>
-          </Grid>
+          </VStack>
 
           <Grid
             mt={8}

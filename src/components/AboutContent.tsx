@@ -11,12 +11,11 @@ const AboutContent = () => {
   return (
     <SectionContainer
       id="about"
-      background="linear-gradient(to bottom, #F1E5D2 85%, #E8DCCB 100%)"
-      fullWidth
+      background="linear-gradient(to bottom, #F1E5D2 85%, #F4E9D8 100%)"
+
       sectionDivider
     >
       <Stack
-        minH={{ lg: '100vh' }}
         px={{ base: 6, md: 10, xl: 16 }}
         pt={{ base: 24, md: 20, lg: 14 }}
         pb={{ base: 10, lg: 16 }}

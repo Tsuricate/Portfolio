@@ -12,18 +12,18 @@ const HomeContent = () => {
       background="paper.100"
       backgroundImage="linear-gradient(to bottom, #EDDFC8 85%, #F1E5D2 100%)"
     >
-      <Flex minH="100vh" pt={{ base: '130px', lg: 0 }} direction={{ base: 'column', lg: 'row' }}>
+      <Flex pt={{ base: '100px', lg: 0 }} direction={{ base: 'column', lg: 'row' }} flex={1}>
         <Box
           order={{ base: 2, lg: 1 }}
           flex={{ base: 'none', lg: '0 0 50%' }}
           w={{ base: '100%', lg: 'auto' }}
-          h={{ base: 'min(65vh, 650px)', lg: '100vh' }}
-          minH={{ base: '420px', lg: '100vh' }}
+          minH={{ base: '420px', lg: 'auto' }}
           backgroundImage="url('/images/homeImage.png')"
           backgroundRepeat="no-repeat"
           backgroundSize={{ base: 'auto 100%', lg: 'contain' }}
           backgroundPosition={{ base: 'left center', lg: 'center' }}
           flexShrink={0}
+          alignSelf="stretch"
         />
 
         <Box

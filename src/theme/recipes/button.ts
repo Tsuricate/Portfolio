@@ -20,10 +20,6 @@ export const buttonRecipe = defineRecipe({
         bg: '#D08A54',
         fontSize: 'lg',
       },
-      secondary: {
-        bg: '#A99E72',
-        fontSize: 'lg',
-      },
       outline: {
         minH: '40px',
         px: 4,
@@ -40,7 +36,6 @@ export const buttonRecipe = defineRecipe({
           transform: 'translateY(-2px)',
         },
       },
-      contact: {},
     },
   },
 
