@@ -1,91 +1,106 @@
-import { Wrap, WrapItem, useBreakpointValue, chakra, useColorModeValue } from '@chakra-ui/react';
-import React from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import { Box, Grid, Heading, HStack, Text, VStack } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
+
 import { projects } from '../data/projects';
-import ProjectCard from './ProjectCard';
 import SectionContainer from './SectionContainer';
+import ProjectCard from './CurrentProjectCard';
+import ArchiveProjectCard from './ArchiveProjectCard';
 
 const ProjectsContent = () => {
-  const useCarousel = useBreakpointValue({ base: false, lg: true });
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 4,
-    },
-    largeDesktop: {
-      breakpoint: { max: 3000, min: 2300 },
-      items: 3,
-      slidesToSlide: 1,
-    },
-    desktop: {
-      breakpoint: { max: 2300, min: 1700 },
-      items: 2,
-      slidesToSlide: 1,
-    },
-    smallDesktop: {
-      breakpoint: { max: 1700, min: 1200 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1200, min: 992 },
-      items: 0.5,
-      slidesToSlide: 1,
-    },
-  };
+  const { t } = useTranslation('projects');
 
-  const ChakraCarousel = chakra(Carousel);
-  const { t } = useTranslation();
+  const featuredProjects = projects.slice(0, 3);
+  const archivedProjects = projects.slice(3);
 
   return (
     <SectionContainer
-      background={useColorModeValue('#DAD7CD', '#505050')}
-      sectionTitle={t('sectionTitle.projects')}
+      id="projects"
+      background="linear-gradient(to bottom, #F4E9D8 85%, #F8F0E3 100%)"
     >
-      {useCarousel ? (
-        <ChakraCarousel
-          responsive={responsive}
-          height={{ lg: '100%' }}
-          pb={{ lg: 10 }}
-          showDots
-          centerMode={{ xl: true }}
-        >
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              image={project.image}
-              name={project.title}
-              description={t(project.description)}
-              githubUrl={project.githubUrl}
-              githubMessage={t(project.githubMessage)}
-              urlMessage={t(project.urlMessage)}
-              url={project.url}
-              specs={project.skills}
-            />
-          ))}
-        </ChakraCarousel>
-      ) : (
-        <Wrap spacing={5} justify="center" p={3}>
-          {projects.map((project) => (
-            <WrapItem key={project.title}>
-              <ProjectCard
-                key={project.title}
-                image={project.image}
-                name={project.title}
-                description={t(project.description)}
-                githubUrl={project.githubUrl}
-                githubMessage={t(project.githubMessage)}
-                urlMessage={t(project.urlMessage)}
-                url={project.url}
-                specs={project.skills}
-              />
-            </WrapItem>
-          ))}
-        </Wrap>
-      )}
+      <VStack
+        align="stretch"
+        justify={{ base: 'flex-start', lg: 'space-between' }}
+        px={{ base: 6, md: 10, lg: 12, xl: 16, '2xl': 20 }}
+        pt={{ base: 16, md: 20, lg: 20, xl: 24 }}
+        pb={{ base: 5, md: 20, lg: 14 }}
+        gap={{ base: 12, lg: 14, xl: 16 }}
+      >
+        <Box>
+          <VStack align="stretch" gap={{ base: 6, md: 5 }}>
+            <Heading
+              alignSelf={{ base: 'start', md: 'flex-end' }}
+              fontSize={{ base: '3rem', sm: '3.5rem', md: '5rem', lg: '6rem' }}
+              fontWeight="600"
+              letterSpacing="0.045em"
+              lineHeight="0.7"
+              textTransform="uppercase"
+            >
+              {t('common:sectionTitle.projects')}
+            </Heading>
+
+            <HStack gap={0} minW={0}>
+              <Heading
+                flexShrink={0}
+                fontSize={{ base: '1.25rem', sm: '1.4rem', md: '1.8rem', lg: '2rem' }}
+                lineHeight="0.9"
+                textTransform="uppercase"
+              >
+                {t('currentProjects')}
+              </Heading>
+
+              <Box flex="1" height="2px" bg="black.100" ml={{ base: 2, sm: 3, md: 5, lg: 6 }} />
+            </HStack>
+
+            <Text
+              ml={{ base: '0.5rem', md: '1rem', lg: '1.25rem' }}
+              maxW={{ md: '420px', lg: '600px' }}
+              color="brown.100"
+              lineHeight="1.5"
+            >
+              {t('intro')}
+            </Text>
+          </VStack>
+
+          <Grid
+            mt={8}
+            templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}
+            gap={{ base: 6, lg: 4 }}
+          >
+            {featuredProjects.map((project, index) => (
+              <ProjectCard project={project} index={index} />
+            ))}
+          </Grid>
+        </Box>
+
+        <Box>
+          <Heading
+            fontSize={{ base: '1.7rem', md: '2rem' }}
+            lineHeight="0.9"
+            textTransform="uppercase"
+          >
+            {t('archive.title')}
+          </Heading>
+
+          <Text
+            mt={{ base: 2, md: 3 }}
+            ml={{ base: '0.5rem', md: '1rem' }}
+            maxW={{ base: '300px', md: '620px' }}
+            fontSize={{ base: '0.85rem', md: '1rem' }}
+            color="brown.100"
+            lineHeight="1.5"
+          >
+            {t('archive.description')}
+          </Text>
+
+          <Grid mt={8} templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }} gap={4}>
+            {archivedProjects.map((project) => (
+              <ArchiveProjectCard project={project} />
+            ))}
+          </Grid>
+        </Box>
+      </VStack>
     </SectionContainer>
   );
 };
+
 export default ProjectsContent;

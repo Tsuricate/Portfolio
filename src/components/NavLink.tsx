@@ -1,51 +1,104 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { HashLink } from 'react-router-hash-link';
-import { chakra, useColorModeValue } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
+import { Link } from '@chakra-ui/react';
 
-const NavLink = ({ children, onClose }) => {
-  const ChakraHashLink = chakra(HashLink);
-  const { t } = useTranslation();
-  const anchor = t('sectionTitle.home') === children ? '#' : `#${children}`;
+interface NavLinkProps {
+  children: React.ReactNode;
+  href: string;
+  active?: boolean;
+  mobile?: boolean;
+  onClose?: () => void;
+}
 
-  return (
-    <ChakraHashLink
-      smooth
-      to={anchor}
-      position="relative"
-      _before={{
-        content: "''",
-        position: 'absolute',
-        width: '100%',
-        height: '1px',
-        bottom: '0',
-        left: '0',
-        bgColor: `${useColorModeValue('rgba(0, 0, 0, 0.64)', 'rgba(255, 255, 255, 0.64)')}`,
-        visibility: 'hidden',
-        transform: 'scaleX(0)',
-        transition: 'all .25s cubic-bezier(1,.25,0,.75) 0s',
-      }}
-      sx={{
-        '&:hover:before': {
-          visibility: 'visible',
-          transform: 'scaleX(1)',
-        },
-      }}
-      onClick={onClose}
-    >
-      {children}
-    </ChakraHashLink>
-  );
-};
+const NavLink = ({ children, href, active = false, mobile = false, onClose }: NavLinkProps) => (
+  <Link
+    href={href}
+    variant="navLink"
+    justifyContent={mobile ? 'flex-start' : 'center'}
+    height={mobile ? '50px' : '48px'}
+    width={mobile ? '100%' : 'auto'}
+    px={mobile ? 3 : { md: 3, lg: 4 }}
+    fontSize={mobile ? '18px' : { md: '17px', lg: '19px' }}
+    letterSpacing={mobile ? '0.08em' : '0.065em'}
 
-NavLink.defaultProps = {
-  onClose: null,
-};
-
-NavLink.propTypes = {
-  children: PropTypes.node.isRequired,
-  onClose: PropTypes.func,
-};
+    color={active ? 'light.50' : 'black.100'}
+    _before={
+      mobile
+        ? {
+            content: "''",
+            position: 'absolute',
+            zIndex: -1,
+            left: '-5px',
+            right: active ? '8px' : '100%',
+            top: '4px',
+            bottom: '4px',
+            bg: 'black.100',
+            borderRadius: '1px 3px 2px 2px',
+            transition: 'right .2s ease',
+          }
+        : {
+            content: "''",
+            position: 'absolute',
+            zIndex: -2,
+            inset: '1px -9px 0',
+            bg: 'black.100',
+            borderRadius: '2px 3px 0 2px',
+            transform: active ? 'rotate(-0.8deg) scale(1)' : 'rotate(-0.8deg) scale(0)',
+            transformOrigin: 'center bottom',
+            transition: 'transform .2s ease',
+          }
+    }
+    _after={
+      mobile
+        ? {
+            content: "''",
+            position: 'absolute',
+            zIndex: 1,
+            left: '-10px',
+            top: '50%',
+            width: active ? '4px' : '0',
+            height: active ? '20px' : '0',
+            bg: 'orange.100',
+            borderRadius: '1px',
+            transform: 'translateY(-50%)',
+            transition: 'width .2s ease, height .2s ease',
+          }
+        : {
+            content: "''",
+            position: 'absolute',
+            zIndex: -2,
+            left: '50%',
+            bottom: '-8px',
+            width: 0,
+            height: 0,
+            borderLeft: '6px solid transparent',
+            borderRight: '6px solid transparent',
+            borderTop: active ? '7px solid #1A1B1B' : '0 solid transparent',
+            transform: 'translateX(-50%)',
+            transition: 'border-top-width .2s ease',
+          }
+    }
+    _hover={
+      mobile
+        ? {
+            color: 'light.50',
+            _before: {
+              right: '8px',
+            },
+          }
+        : {
+            color: 'light.50',
+            _before: {
+              transform: 'rotate(-0.8deg) scale(1)',
+            },
+            _after: {
+              borderTopWidth: '7px',
+            },
+          }
+    }
+    onClick={onClose}
+  >
+    {children}
+  </Link>
+);
 
 export default NavLink;

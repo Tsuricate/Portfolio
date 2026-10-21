@@ -1,0 +1,19 @@
+{
+  "sectionTitle": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "backToTop": "Back to top",
+    "website": "See website",
+    "resume": "Download my resume",
+    "contact": "Contact me"
+  },
+  "footer": {
+    "by": "by",
+    "and": "and",
+    "on": "on"
+  }
+}

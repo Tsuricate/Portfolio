@@ -1,0 +1,30 @@
+{
+  "currentProjects": "Actuels",
+  "intro": "Quelques projets que je construis, explore et fais évoluer au fil du temps",
+  "projectLabel": "Projet",
+  "stack": "Stack",
+  "blablaBook": {
+    "name": "BlablaBook",
+    "description": "Une application pour rechercher, découvrir et organiser des livres dans sa bibliothèque personnelle. Un système de notes et de critiques est actuellement en cours de développement."
+  },
+  "wingco": {
+    "name": "Wingco",
+    "description": "Une application pour garder une trace de ses parties de Wingspan, comparer ses scores avec ceux de ses amis et suivre sa progression."
+  },
+  "avatarCreator": {
+    "name": "Yet Another Avatar Creator",
+    "description": "Un créateur d’avatars développé en collaboration avec une graphiste, avec une collection d’éléments visuels qui peut évoluer au fil du temps."
+  },
+  "portfolio": {
+    "name": "Portfolio",
+    "description": "Mon portfolio personnel, repensé pour mieux refléter ma façon de travailler et ce que j’aime créer."
+  },
+  "taleMe": {
+    "name": "TaleMe",
+    "description": "Une plateforme inspirée des Livres dont vous êtes le héros, où l’on peut lire des histoires à choix multiples ou créer les siennes."
+  },
+  "archive": {
+    "title": "Archives",
+    "description": "Des projets qui ont marqué différentes étapes de mon parcours"
+  }
+}
